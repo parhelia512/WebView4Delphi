@@ -2678,6 +2678,30 @@ const
   /// <para>This is one of the COREWEBVIEW2_PROCESS_FAILED_REASON values.</para>
   /// </remarks>
   COREWEBVIEW2_PROCESS_FAILED_REASON_PROFILE_DELETED = $00000006;
+  /// <summary>
+  /// The process exited normally (exit code 0). This typically indicates
+  /// a clean or transparent process shutdown.
+  /// </summary>
+  /// <remarks>
+  /// <para>This is one of the COREWEBVIEW2_PROCESS_FAILED_REASON values.</para>
+  /// </remarks>
+  COREWEBVIEW2_PROCESS_FAILED_REASON_NORMAL_EXIT = $00000007;
+  /// <summary>
+  /// The process exited abnormally (non-zero exit code). This indicates
+  /// an unexpected termination that is not a crash or kill.
+  /// </summary>
+  /// <remarks>
+  /// <para>This is one of the COREWEBVIEW2_PROCESS_FAILED_REASON values.</para>
+  /// </remarks>
+  COREWEBVIEW2_PROCESS_FAILED_REASON_ABNORMAL_EXIT = $00000008;
+  /// <summary>
+  /// The OS terminated the process due to a code integrity failure.
+  /// This indicates a DLL failed Windows Code Integrity verification.
+  /// </summary>
+  /// <remarks>
+  /// <para>This is one of the COREWEBVIEW2_PROCESS_FAILED_REASON values.</para>
+  /// </remarks>
+  COREWEBVIEW2_PROCESS_FAILED_REASON_INTEGRITY_FAILURE = $00000009;
 
 type
   /// <summary>

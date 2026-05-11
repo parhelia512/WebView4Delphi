@@ -3,14 +3,18 @@
 <head>
 <title>WebView4Delphi: uWVTypeLibrary: Interface ICoreWebView2ProcessFailedEventArgs2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.4">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="ICoreWebView2ProcessFailedEventArgs2"></span><h1 class="cio">Interface ICoreWebView2ProcessFailedEventArgs2</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section">Properties</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uWVTypeLibrary.html">uWVTypeLibrary</a></p>
@@ -30,28 +34,28 @@
 <li class="thisitem">ICoreWebView2ProcessFailedEventArgs2</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventArgs2.html#Get_reason-COREWEBVIEW2_PROCESS_FAILED_REASON-">Get_reason</a></strong>(out reason: <a href="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON">COREWEBVIEW2_PROCESS_FAILED_REASON</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventArgs2.html#Get_ExitCode-SYSINT-">Get_ExitCode</a></strong>(out ExitCode: SYSINT): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventArgs2.html#Get_ProcessDescription-PWideChar-">Get_ProcessDescription</a></strong>(out ProcessDescription: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventArgs2.html#Get_FrameInfosForFailedProcess-ICoreWebView2FrameInfoCollection-">Get_FrameInfosForFailedProcess</a></strong>(out frames: <a href="uWVTypeLibrary.ICoreWebView2FrameInfoCollection.html">ICoreWebView2FrameInfoCollection</a>): HResult; stdcall;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_reason-COREWEBVIEW2_PROCESS_FAILED_REASON-"></span><code>function <strong>Get_reason</strong>(out reason: <a href="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON">COREWEBVIEW2_PROCESS_FAILED_REASON</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -68,9 +72,9 @@
 </dl>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_ExitCode-SYSINT-"></span><code>function <strong>Get_ExitCode</strong>(out ExitCode: SYSINT): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -78,9 +82,9 @@
  The exit code of the failing process, for telemetry purposes. The exit code is always `STILL_ACTIVE` (`259`) when `ProcessFailedKind` is `COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_UNRESPONSIVE`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_ProcessDescription-PWideChar-"></span><code>function <strong>Get_ProcessDescription</strong>(out ProcessDescription: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -90,9 +94,9 @@
 <p>The caller must free the returned string with `CoTaskMemFree`. See [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings). </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_FrameInfosForFailedProcess-ICoreWebView2FrameInfoCollection-"></span><code>function <strong>Get_FrameInfosForFailedProcess</strong>(out frames: <a href="uWVTypeLibrary.ICoreWebView2FrameInfoCollection.html">ICoreWebView2FrameInfoCollection</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -100,6 +104,6 @@
  The collection of `FrameInfo`s for frames in the `ICoreWebView2` that were being rendered by the failed process. The content in these frames is replaced with an error page. This is only available when `ProcessFailedKind` is `COREWEBVIEW2_PROCESS_FAILED_KIND_FRAME_RENDER_PROCESS_EXITED`; `frames` is `null` for all other process failure kinds, including the case in which the failed process was the renderer for the main frame and subframes within it, for which the failure kind is `COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_EXITED`. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </body></html>

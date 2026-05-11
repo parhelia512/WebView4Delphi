@@ -3,14 +3,18 @@
 <head>
 <title>WebView4Delphi: uWVTypeLibrary: Interface ICoreWebView2Environment8</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.4">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="ICoreWebView2Environment8"></span><h1 class="cio">Interface ICoreWebView2Environment8</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section">Properties</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uWVTypeLibrary.html">uWVTypeLibrary</a></p>
@@ -36,24 +40,24 @@
 <li class="thisitem">ICoreWebView2Environment8</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2Environment8.html#add_ProcessInfosChanged-ICoreWebView2ProcessInfosChangedEventHandler-EventRegistrationToken-">add_ProcessInfosChanged</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ProcessInfosChangedEventHandler.html">ICoreWebView2ProcessInfosChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2Environment8.html#remove_ProcessInfosChanged-EventRegistrationToken-">remove_ProcessInfosChanged</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2Environment8.html#GetProcessInfos-ICoreWebView2ProcessInfoCollection-">GetProcessInfos</a></strong>(out value: <a href="uWVTypeLibrary.ICoreWebView2ProcessInfoCollection.html">ICoreWebView2ProcessInfoCollection</a>): HResult; stdcall;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_ProcessInfosChanged-ICoreWebView2ProcessInfosChangedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_ProcessInfosChanged</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ProcessInfosChangedEventHandler.html">ICoreWebView2ProcessInfosChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -68,9 +72,9 @@
 </dl>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_ProcessInfosChanged-EventRegistrationToken-"></span><code>function <strong>remove_ProcessInfosChanged</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -78,9 +82,9 @@
  Removes an event handler previously added with `add_ProcessInfosChanged`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GetProcessInfos-ICoreWebView2ProcessInfoCollection-"></span><code>function <strong>GetProcessInfos</strong>(out value: <a href="uWVTypeLibrary.ICoreWebView2ProcessInfoCollection.html">ICoreWebView2ProcessInfoCollection</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -88,6 +92,6 @@
  Returns the `ICoreWebView2ProcessInfoCollection` Provide a list of all process using same user data folder except for crashpad process. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </body></html>

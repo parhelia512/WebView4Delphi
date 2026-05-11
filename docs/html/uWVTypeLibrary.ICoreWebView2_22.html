@@ -3,14 +3,18 @@
 <head>
 <title>WebView4Delphi: uWVTypeLibrary: Interface ICoreWebView2_22</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.4">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="ICoreWebView2_22"></span><h1 class="cio">Interface ICoreWebView2_22</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section">Properties</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uWVTypeLibrary.html">uWVTypeLibrary</a></p>
@@ -50,20 +54,20 @@
 <li class="thisitem">ICoreWebView2_22</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2_22.html#AddWebResourceRequestedFilterWithRequestSourceKinds-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS-">AddWebResourceRequestedFilterWithRequestSourceKinds</a></strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>; requestSourceKinds: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS">COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2_22.html#RemoveWebResourceRequestedFilterWithRequestSourceKinds-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS-">RemoveWebResourceRequestedFilterWithRequestSourceKinds</a></strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>; requestSourceKinds: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS">COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS</a>): HResult; stdcall;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="AddWebResourceRequestedFilterWithRequestSourceKinds-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS-"></span><code>function <strong>AddWebResourceRequestedFilterWithRequestSourceKinds</strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>; requestSourceKinds: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS">COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -92,9 +96,9 @@
 </dl>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="RemoveWebResourceRequestedFilterWithRequestSourceKinds-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS-"></span><code>function <strong>RemoveWebResourceRequestedFilterWithRequestSourceKinds</strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>; requestSourceKinds: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS">COREWEBVIEW2_WEB_RESOURCE_REQUEST_SOURCE_KINDS</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -102,6 +106,6 @@
  Removes a matching WebResource filter that was previously added for the `WebResourceRequested` event. If the same filter was added multiple times, then it must be removed as many times as it was added for the removal to be effective. Returns `E_INVALIDARG` for a filter that was not added or is already removed. If the filter was added for multiple requestSourceKinds and removed just for one of them the filter remains for the non-removed requestSourceKinds. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </body></html>

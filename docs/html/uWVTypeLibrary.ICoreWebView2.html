@@ -3,14 +3,18 @@
 <head>
 <title>WebView4Delphi: uWVTypeLibrary: Interface ICoreWebView2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="PasDoc 0.17.0.snapshot">
+<meta name="generator" content="PasDoc 1.0.4">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="StyleSheet" type="text/css" href="bootstrap.min.css">
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
-</head>
+<style type="text/css">
+body { margin: 0.5em; }
+.badge { padding: 0.1em 0.5em; color: white; }
+</style></head>
 <body>
 <span id="ICoreWebView2"></span><h1 class="cio">Interface ICoreWebView2</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section">Fields</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div><div class="one_section">Properties</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Methods</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="unit">Unit</h2>
 <p class="unitlink">
 <a href="uWVTypeLibrary.html">uWVTypeLibrary</a></p>
@@ -29,244 +33,244 @@
 <li class="thisitem">ICoreWebView2</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Methods"></span><h3 class="summary">Methods</h3>
 <table class="summary wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_Settings-ICoreWebView2Settings-">Get_Settings</a></strong>(out Settings: <a href="uWVTypeLibrary.ICoreWebView2Settings.html">ICoreWebView2Settings</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_Source-PWideChar-">Get_Source</a></strong>(out uri: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Navigate-PWideChar-">Navigate</a></strong>(uri: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#NavigateToString-PWideChar-">NavigateToString</a></strong>(htmlContent: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_NavigationStarting-ICoreWebView2NavigationStartingEventHandler-EventRegistrationToken-">add_NavigationStarting</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationStartingEventHandler.html">ICoreWebView2NavigationStartingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_NavigationStarting-EventRegistrationToken-">remove_NavigationStarting</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_ContentLoading-ICoreWebView2ContentLoadingEventHandler-EventRegistrationToken-">add_ContentLoading</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ContentLoadingEventHandler.html">ICoreWebView2ContentLoadingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_ContentLoading-EventRegistrationToken-">remove_ContentLoading</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_SourceChanged-ICoreWebView2SourceChangedEventHandler-EventRegistrationToken-">add_SourceChanged</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2SourceChangedEventHandler.html">ICoreWebView2SourceChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_SourceChanged-EventRegistrationToken-">remove_SourceChanged</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_HistoryChanged-ICoreWebView2HistoryChangedEventHandler-EventRegistrationToken-">add_HistoryChanged</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2HistoryChangedEventHandler.html">ICoreWebView2HistoryChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_HistoryChanged-EventRegistrationToken-">remove_HistoryChanged</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_NavigationCompleted-ICoreWebView2NavigationCompletedEventHandler-EventRegistrationToken-">add_NavigationCompleted</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationCompletedEventHandler.html">ICoreWebView2NavigationCompletedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_NavigationCompleted-EventRegistrationToken-">remove_NavigationCompleted</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_FrameNavigationStarting-ICoreWebView2NavigationStartingEventHandler-EventRegistrationToken-">add_FrameNavigationStarting</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationStartingEventHandler.html">ICoreWebView2NavigationStartingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_FrameNavigationStarting-EventRegistrationToken-">remove_FrameNavigationStarting</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_FrameNavigationCompleted-ICoreWebView2NavigationCompletedEventHandler-EventRegistrationToken-">add_FrameNavigationCompleted</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationCompletedEventHandler.html">ICoreWebView2NavigationCompletedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_FrameNavigationCompleted-EventRegistrationToken-">remove_FrameNavigationCompleted</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_ScriptDialogOpening-ICoreWebView2ScriptDialogOpeningEventHandler-EventRegistrationToken-">add_ScriptDialogOpening</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ScriptDialogOpeningEventHandler.html">ICoreWebView2ScriptDialogOpeningEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_ScriptDialogOpening-EventRegistrationToken-">remove_ScriptDialogOpening</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_PermissionRequested-ICoreWebView2PermissionRequestedEventHandler-EventRegistrationToken-">add_PermissionRequested</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2PermissionRequestedEventHandler.html">ICoreWebView2PermissionRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_PermissionRequested-EventRegistrationToken-">remove_PermissionRequested</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_ProcessFailed-ICoreWebView2ProcessFailedEventHandler-EventRegistrationToken-">add_ProcessFailed</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventHandler.html">ICoreWebView2ProcessFailedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_ProcessFailed-EventRegistrationToken-">remove_ProcessFailed</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#AddScriptToExecuteOnDocumentCreated-PWideChar-ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler-">AddScriptToExecuteOnDocumentCreated</a></strong>(javaScript: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler.html">ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#RemoveScriptToExecuteOnDocumentCreated-PWideChar-">RemoveScriptToExecuteOnDocumentCreated</a></strong>(id: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#ExecuteScript-PWideChar-ICoreWebView2ExecuteScriptCompletedHandler-">ExecuteScript</a></strong>(javaScript: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2ExecuteScriptCompletedHandler.html">ICoreWebView2ExecuteScriptCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#CapturePreview-COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT-IStream-ICoreWebView2CapturePreviewCompletedHandler-">CapturePreview</a></strong>(imageFormat: <a href="uWVTypeLibrary.html#COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT">COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT</a>; const imageStream: IStream; const handler: <a href="uWVTypeLibrary.ICoreWebView2CapturePreviewCompletedHandler.html">ICoreWebView2CapturePreviewCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Reload">Reload</a></strong>: HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#PostWebMessageAsJson-PWideChar-">PostWebMessageAsJson</a></strong>(webMessageAsJson: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#PostWebMessageAsString-PWideChar-">PostWebMessageAsString</a></strong>(webMessageAsString: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_WebMessageReceived-ICoreWebView2WebMessageReceivedEventHandler-EventRegistrationToken-">add_WebMessageReceived</a></strong>(const handler: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventHandler.html">ICoreWebView2WebMessageReceivedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_WebMessageReceived-EventRegistrationToken-">remove_WebMessageReceived</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#CallDevToolsProtocolMethod-PWideChar-PWideChar-ICoreWebView2CallDevToolsProtocolMethodCompletedHandler-">CallDevToolsProtocolMethod</a></strong>(methodName: PWideChar; parametersAsJson: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2CallDevToolsProtocolMethodCompletedHandler.html">ICoreWebView2CallDevToolsProtocolMethodCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_BrowserProcessId-SYSUINT-">Get_BrowserProcessId</a></strong>(out value: SYSUINT): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_CanGoBack-Integer-">Get_CanGoBack</a></strong>(out CanGoBack: Integer): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_CanGoForward-Integer-">Get_CanGoForward</a></strong>(out CanGoForward: Integer): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#GoBack">GoBack</a></strong>: HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#GoForward">GoForward</a></strong>: HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#GetDevToolsProtocolEventReceiver-PWideChar-ICoreWebView2DevToolsProtocolEventReceiver-">GetDevToolsProtocolEventReceiver</a></strong>(eventName: PWideChar; out receiver: <a href="uWVTypeLibrary.ICoreWebView2DevToolsProtocolEventReceiver.html">ICoreWebView2DevToolsProtocolEventReceiver</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Stop">Stop</a></strong>: HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_NewWindowRequested-ICoreWebView2NewWindowRequestedEventHandler-EventRegistrationToken-">add_NewWindowRequested</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NewWindowRequestedEventHandler.html">ICoreWebView2NewWindowRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_NewWindowRequested-EventRegistrationToken-">remove_NewWindowRequested</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_DocumentTitleChanged-ICoreWebView2DocumentTitleChangedEventHandler-EventRegistrationToken-">add_DocumentTitleChanged</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2DocumentTitleChangedEventHandler.html">ICoreWebView2DocumentTitleChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_DocumentTitleChanged-EventRegistrationToken-">remove_DocumentTitleChanged</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_DocumentTitle-PWideChar-">Get_DocumentTitle</a></strong>(out title: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#AddHostObjectToScript-PWideChar-OleVariant-">AddHostObjectToScript</a></strong>(name: PWideChar; const object_: OleVariant): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#RemoveHostObjectFromScript-PWideChar-">RemoveHostObjectFromScript</a></strong>(name: PWideChar): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#OpenDevToolsWindow">OpenDevToolsWindow</a></strong>: HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_ContainsFullScreenElementChanged-ICoreWebView2ContainsFullScreenElementChangedEventHandler-EventRegistrationToken-">add_ContainsFullScreenElementChanged</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ContainsFullScreenElementChangedEventHandler.html">ICoreWebView2ContainsFullScreenElementChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_ContainsFullScreenElementChanged-EventRegistrationToken-">remove_ContainsFullScreenElementChanged</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#Get_ContainsFullScreenElement-Integer-">Get_ContainsFullScreenElement</a></strong>(out ContainsFullScreenElement: Integer): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_WebResourceRequested-ICoreWebView2WebResourceRequestedEventHandler-EventRegistrationToken-">add_WebResourceRequested</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2WebResourceRequestedEventHandler.html">ICoreWebView2WebResourceRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_WebResourceRequested-EventRegistrationToken-">remove_WebResourceRequested</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#AddWebResourceRequestedFilter-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-">AddWebResourceRequestedFilter</a></strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#RemoveWebResourceRequestedFilter-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-">RemoveWebResourceRequestedFilter</a></strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#add_WindowCloseRequested-ICoreWebView2WindowCloseRequestedEventHandler-EventRegistrationToken-">add_WindowCloseRequested</a></strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2WindowCloseRequestedEventHandler.html">ICoreWebView2WindowCloseRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
-<tr class="list2">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVTypeLibrary.ICoreWebView2.html#remove_WindowCloseRequested-EventRegistrationToken-">remove_WindowCloseRequested</a></strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_Settings-ICoreWebView2Settings-"></span><code>function <strong>Get_Settings</strong>(out Settings: <a href="uWVTypeLibrary.ICoreWebView2Settings.html">ICoreWebView2Settings</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -279,9 +283,9 @@
 </dl>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_Source-PWideChar-"></span><code>function <strong>Get_Source</strong>(out uri: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -293,9 +297,9 @@
 <p>\snippet ControlComponent.cpp SourceChanged </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Navigate-PWideChar-"></span><code>function <strong>Navigate</strong>(uri: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -307,9 +311,9 @@
 <p>\snippet ControlComponent.cpp Navigate </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="NavigateToString-PWideChar-"></span><code>function <strong>NavigateToString</strong>(htmlContent: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -321,9 +325,9 @@
 <p>WCHAR c_navString[] = LR&quot; &lt;head&gt;&lt;link rel='stylesheet' href ='<a href="http://appassets.example/wv2.css">http://appassets.example/wv2.css</a>'/&gt;&lt;/head&gt; &lt;body&gt; &lt;img src='<a href="http://appassets.example/wv2.png">http://appassets.example/wv2.png</a>' /&gt; &lt;p&gt;&lt;a href='<a href="http://appassets.example/winrt_test.txt">http://appassets.example/winrt_test.txt</a>'&gt;Click me&lt;/a&gt;&lt;/p&gt; &lt;/body&gt;&quot;; m_webView-&gt;NavigateToString(c_navString); ``` \snippet SettingsComponent.cpp NavigateToString </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_NavigationStarting-ICoreWebView2NavigationStartingEventHandler-EventRegistrationToken-"></span><code>function <strong>add_NavigationStarting</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationStartingEventHandler.html">ICoreWebView2NavigationStartingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -335,9 +339,9 @@
 <p>\snippet SettingsComponent.cpp NavigationStarting </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_NavigationStarting-EventRegistrationToken-"></span><code>function <strong>remove_NavigationStarting</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -345,9 +349,9 @@
  Remove an event handler previously added with `add_NavigationStarting`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_ContentLoading-ICoreWebView2ContentLoadingEventHandler-EventRegistrationToken-"></span><code>function <strong>add_ContentLoading</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ContentLoadingEventHandler.html">ICoreWebView2ContentLoadingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -355,9 +359,9 @@
  Add an event handler for the `ContentLoading` event. `ContentLoading` triggers before any content is loaded, including scripts added with `AddScriptToExecuteOnDocumentCreated`. `ContentLoading` does not trigger if a same page navigation occurs (such as through `fragment` navigations or `history.pushState` navigations). This operation follows the `NavigationStarting` and `SourceChanged` events and precedes the `HistoryChanged` and `NavigationCompleted` events. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_ContentLoading-EventRegistrationToken-"></span><code>function <strong>remove_ContentLoading</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -365,9 +369,9 @@
  Remove an event handler previously added with `add_ContentLoading`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_SourceChanged-ICoreWebView2SourceChangedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_SourceChanged</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2SourceChangedEventHandler.html">ICoreWebView2SourceChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -377,9 +381,9 @@
 <p>\snippet ControlComponent.cpp SourceChanged </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_SourceChanged-EventRegistrationToken-"></span><code>function <strong>remove_SourceChanged</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -387,9 +391,9 @@
  Remove an event handler previously added with `add_SourceChanged`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_HistoryChanged-ICoreWebView2HistoryChangedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_HistoryChanged</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2HistoryChangedEventHandler.html">ICoreWebView2HistoryChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -399,9 +403,9 @@
 <p>\snippet ControlComponent.cpp HistoryChanged </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_HistoryChanged-EventRegistrationToken-"></span><code>function <strong>remove_HistoryChanged</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -409,9 +413,9 @@
  Remove an event handler previously added with `add_HistoryChanged`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_NavigationCompleted-ICoreWebView2NavigationCompletedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_NavigationCompleted</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationCompletedEventHandler.html">ICoreWebView2NavigationCompletedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -421,9 +425,9 @@
 <p>\snippet ControlComponent.cpp NavigationCompleted </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_NavigationCompleted-EventRegistrationToken-"></span><code>function <strong>remove_NavigationCompleted</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -431,9 +435,9 @@
  Remove an event handler previously added with `add_NavigationCompleted`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_FrameNavigationStarting-ICoreWebView2NavigationStartingEventHandler-EventRegistrationToken-"></span><code>function <strong>add_FrameNavigationStarting</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationStartingEventHandler.html">ICoreWebView2NavigationStartingEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -445,9 +449,9 @@
 <p>\snippet SettingsComponent.cpp FrameNavigationStarting </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_FrameNavigationStarting-EventRegistrationToken-"></span><code>function <strong>remove_FrameNavigationStarting</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -455,9 +459,9 @@
  Remove an event handler previously added with `add_FrameNavigationStarting`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_FrameNavigationCompleted-ICoreWebView2NavigationCompletedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_FrameNavigationCompleted</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NavigationCompletedEventHandler.html">ICoreWebView2NavigationCompletedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -467,9 +471,9 @@
 <p>\snippet ControlComponent.cpp FrameNavigationCompleted </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_FrameNavigationCompleted-EventRegistrationToken-"></span><code>function <strong>remove_FrameNavigationCompleted</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -477,9 +481,9 @@
  Remove an event handler previously added with `add_FrameNavigationCompleted`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_ScriptDialogOpening-ICoreWebView2ScriptDialogOpeningEventHandler-EventRegistrationToken-"></span><code>function <strong>add_ScriptDialogOpening</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ScriptDialogOpeningEventHandler.html">ICoreWebView2ScriptDialogOpeningEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -491,9 +495,9 @@
 <p>\snippet SettingsComponent.cpp ScriptDialogOpening </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_ScriptDialogOpening-EventRegistrationToken-"></span><code>function <strong>remove_ScriptDialogOpening</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -501,9 +505,9 @@
  Remove an event handler previously added with `add_ScriptDialogOpening`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_PermissionRequested-ICoreWebView2PermissionRequestedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_PermissionRequested</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2PermissionRequestedEventHandler.html">ICoreWebView2PermissionRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -515,9 +519,9 @@
 <p>\snippet SettingsComponent.cpp PermissionRequested0 \snippet SettingsComponent.cpp PermissionRequested1 </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_PermissionRequested-EventRegistrationToken-"></span><code>function <strong>remove_PermissionRequested</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -525,9 +529,9 @@
  Remove an event handler previously added with `add_PermissionRequested`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_ProcessFailed-ICoreWebView2ProcessFailedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_ProcessFailed</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ProcessFailedEventHandler.html">ICoreWebView2ProcessFailedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -543,9 +547,9 @@
 <p>\snippet ProcessComponent.cpp ProcessFailed </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_ProcessFailed-EventRegistrationToken-"></span><code>function <strong>remove_ProcessFailed</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -553,9 +557,9 @@
  Remove an event handler previously added with `add_ProcessFailed`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="AddScriptToExecuteOnDocumentCreated-PWideChar-ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler-"></span><code>function <strong>AddScriptToExecuteOnDocumentCreated</strong>(javaScript: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler.html">ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -569,9 +573,9 @@
 <p>\snippet ScriptComponent.cpp AddScriptToExecuteOnDocumentCreated </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="RemoveScriptToExecuteOnDocumentCreated-PWideChar-"></span><code>function <strong>RemoveScriptToExecuteOnDocumentCreated</strong>(id: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -579,9 +583,9 @@
  Remove the corresponding JavaScript added using `AddScriptToExecuteOnDocumentCreated` with the specified script ID. The script ID should be the one returned by the `AddScriptToExecuteOnDocumentCreated`. Both use `AddScriptToExecuteOnDocumentCreated` and this method in `NewWindowRequested` event handler at the same time sometimes causes trouble. Since invalid scripts will be ignored, the script IDs you got may not be valid anymore. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="ExecuteScript-PWideChar-ICoreWebView2ExecuteScriptCompletedHandler-"></span><code>function <strong>ExecuteScript</strong>(javaScript: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2ExecuteScriptCompletedHandler.html">ICoreWebView2ExecuteScriptCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -593,9 +597,9 @@
 <p>\snippet ScriptComponent.cpp ExecuteScript </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="CapturePreview-COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT-IStream-ICoreWebView2CapturePreviewCompletedHandler-"></span><code>function <strong>CapturePreview</strong>(imageFormat: <a href="uWVTypeLibrary.html#COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT">COREWEBVIEW2_CAPTURE_PREVIEW_IMAGE_FORMAT</a>; const imageStream: IStream; const handler: <a href="uWVTypeLibrary.ICoreWebView2CapturePreviewCompletedHandler.html">ICoreWebView2CapturePreviewCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -605,9 +609,9 @@
 <p>\snippet FileComponent.cpp CapturePreview </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Reload"></span><code>function <strong>Reload</strong>: HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -615,9 +619,9 @@
  Reload the current page. This is similar to navigating to the URI of current top level document including all navigation events firing and respecting any entries in the HTTP cache. But, the back or forward history are not modified. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="PostWebMessageAsJson-PWideChar-"></span><code>function <strong>PostWebMessageAsJson</strong>(webMessageAsJson: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -631,9 +635,9 @@
 <p>\snippet ScenarioWebMessage.cpp WebMessageReceived </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="PostWebMessageAsString-PWideChar-"></span><code>function <strong>PostWebMessageAsString</strong>(webMessageAsString: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -641,9 +645,9 @@
  Posts a message that is a simple string rather than a JSON string representation of a JavaScript object. This behaves in exactly the same manner as `PostWebMessageAsJson`, but the `data` property of the event arg of the `window.chrome.webview` message is a string with the same value as `webMessageAsString`. Use this instead of `PostWebMessageAsJson` if you want to communicate using simple strings rather than JSON objects. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_WebMessageReceived-ICoreWebView2WebMessageReceivedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_WebMessageReceived</strong>(const handler: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventHandler.html">ICoreWebView2WebMessageReceivedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -663,9 +667,9 @@
 <p>then the `NewWindowRequested` event might be fired before the `WebMessageReceived` event. If you need the `WebMessageReceived` event to happen before anything else, then in the `WebMessageReceived` handler you can post a message back to the page and have the page wait until it receives that message before continuing. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_WebMessageReceived-EventRegistrationToken-"></span><code>function <strong>remove_WebMessageReceived</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -673,9 +677,9 @@
  Remove an event handler previously added with `add_WebMessageReceived`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="CallDevToolsProtocolMethod-PWideChar-PWideChar-ICoreWebView2CallDevToolsProtocolMethodCompletedHandler-"></span><code>function <strong>CallDevToolsProtocolMethod</strong>(methodName: PWideChar; parametersAsJson: PWideChar; const handler: <a href="uWVTypeLibrary.ICoreWebView2CallDevToolsProtocolMethodCompletedHandler.html">ICoreWebView2CallDevToolsProtocolMethodCompletedHandler</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -685,9 +689,9 @@
 <p>\snippet ScriptComponent.cpp CallDevToolsProtocolMethod </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_BrowserProcessId-SYSUINT-"></span><code>function <strong>Get_BrowserProcessId</strong>(out value: SYSUINT): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -695,9 +699,9 @@
  The process ID of the browser process that hosts the WebView. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_CanGoBack-Integer-"></span><code>function <strong>Get_CanGoBack</strong>(out CanGoBack: Integer): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -705,9 +709,9 @@
  `TRUE` if the WebView is able to navigate to a previous page in the navigation history. If `CanGoBack` changes value, the `HistoryChanged` event runs. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_CanGoForward-Integer-"></span><code>function <strong>Get_CanGoForward</strong>(out CanGoForward: Integer): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -715,9 +719,9 @@
  `TRUE` if the WebView is able to navigate to a next page in the navigation history. If `CanGoForward` changes value, the `HistoryChanged` event runs. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GoBack"></span><code>function <strong>GoBack</strong>: HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -725,9 +729,9 @@
  Navigates the WebView to the previous page in the navigation history. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GoForward"></span><code>function <strong>GoForward</strong>: HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -735,9 +739,9 @@
  Navigates the WebView to the next page in the navigation history. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="GetDevToolsProtocolEventReceiver-PWideChar-ICoreWebView2DevToolsProtocolEventReceiver-"></span><code>function <strong>GetDevToolsProtocolEventReceiver</strong>(eventName: PWideChar; out receiver: <a href="uWVTypeLibrary.ICoreWebView2DevToolsProtocolEventReceiver.html">ICoreWebView2DevToolsProtocolEventReceiver</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -747,9 +751,9 @@
 <p>\snippet ScriptComponent.cpp DevToolsProtocolEventReceived </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Stop"></span><code>function <strong>Stop</strong>: HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -757,9 +761,9 @@
  Stop all navigations and pending resource fetches. Does not stop scripts. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_NewWindowRequested-ICoreWebView2NewWindowRequestedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_NewWindowRequested</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2NewWindowRequestedEventHandler.html">ICoreWebView2NewWindowRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -773,9 +777,9 @@
 <p>\snippet AppWindow.cpp NewWindowRequested </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_NewWindowRequested-EventRegistrationToken-"></span><code>function <strong>remove_NewWindowRequested</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -783,9 +787,9 @@
  Remove an event handler previously added with `add_NewWindowRequested`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_DocumentTitleChanged-ICoreWebView2DocumentTitleChangedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_DocumentTitleChanged</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2DocumentTitleChangedEventHandler.html">ICoreWebView2DocumentTitleChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -795,9 +799,9 @@
 <p>\snippet FileComponent.cpp DocumentTitleChanged </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_DocumentTitleChanged-EventRegistrationToken-"></span><code>function <strong>remove_DocumentTitleChanged</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -805,9 +809,9 @@
  Remove an event handler previously added with `add_DocumentTitleChanged`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_DocumentTitle-PWideChar-"></span><code>function <strong>Get_DocumentTitle</strong>(out title: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -817,9 +821,9 @@
 <p>The caller must free the returned string with `CoTaskMemFree`. See [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings). </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="AddHostObjectToScript-PWideChar-OleVariant-"></span><code>function <strong>AddHostObjectToScript</strong>(name: PWideChar; const object_: OleVariant): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -865,9 +869,9 @@
 <p>Exposing host objects to script has security risk. For more information about best practices, navigate to [Best practices for developing secure WebView2 applications](/microsoft-edge/webview2/concepts/security). </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="RemoveHostObjectFromScript-PWideChar-"></span><code>function <strong>RemoveHostObjectFromScript</strong>(name: PWideChar): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -875,9 +879,9 @@
  Remove the host object specified by the name so that it is no longer accessible from JavaScript code in the WebView. While new access attempts are denied, if the object is already obtained by JavaScript code in the WebView, the JavaScript code continues to have access to that object. Run this method for a name that is already removed or never added fails. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="OpenDevToolsWindow"></span><code>function <strong>OpenDevToolsWindow</strong>: HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -885,9 +889,9 @@
  Opens the DevTools window for the current document in the WebView. Does nothing if run when the DevTools window is already open. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_ContainsFullScreenElementChanged-ICoreWebView2ContainsFullScreenElementChangedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_ContainsFullScreenElementChanged</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2ContainsFullScreenElementChangedEventHandler.html">ICoreWebView2ContainsFullScreenElementChangedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -897,9 +901,9 @@
 <p>\snippet AppWindow.cpp ContainsFullScreenElementChanged </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_ContainsFullScreenElementChanged-EventRegistrationToken-"></span><code>function <strong>remove_ContainsFullScreenElementChanged</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -907,9 +911,9 @@
  Remove an event handler previously added with `add_ContainsFullScreenElementChanged`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="Get_ContainsFullScreenElement-Integer-"></span><code>function <strong>Get_ContainsFullScreenElement</strong>(out ContainsFullScreenElement: Integer): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -917,9 +921,9 @@
  Indicates if the WebView contains a fullscreen HTML element. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_WebResourceRequested-ICoreWebView2WebResourceRequestedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_WebResourceRequested</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2WebResourceRequestedEventHandler.html">ICoreWebView2WebResourceRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -935,9 +939,9 @@
 <p>\snippet SettingsComponent.cpp WebResourceRequested0 \snippet SettingsComponent.cpp WebResourceRequested1 </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_WebResourceRequested-EventRegistrationToken-"></span><code>function <strong>remove_WebResourceRequested</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -945,9 +949,9 @@
  Remove an event handler previously added with `add_WebResourceRequested`. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="AddWebResourceRequestedFilter-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-"></span><code>function <strong>AddWebResourceRequestedFilter</strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -967,9 +971,9 @@
 <p>| URI Filter String | Request URI | Match | Notes | | &mdash;- | &mdash;- | &mdash;- | &mdash;- | | `*` | `<a href="https://contoso.com/a/b/c">https://contoso.com/a/b/c</a>` | Yes | A single * will match all URIs | | `*<a href="://contoso.com/">://contoso.com/</a>*` | `<a href="https://contoso.com/a/b/c">https://contoso.com/a/b/c</a>` | Yes | Matches everything in contoso.com across all schemes | | `*<a href="://contoso.com/">://contoso.com/</a>*` | `<a href="https://example.com/?https://contoso.com/">https://example.com/?https://contoso.com/</a>` | Yes | But also matches a URI with just the same text anywhere in the URI | | `example` | `<a href="https://contoso.com/example">https://contoso.com/example</a>` | No | The filter does not perform partial matches | | `*example` | `<a href="https://contoso.com/example">https://contoso.com/example</a>` | Yes | The filter matches across URI parts | | `*example` | `<a href="https://contoso.com/path/?example">https://contoso.com/path/?example</a>` | Yes | The filter matches across URI parts | | `*example` | `<a href="https://contoso.com/path/?query#example">https://contoso.com/path/?query#example</a>` | No | The filter is matched against the URI with no fragment | | `*example` | `<a href="https://example">https://example</a>` | No | The URI is normalized before filter matching so the actual URI used for comparison is `<a href="https://example/">https://example/</a>` | | `*example/` | `<a href="https://example">https://example</a>` | Yes | Just like above, but this time the filter ends with a / just like the normalized URI | | `<a href="https://xn--qei.example/">https://xn--qei.example/</a>` | `<a href="https://&amp;#x2764;.example/">https://&amp;#x2764;.example/</a>` | Yes | Non-ASCII hostnames are normalized to punycode before wildcard comparison | | `<a href="https://&amp;#x2764;.example/">https://&amp;#x2764;.example/</a>` | `<a href="https://xn--qei.example/">https://xn--qei.example/</a>` | No | Non-ASCII hostnames are normalized to punycode before wildcard comparison | </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="RemoveWebResourceRequestedFilter-PWideChar-COREWEBVIEW2_WEB_RESOURCE_CONTEXT-"></span><code>function <strong>RemoveWebResourceRequestedFilter</strong>(uri: PWideChar; ResourceContext: <a href="uWVTypeLibrary.html#COREWEBVIEW2_WEB_RESOURCE_CONTEXT">COREWEBVIEW2_WEB_RESOURCE_CONTEXT</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -979,9 +983,9 @@
 <p>Removes a matching WebResource filter that was previously added for the `WebResourceRequested` event. If the same filter was added multiple times, then it must be removed as many times as it was added for the removal to be effective. Returns `E_INVALIDARG` for a filter that was never added. </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="add_WindowCloseRequested-ICoreWebView2WindowCloseRequestedEventHandler-EventRegistrationToken-"></span><code>function <strong>add_WindowCloseRequested</strong>(const eventHandler: <a href="uWVTypeLibrary.ICoreWebView2WindowCloseRequestedEventHandler.html">ICoreWebView2WindowCloseRequestedEventHandler</a>; out token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -991,9 +995,9 @@
 <p>\snippet AppWindow.cpp WindowCloseRequested </p>
 </td></tr>
 </table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><span id="remove_WindowCloseRequested-EventRegistrationToken-"></span><code>function <strong>remove_WindowCloseRequested</strong>(token: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>): HResult; stdcall;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -1001,6 +1005,6 @@
  Remove an event handler previously added with `add_WindowCloseRequested`. </p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.17.0.snapshot</a>. </em>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </body></html>

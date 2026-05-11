@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
-<meta name="GENERATOR" content="PasDoc 0.17.0.snapshot">
+<meta name="GENERATOR" content="PasDoc 1.0.4">
 </head><body>
 <ul>
 <li><object type="text/sitemap">
@@ -476,6 +476,10 @@
 <li><object type="text/sitemap">
 <param name="Name" value="OnFindStartCompleted">
 <param name="Local" value="uWVBrowser.TWVBrowser.html#OnFindStartCompleted">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="OnDragStarting">
+<param name="Local" value="uWVBrowser.TWVBrowser.html#OnDragStarting">
 </object>
 </ul>
 <li><object type="text/sitemap">
@@ -18481,6 +18485,10 @@
 <param name="Name" value="OnFindStartCompleted">
 <param name="Local" value="uWVFMXBrowser.TWVFMXBrowser.html#OnFindStartCompleted">
 </object>
+<li><object type="text/sitemap">
+<param name="Name" value="OnDragStarting">
+<param name="Local" value="uWVFMXBrowser.TWVFMXBrowser.html#OnDragStarting">
+</object>
 </ul>
 <li><object type="text/sitemap">
 <param name="Name" value="Methods">
@@ -28642,6 +28650,10 @@
 <param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PERMISSION_KIND_WINDOW_MANAGEMENT">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="COREWEBVIEW2_PERMISSION_KIND_PERSISTENT_STORAGE">
+<param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PERMISSION_KIND_PERSISTENT_STORAGE">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="COREWEBVIEW2_PERMISSION_STATE_DEFAULT">
 <param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PERMISSION_STATE_DEFAULT">
 </object>
@@ -29440,6 +29452,18 @@
 <li><object type="text/sitemap">
 <param name="Name" value="COREWEBVIEW2_PROCESS_FAILED_REASON_PROFILE_DELETED">
 <param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON_PROFILE_DELETED">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="COREWEBVIEW2_PROCESS_FAILED_REASON_NORMAL_EXIT">
+<param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON_NORMAL_EXIT">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="COREWEBVIEW2_PROCESS_FAILED_REASON_ABNORMAL_EXIT">
+<param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON_ABNORMAL_EXIT">
+</object>
+<li><object type="text/sitemap">
+<param name="Name" value="COREWEBVIEW2_PROCESS_FAILED_REASON_INTEGRITY_FAILURE">
+<param name="Local" value="uWVTypeLibrary.html#COREWEBVIEW2_PROCESS_FAILED_REASON_INTEGRITY_FAILURE">
 </object>
 <li><object type="text/sitemap">
 <param name="Name" value="COREWEBVIEW2_BROWSING_DATA_KINDS_FILE_SYSTEMS">
@@ -50754,6 +50778,10 @@
 <param name="Local" value="uWVBrowser.TWVBrowser.html#OnDownloadStateChanged">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="OnDragStarting">
+<param name="Local" value="uWVBrowser.TWVBrowser.html#OnDragStarting">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="OnEnvironmentCompleted">
 <param name="Local" value="uWVBrowser.TWVBrowser.html#OnEnvironmentCompleted">
 </object>
@@ -54456,6 +54484,10 @@
 <param name="Local" value="uWVFMXBrowser.TWVFMXBrowser.html#OnDownloadStateChanged">
 </object>
 <li><object type="text/sitemap">
+<param name="Name" value="OnDragStarting">
+<param name="Local" value="uWVFMXBrowser.TWVFMXBrowser.html#OnDragStarting">
+</object>
+<li><object type="text/sitemap">
 <param name="Name" value="OnEnvironmentCompleted">
 <param name="Local" value="uWVFMXBrowser.TWVFMXBrowser.html#OnEnvironmentCompleted">
 </object>
@@ -56059,9 +56091,5 @@
 <param name="Local" value="AllIdentifiers.html">
 </object>
 </ul>
-<li><object type="text/sitemap">
-<param name="Name" value="Legend">
-<param name="Local" value="Legend.html">
-</object>
 </ul>
 </body></html>
