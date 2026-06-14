@@ -110,6 +110,20 @@ type
   TOnFindMatchCountChangedEvent                            = procedure(Sender: TObject; const aFindSession: ICoreWebView2Find; const aArgs: IUnknown) of object;
   TOnFindStartCompletedEvent                               = procedure(Sender: TObject; aErrorCode: HResult) of object;
   TOnDragStartingEvent                                     = procedure(Sender: TObject; const aController: ICoreWebView2CompositionController; const aArgs: ICoreWebView2DragStartingEventArgs) of object;
+  TOnDedicatedWorkerCreatedEvent                           = procedure(Sender: TObject; const aWebView : ICoreWebView2; const aArgs : ICoreWebView2DedicatedWorkerCreatedEventArgs) of object;
+  TOnDedicatedWorkerCreated2Event                          = procedure(Sender: TObject; const aDedicatedWorker: ICoreWebView2DedicatedWorker; const aArgs: ICoreWebView2DedicatedWorkerCreatedEventArgs; aWorkerID: cardinal) of object;
+  TOnDedicatedWorkerDestroyingEvent                        = procedure(Sender: TObject; const aDedicatedWorker: ICoreWebView2DedicatedWorker; const aArgs: IUnknown; aWorkerID: cardinal) of object;
+  TOnDedicatedWorkerWebMessageReceivedEvent                = procedure(Sender: TObject; const aDedicatedWorker: ICoreWebView2DedicatedWorker; const aArgs: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal) of object;
+  TOnFrameDedicatedWorkerCreatedEvent                      = procedure(Sender: TObject; const aFrame: ICoreWebView2Frame; const aArgs: ICoreWebView2DedicatedWorkerCreatedEventArgs; aFrameID: cardinal) of object;
+  TOnServiceWorkerDestroyingEvent                          = procedure(Sender: TObject; const aServiceWorker: ICoreWebView2ServiceWorker; const aArgs: IUnknown; aWorkerID: cardinal) of object;
+  TOnServiceWorkerWebMessageReceivedEvent                  = procedure(Sender: TObject; const aServiceWorker: ICoreWebView2ServiceWorker; const aArgs: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal) of object;
+  TOnServiceWorkerRegisteredEvent                          = procedure(Sender: TObject; const aServiceWorkerManager: ICoreWebView2ServiceWorkerManager; const aArgs: ICoreWebView2ServiceWorkerRegisteredEventArgs) of object;
+  TOnGetServiceWorkerRegistrationsCompletedEvent           = procedure(Sender: TObject; errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView) of object;
+  TOnServiceWorkerActivatedEvent                           = procedure(Sender: TObject; const aServiceWorkerRegistration: ICoreWebView2ServiceWorkerRegistration; const aArgs: ICoreWebView2ServiceWorkerActivatedEventArgs) of object;
+  TOnServiceWorkerRegistrationUnregisteringEvent           = procedure(Sender: TObject; const aServiceWorkerRegistration: ICoreWebView2ServiceWorkerRegistration; const aArgs: IUnknown) of object;
+  TOnSharedWorkerCreatedEvent                              = procedure(Sender: TObject; const aSharedWorkerManager: ICoreWebView2SharedWorkerManager; const aArgs: ICoreWebView2SharedWorkerCreatedEventArgs) of object;
+  TOnGetSharedWorkersCompletedEvent                        = procedure(Sender: TObject; errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView) of object;
+  TOnSharedWorkerDestroyingEvent                           = procedure(Sender: TObject; const aSharedWorker: ICoreWebView2SharedWorker; const aArgs: IUnknown; aWorkerID: cardinal) of object;
 
   // Custom events
   TOnCompMsgEvent                                          = procedure(Sender: TObject; var aMessage: TMessage; var aHandled: Boolean) of object;

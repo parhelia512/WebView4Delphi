@@ -8,9 +8,9 @@ interface
 
 uses
   {$IFDEF DELPHI16_UP}
-  WinApi.Windows, System.Classes, System.SysUtils, WinApi.ActiveX, System.Win.Registry, Winapi.ShlObj, System.Math,
+  WinApi.Windows, System.Classes, System.SysUtils, WinApi.ActiveX, System.Win.Registry, Winapi.ShlObj, System.Math, System.SyncObjs,
   {$ELSE}
-  Windows, Classes, SysUtils, ActiveX, Registry, ShlObj, Math, Dialogs,
+  Windows, Classes, SysUtils, ActiveX, Registry, ShlObj, Math, Dialogs, SyncObjs,
   {$ENDIF}
   uWVLibFunctions, uWVInterfaces, uWVTypeLibrary, uWVTypes, uWVEvents, uWVCoreWebView2Environment;
 
@@ -29,6 +29,7 @@ type
       FOnProcessInfosChanged                  : TLoaderProcessInfosChangedEvent;
       FOnGetCustomSchemes                     : TLoaderGetCustomSchemesEvent;
       FLibHandle                              : THandle;
+      FSyncObj                                : TCriticalSection;
       FErrorLog                               : TStringList;
       FError                                  : int64;
       FBrowserExecPath                        : wvstring;
@@ -45,6 +46,7 @@ type
       FLoaderDllPath                          : wvstring;
       FUseInternalLoader                      : boolean;
       FAllowOldRuntime                        : boolean;
+      FWorkerIDGen                  : cardinal;
 
       // Fields used to create the environment
       FAdditionalBrowserArguments             : wvstring;
@@ -114,6 +116,8 @@ type
       function  CreateEnvironment : boolean;
       procedure DestroyEnvironment;
 
+      function  Lock: boolean;
+      procedure UnLock;
       function  GetFileVersion(const aFile : wvstring; var aVersionInfo : TFileVersionInfo) : boolean;
       function  GetExtendedFileVersion(const aFileName : wvstring) : uint64;
       function  LoadLibProcedures : boolean;
@@ -182,6 +186,10 @@ type
       /// Append aText to the ErrorMessage property.
       /// </summary>
       procedure   AppendErrorLog(const aText : wvstring);
+      /// <summary>
+      /// Custom ID generator for the web workers.
+      /// </summary>
+      function    NextWorkerID: cardinal;
 
       /// <summary>
       /// Represents the global WebView2 Environment.
@@ -889,6 +897,8 @@ begin
   FOnBrowserProcessExited                 := nil;
   FOnGetCustomSchemes                     := nil;
   FStatus                                 := wvlsCreated;
+  FSyncObj                                := nil;
+  FWorkerIDGen                  := 0;
   FLibHandle                              := 0;
   FError                                  := 0;
   FBrowserExecPath                        := '';
@@ -975,6 +985,9 @@ begin
 
     if assigned(FErrorLog) then
       FreeAndNil(FErrorLog);
+
+    if assigned(FSyncObj) then
+      FreeAndNil(FSyncObj);
   finally
     inherited Destroy;
   end;
@@ -1114,6 +1127,23 @@ begin
     on e : exception do
       if CustomExceptionHandler('TWVLoader.GetFileVersion', e) then raise;
   end;
+end;
+
+function TWVLoader.Lock: boolean;
+begin
+  if assigned(FSyncObj) then
+    begin
+      FSyncObj.Acquire;
+      Result := True;
+    end
+   else
+    Result := False;
+end;
+
+procedure TWVLoader.UnLock;
+begin
+  if assigned(FSyncObj) then
+    FSyncObj.Release;
 end;
 
 function TWVLoader.LoadWebView2Library : boolean;
@@ -2079,6 +2109,23 @@ begin
   OutputDebugMessage({$IFDEF FPC}UTF8Encode({$ENDIF}aText{$IFDEF FPC}){$ENDIF});
   if assigned(FErrorLog) then
     FErrorLog.Add({$IFDEF FPC}UTF8Encode({$ENDIF}aText{$IFDEF FPC}){$ENDIF});
+end;
+
+function TWVLoader.NextWorkerID: cardinal;
+begin
+  Result := 0;
+
+  if Lock then
+    try
+      if (FWorkerIDGen < pred(high(cardinal))) then
+        inc(FWorkerIDGen)
+       else
+        FWorkerIDGen := 1;
+
+      Result := FWorkerIDGen;
+    finally
+      UnLock;
+    end;
 end;
 
 procedure TWVLoader.UpdateDeviceScaleFactor;

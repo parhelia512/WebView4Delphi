@@ -2269,6 +2269,137 @@ type
       property Deferral                      : ICoreWebView2Deferral                             read GetDeferral;
   end;
 
+  /// <summary>
+  /// Event args for the `DedicatedWorkerCreated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkercreatedeventargs">See the ICoreWebView2DedicatedWorkerCreatedEventArgs article.</see></para>
+  /// </remarks>
+  TCoreWebView2DedicatedWorkerCreatedEventArgs = class
+    protected
+      FBaseIntf : ICoreWebView2DedicatedWorkerCreatedEventArgs;
+
+      function  GetInitialized : boolean;
+      function  GetOriginalSourceFrameInfo : ICoreWebView2FrameInfo;
+      function  GetWorker : ICoreWebView2DedicatedWorker;
+
+    public
+      constructor Create(const aArgs: ICoreWebView2DedicatedWorkerCreatedEventArgs); reintroduce;
+      destructor  Destroy; override;
+
+      /// <summary>
+      /// Returns true when the interface implemented by this class is fully initialized.
+      /// </summary>
+      property Initialized                   : boolean                                           read GetInitialized;
+      /// <summary>
+      /// Returns the interface implemented by this class.
+      /// </summary>
+      property BaseIntf                      : ICoreWebView2DedicatedWorkerCreatedEventArgs      read FBaseIntf;
+      /// <summary>
+      /// The associated frame information that created the dedicated worker.
+      /// This can be used to get the frame source, name, frameId,
+      /// and parent frame information.
+      /// </summary>
+      property OriginalSourceFrameInfo       : ICoreWebView2FrameInfo                            read GetOriginalSourceFrameInfo;
+      /// <summary>
+      /// The dedicated worker that was created.
+      /// </summary>
+      property Worker                        : ICoreWebView2DedicatedWorker                      read GetWorker;
+  end;
+
+  /// <summary>
+  /// Event args for the `ServiceWorkerRegistered` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregisteredeventargs">See the ICoreWebView2ServiceWorkerRegisteredEventArgs article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerRegisteredEventArgs = class
+    protected
+      FBaseIntf : ICoreWebView2ServiceWorkerRegisteredEventArgs;
+
+      function  GetInitialized : boolean;
+      function  GetServiceWorkerRegistration : ICoreWebView2ServiceWorkerRegistration;
+
+    public
+      constructor Create(const aArgs: ICoreWebView2ServiceWorkerRegisteredEventArgs); reintroduce;
+      destructor  Destroy; override;
+
+      /// <summary>
+      /// Returns true when the interface implemented by this class is fully initialized.
+      /// </summary>
+      property Initialized                   : boolean                                           read GetInitialized;
+      /// <summary>
+      /// Returns the interface implemented by this class.
+      /// </summary>
+      property BaseIntf                      : ICoreWebView2ServiceWorkerRegisteredEventArgs     read FBaseIntf;
+      /// <summary>
+      /// The service worker that was registered.
+      /// </summary>
+      property ServiceWorkerRegistration     : ICoreWebView2ServiceWorkerRegistration            read GetServiceWorkerRegistration;
+  end;
+
+  /// <summary>
+  /// Event args for the `ServiceWorkerActivated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkeractivatedeventargs">See the ICoreWebView2ServiceWorkerActivatedEventArgs article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerActivatedEventArgs = class
+    protected
+      FBaseIntf : ICoreWebView2ServiceWorkerActivatedEventArgs;
+
+      function  GetInitialized : boolean;
+      function  GetActiveServiceWorker : ICoreWebView2ServiceWorker;
+
+    public
+      constructor Create(const aArgs: ICoreWebView2ServiceWorkerActivatedEventArgs); reintroduce;
+      destructor  Destroy; override;
+
+      /// <summary>
+      /// Returns true when the interface implemented by this class is fully initialized.
+      /// </summary>
+      property Initialized                   : boolean                                           read GetInitialized;
+      /// <summary>
+      /// Returns the interface implemented by this class.
+      /// </summary>
+      property BaseIntf                      : ICoreWebView2ServiceWorkerActivatedEventArgs      read FBaseIntf;
+      /// <summary>
+      /// The service worker that was activated.
+      /// </summary>
+      property ActiveServiceWorker           : ICoreWebView2ServiceWorker                        read GetActiveServiceWorker;
+  end;
+
+  /// <summary>
+  /// Event args for the `SharedWorkerCreated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercreatedeventargs">See the ICoreWebView2SharedWorkerCreatedEventArgs article.</see></para>
+  /// </remarks>
+  TCoreWebView2SharedWorkerCreatedEventArgs = class
+    protected
+      FBaseIntf : ICoreWebView2SharedWorkerCreatedEventArgs;
+
+      function  GetInitialized : boolean;
+      function  GetWorker : ICoreWebView2SharedWorker;
+
+    public
+      constructor Create(const aArgs: ICoreWebView2SharedWorkerCreatedEventArgs); reintroduce;
+      destructor  Destroy; override;
+
+      /// <summary>
+      /// Returns true when the interface implemented by this class is fully initialized.
+      /// </summary>
+      property Initialized                   : boolean                                           read GetInitialized;
+      /// <summary>
+      /// Returns the interface implemented by this class.
+      /// </summary>
+      property BaseIntf                      : ICoreWebView2SharedWorkerCreatedEventArgs         read FBaseIntf;
+      /// <summary>
+      /// The shared worker that was created.
+      /// </summary>
+      property Worker                        : ICoreWebView2SharedWorker                         read GetWorker;
+  end;
+
 implementation
 
 uses
@@ -4841,5 +4972,160 @@ begin
   if Initialized then
     FBaseIntf.Set_Handled(ord(aValue));
 end;
+
+
+// TCoreWebView2DedicatedWorkerCreatedEventArgs
+
+constructor TCoreWebView2DedicatedWorkerCreatedEventArgs.Create(const aArgs: ICoreWebView2DedicatedWorkerCreatedEventArgs);
+begin
+  inherited Create;
+
+  FBaseIntf := aArgs;
+end;
+
+destructor TCoreWebView2DedicatedWorkerCreatedEventArgs.Destroy;
+begin
+  FBaseIntf := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2DedicatedWorkerCreatedEventArgs.GetInitialized : boolean;
+begin
+  Result := assigned(FBaseIntf);
+end;
+
+function TCoreWebView2DedicatedWorkerCreatedEventArgs.GetOriginalSourceFrameInfo : ICoreWebView2FrameInfo;
+var
+  TempResult : ICoreWebView2FrameInfo;
+begin
+  Result     := nil;
+  TempResult := nil;
+
+  if Initialized and
+     succeeded(FBaseIntf.Get_OriginalSourceFrameInfo(TempResult)) and
+     (TempResult <> nil) then
+    Result := TempResult;
+end;
+
+function TCoreWebView2DedicatedWorkerCreatedEventArgs.GetWorker : ICoreWebView2DedicatedWorker;
+var
+  TempResult : ICoreWebView2DedicatedWorker;
+begin
+  Result     := nil;
+  TempResult := nil;
+
+  if Initialized and
+     succeeded(FBaseIntf.Get_Worker(TempResult)) and
+     (TempResult <> nil) then
+    Result := TempResult;
+end;
+
+
+// TCoreWebView2ServiceWorkerRegisteredEventArgs
+
+constructor TCoreWebView2ServiceWorkerRegisteredEventArgs.Create(const aArgs: ICoreWebView2ServiceWorkerRegisteredEventArgs);
+begin
+  inherited Create;
+
+  FBaseIntf := aArgs;
+end;
+
+destructor TCoreWebView2ServiceWorkerRegisteredEventArgs.Destroy;
+begin
+  FBaseIntf := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerRegisteredEventArgs.GetInitialized : boolean;
+begin
+  Result := assigned(FBaseIntf);
+end;
+
+function TCoreWebView2ServiceWorkerRegisteredEventArgs.GetServiceWorkerRegistration : ICoreWebView2ServiceWorkerRegistration;
+var
+  TempResult : ICoreWebView2ServiceWorkerRegistration;
+begin
+  Result     := nil;
+  TempResult := nil;
+
+  if Initialized and
+     succeeded(FBaseIntf.Get_ServiceWorkerRegistration(TempResult)) and
+     (TempResult <> nil) then
+    Result := TempResult;
+end;
+
+
+// TCoreWebView2ServiceWorkerActivatedEventArgs
+
+constructor TCoreWebView2ServiceWorkerActivatedEventArgs.Create(const aArgs: ICoreWebView2ServiceWorkerActivatedEventArgs);
+begin
+  inherited Create;
+
+  FBaseIntf := aArgs;
+end;
+
+destructor TCoreWebView2ServiceWorkerActivatedEventArgs.Destroy;
+begin
+  FBaseIntf := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerActivatedEventArgs.GetInitialized : boolean;
+begin
+  Result := assigned(FBaseIntf);
+end;
+
+function TCoreWebView2ServiceWorkerActivatedEventArgs.GetActiveServiceWorker : ICoreWebView2ServiceWorker;
+var
+  TempResult : ICoreWebView2ServiceWorker;
+begin
+  Result     := nil;
+  TempResult := nil;
+
+  if Initialized and
+     succeeded(FBaseIntf.Get_ActiveServiceWorker(TempResult)) and
+     (TempResult <> nil) then
+    Result := TempResult;
+end;
+
+
+// TCoreWebView2SharedWorkerCreatedEventArgs
+
+constructor TCoreWebView2SharedWorkerCreatedEventArgs.Create(const aArgs: ICoreWebView2SharedWorkerCreatedEventArgs);
+begin
+  inherited Create;
+
+  FBaseIntf := aArgs;
+end;
+
+destructor TCoreWebView2SharedWorkerCreatedEventArgs.Destroy;
+begin
+  FBaseIntf := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2SharedWorkerCreatedEventArgs.GetInitialized : boolean;
+begin
+  Result := assigned(FBaseIntf);
+end;
+
+function TCoreWebView2SharedWorkerCreatedEventArgs.GetWorker : ICoreWebView2SharedWorker;
+var
+  TempResult : ICoreWebView2SharedWorker;
+begin
+  Result     := nil;
+  TempResult := nil;
+
+  if Initialized and
+     succeeded(FBaseIntf.Get_Worker(TempResult)) and
+     (TempResult <> nil) then
+    Result := TempResult;
+end;
+
+
 
 end.

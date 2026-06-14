@@ -1,4 +1,4 @@
-unit uWVTypeLibrary;
+﻿unit uWVTypeLibrary;
 
 {$IFDEF FPC}{$MODE Delphi}{$ENDIF}
 
@@ -183,6 +183,13 @@ const
   IID_ICoreWebView2FindMatchCountChangedEventHandler: TGUID = '{DA0D6827-4254-5B10-A6D9-412076AFC9F3}';
   IID_ICoreWebView2FindOptions: TGUID = '{E82E3B2B-A4AF-5BC6-94C6-18B44157A16C}';
   IID_ICoreWebView2FindStartCompletedHandler: TGUID = '{6A90ECAF-44B0-5BD9-8F07-1967E17BE9FB}';
+  IID_ICoreWebView2_29: TGUID = '{650F917E-CC16-5C8C-9287-B0BBC8A4AB2C}';
+  IID_ICoreWebView2DedicatedWorkerCreatedEventHandler: TGUID = '{CBA7462C-52C1-5706-8BBC-E9FC36476DE4}';
+  IID_ICoreWebView2DedicatedWorkerCreatedEventArgs: TGUID = '{910C52AF-8129-516D-AB9A-B524E377D8AC}';
+  IID_ICoreWebView2DedicatedWorker: TGUID = '{66833876-EDBA-5A60-8508-7DA64504A9D2}';
+  IID_ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler: TGUID = '{A85B1B35-F6D7-5AE6-9FD7-57905DEFF79F}';
+  IID_ICoreWebView2DedicatedWorkerDestroyingEventHandler: TGUID = '{72473D5F-CBA2-57CA-A42E-03610A349FEF}';
+  IID_ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler: TGUID = '{B366218B-0BB8-58A3-AC33-F40A2235366E}';
   IID_ICoreWebView2AcceleratorKeyPressedEventArgs2: TGUID = '{03B2C8C8-7799-4E34-BD66-ED26AA85F2BF}';
   IID_ICoreWebView2BrowserExtension: TGUID = '{7EF7FFA0-FAC5-462C-B189-3D9EDBE575DA}';
   IID_ICoreWebView2BrowserExtensionRemoveCompletedHandler: TGUID = '{8E41909A-9B18-4BB1-8CDF-930F467A50BE}';
@@ -261,6 +268,8 @@ const
   IID_ICoreWebView2FrameScreenCaptureStartingEventHandler: TGUID = '{A6C1D8AD-BB80-59C5-895B-FBA1698B9309}';
   IID_ICoreWebView2Frame7: TGUID = '{3598CFA2-D85D-5A9F-9228-4DDE1F59EC64}';
   IID_ICoreWebView2FrameChildFrameCreatedEventHandler: TGUID = '{569E40E7-46B7-563D-83AE-1073155664D7}';
+  IID_ICoreWebView2Frame8: TGUID = '{9DEFF655-E3D5-5B8F-9107-52E66B3EC3FC}';
+  IID_ICoreWebView2FrameDedicatedWorkerCreatedEventHandler: TGUID = '{3E28D307-9D58-5306-8097-A79301DE4F05}';
   IID_ICoreWebView2FrameInfo2: TGUID = '{56F85CFA-72C4-11EE-B962-0242AC120002}';
   IID_ICoreWebView2NavigationCompletedEventArgs2: TGUID = '{FDF8B738-EE1E-4DB2-A329-8D7D7B74D792}';
   IID_ICoreWebView2NavigationStartingEventArgs2: TGUID = '{9086BE93-91AA-472D-A7E0-579F2BA006AD}';
@@ -287,6 +296,26 @@ const
   IID_ICoreWebView2BrowserExtensionList: TGUID = '{2EF3D2DC-BD5F-4F4D-90AF-FD67798F0C2F}';
   IID_ICoreWebView2Profile8: TGUID = '{FBF70C2F-EB1F-4383-85A0-163E92044011}';
   IID_ICoreWebView2ProfileDeletedEventHandler: TGUID = '{DF35055D-772E-4DBE-B743-5FBF74A2B258}';
+  IID_ICoreWebView2Profile9: TGUID = '{40C764D0-12FC-5D23-816D-971B353174C1}';
+  IID_ICoreWebView2ServiceWorkerManager: TGUID = '{A2D52FD4-9B10-5971-8499-C67D1560F47A}';
+  IID_ICoreWebView2ServiceWorkerRegisteredEventHandler: TGUID = '{C024C910-4DF2-54A3-B5C1-6152CA0E4577}';
+  IID_ICoreWebView2ServiceWorkerRegisteredEventArgs: TGUID = '{C6172932-407A-553B-B4D1-CDD12605EB6A}';
+  IID_ICoreWebView2ServiceWorkerRegistration: TGUID = '{06003F5E-AF92-5E7E-B497-3FA167DD37C2}';
+  IID_ICoreWebView2ServiceWorker: TGUID = '{245A7BB7-7C31-582D-95EE-0F2D99D2F5B0}';
+  IID_ICoreWebView2ServiceWorkerDestroyingEventHandler: TGUID = '{C7528449-5674-5E34-B990-FF4CEF046214}';
+  IID_ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler: TGUID = '{65F0A1A6-A295-5A9F-8041-70DB71566F98}';
+  IID_ICoreWebView2ServiceWorkerActivatedEventHandler: TGUID = '{ECAA9897-769D-5ECE-A1E5-8859818CAF86}';
+  IID_ICoreWebView2ServiceWorkerActivatedEventArgs: TGUID = '{5685C4B6-A514-58B2-9721-B61EF4CCD9D8}';
+  IID_ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler: TGUID = '{BEC01D14-6AD9-5257-9FF6-84F01BAA0CCA}';
+  IID_ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler: TGUID = '{EA83432F-6528-592F-903B-0917EB0FD9C7}';
+  IID_ICoreWebView2ServiceWorkerRegistrationCollectionView: TGUID = '{83D8CFA9-EF83-5447-9431-91C203C4C9D8}';
+  IID_ICoreWebView2SharedWorkerManager: TGUID = '{9B897103-D035-551F-892E-3E8F2916D03E}';
+  IID_ICoreWebView2SharedWorkerCreatedEventHandler: TGUID = '{79CB8524-B842-551A-8D31-5F824B6955ED}';
+  IID_ICoreWebView2SharedWorkerCreatedEventArgs: TGUID = '{9F6615B0-08F1-5BAA-9C95-A02A1DC56D3F}';
+  IID_ICoreWebView2SharedWorker: TGUID = '{BCD39C8D-48BB-5F1B-BE22-89F9C0C4484A}';
+  IID_ICoreWebView2SharedWorkerDestroyingEventHandler: TGUID = '{5A459F84-FD04-5CCE-A998-6FAB56F09EEB}';
+  IID_ICoreWebView2GetSharedWorkersCompletedHandler: TGUID = '{1F3179AE-15E5-51E4-8583-BE0CAF85ADC7}';
+  IID_ICoreWebView2SharedWorkerCollectionView: TGUID = '{F8842B09-0108-5575-A965-3D76FD267050}';
   IID_ICoreWebView2Settings2: TGUID = '{EE9A0F68-F46C-4E32-AC23-EF8CAC224D2A}';
   IID_ICoreWebView2Settings3: TGUID = '{FDB5AB74-AF33-4854-84F0-0A631DEB5EBA}';
   IID_ICoreWebView2Settings4: TGUID = '{CB56846C-4168-4D53-B04F-03B6D6796FF2}';
@@ -3317,6 +3346,13 @@ type
   ICoreWebView2FindMatchCountChangedEventHandler = interface;
   ICoreWebView2FindOptions = interface;
   ICoreWebView2FindStartCompletedHandler = interface;
+  ICoreWebView2_29 = interface;
+  ICoreWebView2DedicatedWorkerCreatedEventHandler = interface;
+  ICoreWebView2DedicatedWorkerCreatedEventArgs = interface;
+  ICoreWebView2DedicatedWorker = interface;
+  ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler = interface;
+  ICoreWebView2DedicatedWorkerDestroyingEventHandler = interface;
+  ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler = interface;
   ICoreWebView2AcceleratorKeyPressedEventArgs2 = interface;
   ICoreWebView2BrowserExtension = interface;
   ICoreWebView2BrowserExtensionRemoveCompletedHandler = interface;
@@ -3395,6 +3431,8 @@ type
   ICoreWebView2FrameScreenCaptureStartingEventHandler = interface;
   ICoreWebView2Frame7 = interface;
   ICoreWebView2FrameChildFrameCreatedEventHandler = interface;
+  ICoreWebView2Frame8 = interface;
+  ICoreWebView2FrameDedicatedWorkerCreatedEventHandler = interface;
   ICoreWebView2FrameInfo2 = interface;
   ICoreWebView2NavigationCompletedEventArgs2 = interface;
   ICoreWebView2NavigationStartingEventArgs2 = interface;
@@ -3421,6 +3459,26 @@ type
   ICoreWebView2BrowserExtensionList = interface;
   ICoreWebView2Profile8 = interface;
   ICoreWebView2ProfileDeletedEventHandler = interface;
+  ICoreWebView2Profile9 = interface;
+  ICoreWebView2ServiceWorkerManager = interface;
+  ICoreWebView2ServiceWorkerRegisteredEventHandler = interface;
+  ICoreWebView2ServiceWorkerRegisteredEventArgs = interface;
+  ICoreWebView2ServiceWorkerRegistration = interface;
+  ICoreWebView2ServiceWorker = interface;
+  ICoreWebView2ServiceWorkerDestroyingEventHandler = interface;
+  ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler = interface;
+  ICoreWebView2ServiceWorkerActivatedEventHandler = interface;
+  ICoreWebView2ServiceWorkerActivatedEventArgs = interface;
+  ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler = interface;
+  ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler = interface;
+  ICoreWebView2ServiceWorkerRegistrationCollectionView = interface;
+  ICoreWebView2SharedWorkerManager = interface;
+  ICoreWebView2SharedWorkerCreatedEventHandler = interface;
+  ICoreWebView2SharedWorkerCreatedEventArgs = interface;
+  ICoreWebView2SharedWorker = interface;
+  ICoreWebView2SharedWorkerDestroyingEventHandler = interface;
+  ICoreWebView2GetSharedWorkersCompletedHandler = interface;
+  ICoreWebView2SharedWorkerCollectionView = interface;
   ICoreWebView2Settings2 = interface;
   ICoreWebView2Settings3 = interface;
   ICoreWebView2Settings4 = interface;
@@ -10199,6 +10257,262 @@ type
   end;
 
   /// <summary>
+  /// A continuation of the ICoreWebView2 interface to manage dedicated
+  /// workers.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_29">See the ICoreWebView2_29 article.</see></para>
+  /// </remarks>
+  ICoreWebView2_29 = interface(ICoreWebView2_28)
+    ['{650F917E-CC16-5C8C-9287-B0BBC8A4AB2C}']
+    /// <summary>
+    /// Adds an event handler for the `DedicatedWorkerCreated` event.
+    /// Subscribe to this event that gets raised when a new dedicated worker is created.
+    ///
+    /// A Dedicated Worker is a type of web worker that allows you to run Javascript
+    /// code in the background without blocking the main thread, making them useful
+    /// for tasks like heavy computations, data processing, and parallel execution.
+    /// It is "dedicated" because it is linked to a single parent document and cannot
+    /// be shared with other scripts.
+    ///
+    /// This event is raised when a web application creates a dedicated worker using the
+    /// `new Worker("/worker.js")` method. See the
+    /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+    /// for more information.
+    ///
+    ///
+    /// \snippet ScenarioDedicatedWorker.cpp DedicatedWorkerCreated
+    /// </summary>
+    function add_DedicatedWorkerCreated(const eventHandler: ICoreWebView2DedicatedWorkerCreatedEventHandler;
+                                        out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_DedicatedWorkerCreated`.
+    /// </summary>
+    function remove_DedicatedWorkerCreated(token: EventRegistrationToken): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkercreatedeventhandler">See the ICoreWebView2DedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorkerCreatedEventHandler = interface(IUnknown)
+    ['{CBA7462C-52C1-5706-8BBC-E9FC36476DE4}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2;
+                    const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Event args for the `DedicatedWorkerCreated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkercreatedeventargs">See the ICoreWebView2DedicatedWorkerCreatedEventArgs article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorkerCreatedEventArgs = interface(IUnknown)
+    ['{910C52AF-8129-516D-AB9A-B524E377D8AC}']
+    /// <summary>
+    /// The associated frame information that created the dedicated worker.
+    /// This can be used to get the frame source, name, frameId,
+    /// and parent frame information.
+    /// </summary>
+    function Get_OriginalSourceFrameInfo(out value: ICoreWebView2FrameInfo): HResult; stdcall;
+    /// <summary>
+    /// The dedicated worker that was created.
+    /// </summary>
+    function Get_Worker(out value: ICoreWebView2DedicatedWorker): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface represents a dedicated worker in WebView2 and provides methods
+  /// and properties for interacting with it, such as getting the script uri,
+  /// posting messages, managing events related to the creation of child workers,
+  /// termination etc.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker">See the ICoreWebView2DedicatedWorker article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorker = interface(IUnknown)
+    ['{66833876-EDBA-5A60-8508-7DA64504A9D2}']
+    /// <summary>
+    /// A string representing the Uri of the script that the worker is executing.
+    ///
+    /// The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
+    /// In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
+    /// URL of the script being executed by the worker. For more details on DOM API, see the
+    /// [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    /// The same process applies to the `scriptURL` when a worker is created from DOM API.
+    /// The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
+    /// `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
+    /// `https://bücher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_ScriptUri(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `DedicatedWorkerCreated` event.
+    /// Subscribe to this event that gets raised when a new dedicated worker is created from a
+    /// dedicated worker.
+    ///
+    /// A Dedicated Worker is a type of web worker that allows you to run Javascript
+    /// code in the background without blocking the main thread, making them useful
+    /// for tasks like heavy computations, data processing, and parallel execution.
+    /// It is "dedicated" because it is linked to a single parent document and cannot
+    /// be shared with other scripts.
+    ///
+    /// This event is raised when a dedicated creates a dedicated worker using the
+    /// `new Worker("/worker.js")` method. See the
+    /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+    /// for more information.
+    /// </summary>
+    function add_DedicatedWorkerCreated(const eventHandler: ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler;
+                                        out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_DedicatedWorkerCreated`.
+    /// </summary>
+    function remove_DedicatedWorkerCreated(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `Destroying` event.
+    /// Add an event handler for the `Destroying` event that is raised when the
+    /// worker object is Destroying.
+    ///
+    /// A worker object is Destroying when the worker script is terminated or when
+    /// the `CoreWebView2DedicatedWorker` object is Destroying.
+    ///
+    /// If the worker has already been destroyed before the event handler is registered,
+    /// the handler will never be called.
+    /// </summary>
+    function add_Destroying(const eventHandler: ICoreWebView2DedicatedWorkerDestroyingEventHandler;
+                            out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_Destroying`.
+    /// </summary>
+    function remove_Destroying(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `WebMessageReceived` event.
+    /// Add an event handler for the `WebMessageReceived` event.
+    /// `WebMessageReceived` is fired, when the
+    /// `ICoreWebView2Settings::IsWebMessageEnabled` setting is set TRUE and the
+    /// worker runs `self.chrome.webview.postMessage`. The `postMessage` function
+    /// is `void postMessage(object)` where object is any object supported by JSON
+    /// conversion.
+    ///
+    /// If the worker calls `postMessage` multiple times, the corresponding
+    /// `WebMessageReceived` events are guaranteed to be fired in the same order.
+    ///
+    ///
+    /// \snippet ScenarioDedicatedWorkerPostMessage.cpp WebMessageReceived
+    /// </summary>
+    function add_WebMessageReceived(const eventHandler: ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler;
+                                    out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_WebMessageReceived`.
+    /// </summary>
+    function remove_WebMessageReceived(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Posts the specified webMessageAsJson to this worker.
+    /// The worker receives the message by subscribing to the `message` event of the
+    /// `self.chrome.webview` of the worker.
+    ///
+    /// ```cpp
+    /// self.chrome.webview.addEventListener('message', handler)
+    /// self.chrome.webview.removeEventListener('message', handler)
+    /// ```
+    ///
+    /// The event args is an instance of `MessageEvent`. The
+    /// `ICoreWebView2Settings::IsWebMessageEnabled` setting must be `TRUE` or
+    /// the web message will not be sent. The `data` property of the event arg
+    /// is the `webMessageAsJson` string parameter parsed as a JSON string into a
+    /// JS object. The `source` property of the event arg is the path
+    /// to the worker script. The message is delivered asynchronously.
+    /// If the worker is terminated or destroyed before the message is posted,
+    /// the message is discarded.
+    /// Worker Javascript may subscribe and unsubscribe to the event
+    /// using the following code:
+    /// ```javascript
+    /// self.chrome.webview.addEventListener('message', handler)
+    /// self.chrome.webview.removeEventListener('message', handler)
+    /// ```
+    /// ```cpp
+    /// See also the equivalent methods: `ICoreWebView2::PostWebMessageAsJson`,
+    /// `ICoreWebView2Frame::PostWebMessageAsJson`,
+    /// `ICoreWebView2ServiceWorker::PostWebMessageAsJson`.
+    /// ```
+    ///
+    ///
+    /// \snippet ScenarioDedicatedWorkerPostMessage.cpp PostWebMessageAsJson
+    /// </summary>
+    function PostWebMessageAsJson(webMessageAsJson: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Posts a message that is a simple string rather than a JSON string
+    /// representation of a JavaScript object. This behaves exactly the same
+    /// manner as `PostWebMessageAsJson`, but the `data` property of the event
+    /// arg of the `self.chrome.webview` message is a string with the same
+    /// value as `webMessageAsString`.  Use this instead of
+    /// `PostWebMessageAsJson` if you want to communicate using simple strings
+    /// rather than JSON objects. Please see `PostWebMessageAsJson` for
+    /// additional information.
+    /// ```cpp
+    /// See also the equivalent methods: `ICoreWebView2::PostWebMessageAsString`,
+    /// `ICoreWebView2Frame::PostWebMessageAsString`,
+    /// `ICoreWebView2ServiceWorker::PostWebMessageAsString`.
+    /// ```
+    /// </summary>
+    function PostWebMessageAsString(webMessageAsString: PWideChar): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerdedicatedworkercreatedeventhandler">See the ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler = interface(IUnknown)
+    ['{A85B1B35-F6D7-5AE6-9FD7-57905DEFF79F}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2DedicatedWorker;
+                    const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerdestroyingeventhandler">See the ICoreWebView2DedicatedWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorkerDestroyingEventHandler = interface(IUnknown)
+    ['{72473D5F-CBA2-57CA-A42E-03610A349FEF}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2DedicatedWorker; const args: IUnknown): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `WebMessageReceived` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerwebmessagereceivedeventhandler">See the ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler = interface(IUnknown)
+    ['{B366218B-0BB8-58A3-AC33-F40A2235366E}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2DedicatedWorker;
+                    const args: ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
   /// Event args for the BrowserProcessExited event.
   /// </summary>
   /// <remarks>
@@ -13004,6 +13318,54 @@ type
   end;
 
   /// <summary>
+  /// A continuation of the `ICoreWebView2Frame` interface to manage dedicated
+  /// workers.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame8">See the ICoreWebView2Frame8 article.</see></para>
+  /// </remarks>
+  ICoreWebView2Frame8 = interface(ICoreWebView2Frame7)
+    ['{9DEFF655-E3D5-5B8F-9107-52E66B3EC3FC}']
+    /// <summary>
+    /// Adds an event handler for the `DedicatedWorkerCreated` event.
+    /// Subscribe to this event that gets raised when a new dedicated worker is created
+    /// from an iframe.
+    ///
+    /// A Dedicated Worker is a type of web worker that allows you to run Javascript
+    /// code in the background without blocking the main thread, making them useful
+    /// for tasks like heavy computations, data processing, and parallel execution.
+    /// It is "dedicated" because it is linked to a single parent document and cannot
+    /// be shared with other scripts.
+    ///
+    /// This event is raised when a web application creates a dedicated worker using the
+    /// `new Worker("/worker.js")` method. See the
+    /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+    /// for more information.
+    /// </summary>
+    function add_DedicatedWorkerCreated(const eventHandler: ICoreWebView2FrameDedicatedWorkerCreatedEventHandler;
+                                        out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_DedicatedWorkerCreated`.
+    /// </summary>
+    function remove_DedicatedWorkerCreated(token: EventRegistrationToken): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2framededicatedworkercreatedeventhandler">See the ICoreWebView2FrameDedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2FrameDedicatedWorkerCreatedEventHandler = interface(IUnknown)
+    ['{3E28D307-9D58-5306-8097-A79301DE4F05}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2Frame;
+                    const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
   /// A continuation of the ICoreWebView2FrameInfo interface that provides
   /// `ParentFrameInfo`, `FrameId` and `FrameKind` properties.
   /// </summary>
@@ -14008,6 +14370,691 @@ type
     /// Provides the event args for the corresponding event.
     /// </summary>
     function Invoke(const sender: ICoreWebView2Profile; const args: IUnknown): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// A continuation of the ICoreWebView2Profile interface to manage service workers,
+  /// shared workers, and service worker script API settings.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9">See the ICoreWebView2Profile9 article.</see></para>
+  /// </remarks>
+  ICoreWebView2Profile9 = interface(ICoreWebView2Profile8)
+    ['{40C764D0-12FC-5D23-816D-971B353174C1}']
+    /// <summary>
+    /// Gets the `AreWebViewScriptApisEnabledForServiceWorkers` property.
+    /// </summary>
+    function Get_AreWebViewScriptApisEnabledForServiceWorkers(out value: Integer): HResult; stdcall;
+    /// <summary>
+    /// Enables or disables webview2 specific Service Worker JS APIs in the
+    /// WebView2s associated with this Profile. When set to `TRUE`, chrome and
+    /// webview objects are available in Service Workers. chrome.webview exposes
+    /// APIs to interact with the WebView from Service Workers. The default value
+    /// is `FALSE`. This setting applies to all newly installed Service Workers
+    /// within the profile and is not persisted across WebView2 sessions.
+    /// \snippet ScenarioServiceWorkerPostMessageSetting.cpp AreWebViewScriptApisEnabledForServiceWorkers
+    /// </summary>
+    function Set_AreWebViewScriptApisEnabledForServiceWorkers(value: Integer): HResult; stdcall;
+    /// <summary>
+    /// Get the service worker manager to monitor service worker registrations and
+    /// interact with the service workers associated with the current profile.
+    ///
+    /// \snippet ScenarioServiceWorkerManager.cpp ServiceWorkerManager
+    /// </summary>
+    function Get_ServiceWorkerManager(out value: ICoreWebView2ServiceWorkerManager): HResult; stdcall;
+    /// <summary>
+    /// Get the shared worker manager to monitor shared worker creations and interact
+    /// with the shared workers associated with the current profile.
+    ///
+    /// \snippet ScenarioSharedWorkerManager.cpp SharedWorkerManager
+    /// </summary>
+    function Get_SharedWorkerManager(out value: ICoreWebView2SharedWorkerManager): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface manages registrations for service workers in WebView2.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager">See the ICoreWebView2ServiceWorkerManager article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerManager = interface(IUnknown)
+    ['{A2D52FD4-9B10-5971-8499-C67D1560F47A}']
+    /// <summary>
+    /// Adds an event handler for the `ServiceWorkerRegistered` event.
+    /// A ServiceWorker is a specific type of worker that takes a JavaScript file
+    /// that can control the web-page/site that it is associated with,
+    /// intercepting and modifying navigation and resource requests, and caching
+    /// resources in a very granular fashion to give you complete control
+    /// over how app behaves in certain situations.
+    ///
+    /// Service workers essentially act as proxy servers that sit between web
+    /// applications, the browser, and the network (when available). They run in
+    /// a different context from the web page, which means they have no direct access
+    /// to the DOM. Unlike dedicated and shared workers, which may have direct access to a
+    /// global scope shared with other scripts, service workers operate in isolation
+    /// from the DOM, ensuring a more secure and controlled environment.
+    ///
+    /// This event is raised when a web application registers a service worker using the
+    /// `navigator.serviceWorker.register("/sw.js")` method. See the
+    /// [Service Worker Registration](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration)
+    /// for more information.
+    ///
+    /// \snippet ScenarioServiceWorkerManager.cpp ServiceWorkerRegistered
+    /// </summary>
+    function add_ServiceWorkerRegistered(const eventHandler: ICoreWebView2ServiceWorkerRegisteredEventHandler;
+                                         out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_ServiceWorkerRegistered`.
+    /// </summary>
+    function remove_ServiceWorkerRegistered(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Gets a list of the service worker registrations under the same profile.
+    ///
+    /// This method returns a list of `CoreWebView2ServiceWorkerRegistration` objects,
+    /// each representing a service worker registration.
+    ///
+    /// This method corresponds to the `getRegistrations` method of the `ServiceWorkerContainer`
+    /// object in the DOM which returns a Promise that resolves to an array of
+    /// `ServiceWorkerRegistration` objects. See the [MDN documentation]
+    /// (https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistrations) for more information.
+    /// </summary>
+    function GetServiceWorkerRegistrations(const handler: ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler): HResult; stdcall;
+    /// <summary>
+    /// Gets the service worker registrations associated with the specified scope.
+    /// If a service worker has been registered for the given scope, it gets the
+    /// list of `CoreWebView2ServiceWorkerRegistration` objects otherwise returns
+    /// empty list.
+    ///
+    /// If the service worker is registered with a `scope` of '/app/' for an application
+    /// at https://example.com/, you should specify the full qualified URI i.e.,
+    /// https://example.com/app/ when calling this method. If the scope was not explicitly
+    /// specified during registration, you should use the directory where the service worker
+    /// script resides, for example, https://example.com/app/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how provided `scriptUri` normalization is performed. For example, `HTTPS://münchen.de/`
+    /// will be normalized to `https://www.xn--kfk.com` for comparison.
+    ///
+    /// This corresponds to the `getRegistration` method of the `ServiceWorkerContainer`
+    /// object in the DOM which returns a Promise that resolves to a `ServiceWorkerRegistration`
+    /// object. See the [MDN documentation]
+    /// (https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/getRegistration) for more information.
+    ///
+    /// If scopeUri is empty string or null or invalid, the completed handler immediately returns
+    /// `E_INVALIDARG` and with a null pointer.
+    /// </summary>
+    function GetServiceWorkerRegistrationsForScope(ScopeUri: PWideChar;
+                                                   const handler: ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `ServiceWorkerRegistered` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregisteredeventhandler">See the ICoreWebView2ServiceWorkerRegisteredEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerRegisteredEventHandler = interface(IUnknown)
+    ['{C024C910-4DF2-54A3-B5C1-6152CA0E4577}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2ServiceWorkerManager;
+                    const args: ICoreWebView2ServiceWorkerRegisteredEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Event args for the `ServiceWorkerRegistered` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregisteredeventargs">See the ICoreWebView2ServiceWorkerRegisteredEventArgs article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerRegisteredEventArgs = interface(IUnknown)
+    ['{C6172932-407A-553B-B4D1-CDD12605EB6A}']
+    /// <summary>
+    /// The service worker that was registered.
+    /// </summary>
+    function Get_ServiceWorkerRegistration(out value: ICoreWebView2ServiceWorkerRegistration): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface represents a service worker registration in WebView2 and provides methods
+  /// and properties for interacting with it, such as getting the scope uri, active service worker,
+  /// listening for service worker activation, unregistering events etc.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration">See the ICoreWebView2ServiceWorkerRegistration article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerRegistration = interface(IUnknown)
+    ['{06003F5E-AF92-5E7E-B497-3FA167DD37C2}']
+    /// <summary>
+    /// The active service worker that was created. If there is no active service worker,
+    /// it returns a null pointer.
+    /// The active service worker is the service worker that controls the pages within
+    /// the scope of the registration. See the [Service Worker]
+    /// (https://developer.mozilla.org/docs/Web/API/ServiceWorker) for more information.
+    ///
+    /// This corresponds to the `active` property of the `ServiceWorkerRegistration` object in the DOM.
+    /// For more information, see the [MDN documentation]
+    /// (https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/active).
+    /// </summary>
+    function Get_ActiveServiceWorker(out value: ICoreWebView2ServiceWorker): HResult; stdcall;
+    /// <summary>
+    /// A string representing the URI of the origin where the worker is executing.
+    ///
+    /// If a worker created with `ScriptUri` set to https://example.com/worker.js, the origin
+    /// will be https://example.com/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_origin(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// The `scopeUri` is a fully qualified URI, including the scheme, host and path,
+    /// that specifies the range of URLs a service worker can control.
+    ///
+    /// When registering a service worker, if no scope is specified, it defaults to the
+    /// directory where the service worker script resides. For example, if the script is
+    /// located at https://example.com/app/sw.js, the default `scopeUri` would be
+    /// https://example.com/app/. However, if a scope is provided, it is defined relative
+    /// to the application's base URI. For instance, if an application at
+    /// https://example.com/ registers a service worker with a scope of /app/, the resulting
+    /// `scopeUri` is https://example.com/app/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    /// The same process applies to the `Scope` when a service worker is registered from DOM API.
+    /// The `scopeUri` property reflects this normalization, ensuring that the URI is standardized. For example,
+    /// `HTTPS://EXAMPLE.COM/app/` is canonicalized to `https://example.com/app/`;
+    /// `https://bücher.de/` is canonicalized to `https://xn--bcher-kva.de/`.
+    ///
+    /// The `scope` property of the `ServiceWorkerRegistration` object in the DOM returns
+    /// the relative URL based on the application's base URI, while this property always
+    /// returns a fully qualified URI.  For more information on DOM API, see the
+    /// [MDN documentation](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/scope).
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_ScopeUri(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// A string representing the URI of the top-level document that the worker is associated with.
+    ///
+    /// If a worker is created with `ScriptUri` set to https://example.com/worker.js, the top-level origin
+    /// is https://example.com/. If the same worker is created from a iframe at https://example.com/ which is hosted on
+    /// https://example2.com/, the top-level origin is https://example2.com/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    ///
+    /// When CustomDataPartitionId is set, the `TopLevelOrigin` will be a generated
+    /// site like guid.invalid. For example, if the top-level document is https://example.com/worker.js,
+    /// the top-level origin will be `https://guid.invalid/`.
+    ///
+    /// For more details see `ICoreWebView2Experimental20::CustomDataPartitionId`.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_TopLevelOrigin(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `ServiceWorkerActivated` event.
+    /// Adds an event handler for the `ServiceWorkerActivated` event.
+    ///
+    /// This event is raised when a service worker is activated. A service worker is
+    /// activated when its script has been successfully registered and it is ready to
+    /// control the pages within the scope of the registration.
+    ///
+    /// This event is also raised when an updated version of a service worker reaches the active state.
+    /// In such a case, the existing CoreWebView2ServiceWorker object is destroying, and this event is
+    /// raised with a new CoreWebView2ServiceWorker object representing the updated service worker.
+    /// The active service worker is the one that receives fetch and message events for the pages it controls.
+    /// See the [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active)
+    /// documentation for more information.
+    ///
+    /// If you register for the `ServiceWorkerActivated` event and the registration already
+    /// has an active worker, the event handler is not called immediately. Instead, it waits
+    /// for the next activation event to occur. Therefore, you should first check if an active
+    /// service worker is running by using the `ActiveServiceWorker` property.
+    /// </summary>
+    function add_ServiceWorkerActivated(const eventHandler: ICoreWebView2ServiceWorkerActivatedEventHandler;
+                                        out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_ServiceWorkerActivated`.
+    /// </summary>
+    function remove_ServiceWorkerActivated(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `Unregistering` event.
+    /// Add an event handler for the `Unregistering` event that is raised when the worker registration is
+    /// unregistered using the JS api `registration.unregister()`. See the
+    /// [Unregister](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister)
+    /// for more information.
+    /// </summary>
+    function add_Unregistering(const eventHandler: ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler;
+                               out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_Unregistering`.
+    /// </summary>
+    function remove_Unregistering(token: EventRegistrationToken): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface represents a service worker in WebView2 and provides methods and properties
+  /// for interacting with it, such as getting the script uri, posting messages to it etc.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker">See the ICoreWebView2ServiceWorker article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorker = interface(IUnknown)
+    ['{245A7BB7-7C31-582D-95EE-0F2D99D2F5B0}']
+    /// <summary>
+    /// A string representing the Uri of the script that the worker is executing.
+    ///
+    /// The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
+    /// In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
+    /// URL of the script being executed by the worker. For more details on DOM API, see the
+    /// [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    /// The same process applies to the `scriptURL` when a worker is registered from DOM API.
+    /// The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
+    /// `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
+    /// `https://bücher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_ScriptUri(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `Destroying` event.
+    /// Add an event handler for the `Destroying` event that is raised when the
+    /// worker object is Destroying.
+    ///
+    /// A worker object is Destroying when the worker script is terminated or when
+    /// the `CoreWebView2ServiceWorker` object is Destroying.
+    ///
+    /// If the worker has already been destroyed before the event handler is registered,
+    /// the handler will never be called.
+    /// </summary>
+    function add_Destroying(const eventHandler: ICoreWebView2ServiceWorkerDestroyingEventHandler;
+                            out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_Destroying`.
+    /// </summary>
+    function remove_Destroying(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `WebMessageReceived` event.
+    /// Add an event handler for the `WebMessageReceived` event.
+    /// `WebMessageReceived` is fired, when the
+    /// `ICoreWebView2Settings::IsWebMessageEnabled` setting is set TRUE and the
+    /// worker runs `self.chrome.webview.postMessage`. The `postMessage` function
+    /// is `void postMessage(object)` where object is any object supported by JSON
+    /// conversion.
+    ///
+    /// If the worker calls `postMessage` multiple times, the corresponding
+    /// `WebMessageReceived` events are guaranteed to be fired in the same order.
+    ///
+    ///
+    /// \snippet ScenarioServiceWorkerPostMessage.cpp WebMessageReceived
+    /// </summary>
+    function add_WebMessageReceived(const eventHandler: ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler;
+                                    out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_WebMessageReceived`.
+    /// </summary>
+    function remove_WebMessageReceived(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Posts the specified webMessageAsJson to this worker.
+    /// The worker receives the message by subscribing to the `message` event of the
+    /// `self.chrome.webview` of the worker.
+    ///
+    /// ```cpp
+    /// self.chrome.webview.addEventListener('message', handler)
+    /// self.chrome.webview.removeEventListener('message', handler)
+    /// ```
+    ///
+    /// The event args is an instance of `MessageEvent`. Both the
+    /// `ICoreWebView2Profile::AreWebViewScriptApisEnabledForServiceWorkers` and
+    /// `ICoreWebView2Settings::IsWebMessageEnabled` settings must be `TRUE` or
+    /// the web message will not be sent. The `data` property of the event arg
+    /// is the `webMessageAsJson` string parameter parsed as a JSON string into a
+    /// JS object. The `source` property of the event arg is the path
+    /// to the worker script. The message is delivered asynchronously.
+    /// If the worker is terminated or destroyed before the message is posted,
+    /// the message is discarded.
+    /// Worker Javascript may subscribe and unsubscribe to the event
+    /// using the following code:
+    /// ```javascript
+    /// self.chrome.webview.addEventListener('message', handler)
+    /// self.chrome.webview.removeEventListener('message', handler)
+    /// ```
+    /// ```cpp
+    /// See also the equivalent methods: `ICoreWebView2::PostWebMessageAsJson`,
+    /// `ICoreWebView2Frame::PostWebMessageAsJson`,
+    /// `ICoreWebView2DedicatedWorker::PostWebMessageAsJson`.
+    /// ```
+    ///
+    ///
+    /// \snippet ScenarioServiceWorkerPostMessage.cpp PostWebMessageAsJson
+    /// </summary>
+    function PostWebMessageAsJson(webMessageAsJson: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Posts a message that is a simple string rather than a JSON string
+    /// representation of a JavaScript object. This behaves exactly the same
+    /// manner as `PostWebMessageAsJson`, but the `data` property of the event
+    /// arg of the `self.chrome.webview` message is a string with the same
+    /// value as `webMessageAsString`.  Use this instead of
+    /// `PostWebMessageAsJson` if you want to communicate using simple strings
+    /// rather than JSON objects. Please see `PostWebMessageAsJson` for
+    /// additional information.
+    /// ```cpp
+    /// See also the equivalent methods: `ICoreWebView2::PostWebMessageAsString`
+    /// `ICoreWebView2Frame::PostWebMessageAsString`,
+    /// `ICoreWebView2DedicatedWorker::PostWebMessageAsString`.
+    /// ```
+    /// </summary>
+    function PostWebMessageAsString(webMessageAsString: PWideChar): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerdestroyingeventhandler">See the ICoreWebView2ServiceWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerDestroyingEventHandler = interface(IUnknown)
+    ['{C7528449-5674-5E34-B990-FF4CEF046214}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2ServiceWorker; const args: IUnknown): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `WebMessageReceived` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerwebmessagereceivedeventhandler">See the ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler = interface(IUnknown)
+    ['{65F0A1A6-A295-5A9F-8041-70DB71566F98}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2ServiceWorker;
+                    const args: ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `ServiceWorkerActivated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkeractivatedeventhandler">See the ICoreWebView2ServiceWorkerActivatedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerActivatedEventHandler = interface(IUnknown)
+    ['{ECAA9897-769D-5ECE-A1E5-8859818CAF86}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2ServiceWorkerRegistration;
+                    const args: ICoreWebView2ServiceWorkerActivatedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Event args for the `ServiceWorkerActivated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkeractivatedeventargs">See the ICoreWebView2ServiceWorkerActivatedEventArgs article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerActivatedEventArgs = interface(IUnknown)
+    ['{5685C4B6-A514-58B2-9721-B61EF4CCD9D8}']
+    /// <summary>
+    /// The service worker that was activated.
+    /// </summary>
+    function Get_ActiveServiceWorker(out value: ICoreWebView2ServiceWorker): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `Unregistering` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistrationunregisteringeventhandler">See the ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler = interface(IUnknown)
+    ['{BEC01D14-6AD9-5257-9FF6-84F01BAA0CCA}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives the result of the `GetServiceWorkerRegistrations` method.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getserviceworkerregistrationscompletedhandler">See the ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler = interface(IUnknown)
+    ['{EA83432F-6528-592F-903B-0917EB0FD9C7}']
+    /// <summary>
+    /// Provides the result of the corresponding asynchronous method.
+    /// </summary>
+    function Invoke(errorCode: HResult;
+                    const result: ICoreWebView2ServiceWorkerRegistrationCollectionView): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// A collection of ICoreWebView2ServiceWorkerRegistration.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistrationcollectionview">See the ICoreWebView2ServiceWorkerRegistrationCollectionView article.</see></para>
+  /// </remarks>
+  ICoreWebView2ServiceWorkerRegistrationCollectionView = interface(IUnknown)
+    ['{83D8CFA9-EF83-5447-9431-91C203C4C9D8}']
+    /// <summary>
+    /// The number of elements contained in the collection.
+    /// </summary>
+    function Get_Count(out value: SYSUINT): HResult; stdcall;
+    /// <summary>
+    /// Gets the element at the given index.
+    /// </summary>
+    function GetValueAtIndex(index: SYSUINT; out value: ICoreWebView2ServiceWorkerRegistration): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface manages shared workers in WebView2.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkermanager">See the ICoreWebView2SharedWorkerManager article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorkerManager = interface(IUnknown)
+    ['{9B897103-D035-551F-892E-3E8F2916D03E}']
+    /// <summary>
+    /// Adds an event handler for the `SharedWorkerCreated` event.
+    /// Add an event handler for the `SharedWorkerCreated` event.
+    ///
+    /// A SharedWorker is a specific type of worker that can be accessed from several
+    /// browsing contexts, such as multiple windows, iframes, or even other workers.
+    /// Unlike Dedicated Workers, which have their own separate global scope, SharedWorkers
+    /// share a common global scope called SharedWorkerGlobalScope.
+    ///
+    /// This event is raised when a web application creates a shared worker using the
+    /// `new SharedWorker("worker.js")` method. See the
+    /// [Shared Worker](https://developer.mozilla.org/docs/Web/API/SharedWorker)
+    /// for more information.
+    ///
+    ///
+    /// \snippet ScenarioSharedWorkerManager.cpp SharedWorkerCreated
+    /// </summary>
+    function add_SharedWorkerCreated(const eventHandler: ICoreWebView2SharedWorkerCreatedEventHandler;
+                                     out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_SharedWorkerCreated`.
+    /// </summary>
+    function remove_SharedWorkerCreated(token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Gets a list of the shared workers created under the same profile.
+    /// </summary>
+    function GetSharedWorkers(const handler: ICoreWebView2GetSharedWorkersCompletedHandler): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `SharedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercreatedeventhandler">See the ICoreWebView2SharedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorkerCreatedEventHandler = interface(IUnknown)
+    ['{79CB8524-B842-551A-8D31-5F824B6955ED}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2SharedWorkerManager;
+                    const args: ICoreWebView2SharedWorkerCreatedEventArgs): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Event args for the `SharedWorkerCreated` event.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercreatedeventargs">See the ICoreWebView2SharedWorkerCreatedEventArgs article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorkerCreatedEventArgs = interface(IUnknown)
+    ['{9F6615B0-08F1-5BAA-9C95-A02A1DC56D3F}']
+    /// <summary>
+    /// The shared worker that was created.
+    /// </summary>
+    function Get_Worker(out value: ICoreWebView2SharedWorker): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// This interface represents a shared worker in WebView2 and provides methods and
+  /// properties for interacting with it, such as listening to destroying events,
+  /// getting the script URI, origin, and top-level origin of the worker etc.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworker">See the ICoreWebView2SharedWorker article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorker = interface(IUnknown)
+    ['{BCD39C8D-48BB-5F1B-BE22-89F9C0C4484A}']
+    /// <summary>
+    /// A string representing the URI of the origin where the worker is executing.
+    ///
+    /// If a worker created with `ScriptUri` set to https://example.com/worker.js, the origin
+    /// will be https://example.com/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_origin(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// A string representing the Uri of the script that the worker is executing.
+    ///
+    /// The `scriptUri` is a fully qualified URI, including the scheme, host, and path.
+    /// In contrast, the `scriptURL` property of the `Worker` object in the DOM returns the relative
+    /// URL of the script being executed by the worker. For more details on DOM API, see the
+    /// [DOM API documentation](https://developer.mozilla.org/docs/Web/API/Worker/scriptURL).
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    /// The same process applies to the `scriptURL` when a worker is created from DOM API.
+    /// The `scriptUri` property reflects this normalization, ensuring that the URL is standardized. For example,
+    /// `HTTPS://EXAMPLE.COM/worker.js` is canonicalized to `https://example.com/worker.js`;
+    /// `https://bücher.de/worker.js` is canonicalized to `https://xn--bcher-kva.de/worker.js`.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_ScriptUri(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// A string representing the URI of the top-level document that the worker is associated with.
+    ///
+    /// If a worker is created with `ScriptUri` set to https://example.com/worker.js, the top-level origin
+    /// is https://example.com/. If the same worker is created from a iframe at https://example.com/ which is hosted on
+    /// https://example2.com/, the top-level origin is https://example2.com/.
+    ///
+    /// Refer to the Host Name Canonicalization for
+    /// details on how normalization is performed.
+    ///
+    /// When CustomDataPartitionId is set, the `TopLevelOrigin` will be a generated
+    /// site like guid.invalid. For example, if the top-level document is https://example.com/worker.js,
+    /// the top-level origin will be https://guid.invalid/.
+    ///
+    /// For more details see `ICoreWebView2Experimental20::CustomDataPartitionId`.
+    ///
+    /// The caller must free the returned string with `CoTaskMemFree`.  See
+    /// [API Conventions](/microsoft-edge/webview2/concepts/win32-api-conventions#strings).
+    /// </summary>
+    function Get_TopLevelOrigin(out value: PWideChar): HResult; stdcall;
+    /// <summary>
+    /// Adds an event handler for the `Destroying` event.
+    /// Add an event handler for the `Destroying` event that is raised when the
+    /// worker object is Destroying.
+    ///
+    /// A worker object is Destroying when the worker script is terminated or when
+    /// the `CoreWebView2SharedWorker` object is Destroying.
+    ///
+    /// If the worker has already been destroyed before the event handler is registered,
+    /// the handler will never be called.
+    /// </summary>
+    function add_Destroying(const eventHandler: ICoreWebView2SharedWorkerDestroyingEventHandler;
+                            out token: EventRegistrationToken): HResult; stdcall;
+    /// <summary>
+    /// Removes an event handler previously added with `add_Destroying`.
+    /// </summary>
+    function remove_Destroying(token: EventRegistrationToken): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkerdestroyingeventhandler">See the ICoreWebView2SharedWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorkerDestroyingEventHandler = interface(IUnknown)
+    ['{5A459F84-FD04-5CCE-A998-6FAB56F09EEB}']
+    /// <summary>
+    /// Provides the event args for the corresponding event.
+    /// </summary>
+    function Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// Receives the result of the `GetSharedWorkers` method.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getsharedworkerscompletedhandler">See the ICoreWebView2GetSharedWorkersCompletedHandler article.</see></para>
+  /// </remarks>
+  ICoreWebView2GetSharedWorkersCompletedHandler = interface(IUnknown)
+    ['{1F3179AE-15E5-51E4-8583-BE0CAF85ADC7}']
+    /// <summary>
+    /// Provides the result of the corresponding asynchronous method.
+    /// </summary>
+    function Invoke(errorCode: HResult; const result: ICoreWebView2SharedWorkerCollectionView): HResult; stdcall;
+  end;
+
+  /// <summary>
+  /// A collection of ICoreWebView2SharedWorker.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercollectionview">See the ICoreWebView2SharedWorkerCollectionView article.</see></para>
+  /// </remarks>
+  ICoreWebView2SharedWorkerCollectionView = interface(IUnknown)
+    ['{F8842B09-0108-5575-A965-3D76FD267050}']
+    /// <summary>
+    /// The number of elements contained in the collection.
+    /// </summary>
+    function Get_Count(out value: SYSUINT): HResult; stdcall;
+    /// <summary>
+    /// Gets the element at the given index.
+    /// </summary>
+    function GetValueAtIndex(index: SYSUINT; out value: ICoreWebView2SharedWorker): HResult; stdcall;
   end;
 
   /// <summary>

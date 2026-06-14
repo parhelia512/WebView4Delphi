@@ -146,6 +146,20 @@ type
       property OnFindMatchCountChanged;
       property OnFindStartCompleted;
       property OnDragStarting;
+      property OnDedicatedWorkerCreated;
+      property OnDedicatedWorkerCreated2;
+      property OnDedicatedWorkerDestroying;
+      property OnDedicatedWorkerWebMessageReceived;
+      property OnFrameDedicatedWorkerCreated;
+      property OnServiceWorkerDestroying;
+      property OnServiceWorkerWebMessageReceived;
+      property OnServiceWorkerRegistered;
+      property OnGetServiceWorkerRegistrationsCompleted;
+      property OnServiceWorkerActivated;
+      property OnServiceWorkerRegistrationUnregistering;
+      property OnSharedWorkerCreated;
+      property OnGetSharedWorkersCompleted;
+      property OnSharedWorkerDestroying;
   end;
 
 implementation

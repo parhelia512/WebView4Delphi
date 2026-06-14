@@ -303,6 +303,48 @@ type
 
     // ICoreWebView2DragStartingEventHandler
     function DragStartingEventHandler_Invoke(const sender: ICoreWebView2CompositionController; const args: ICoreWebView2DragStartingEventArgs): HResult;
+
+    // ICoreWebView2DedicatedWorkerCreatedEventHandler
+    function DedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult;
+
+    // ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler
+    function DedicatedWorkerDedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aWorkerID: cardinal): HResult;
+
+    // ICoreWebView2DedicatedWorkerDestroyingEventHandler
+    function DedicatedWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: IUnknown; aWorkerID: cardinal): HResult;
+
+    // ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler
+    function DedicatedWorkerWebMessageReceivedEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal): HResult;
+
+    // ICoreWebView2FrameDedicatedWorkerCreatedEventHandler
+    function FrameDedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aFrameID: cardinal): HResult;
+
+    // ICoreWebView2ServiceWorkerDestroyingEventHandler
+    function ServiceWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2ServiceWorker; const args: IUnknown; aWorkerID: cardinal): HResult;
+
+    // ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler
+    function ServiceWorkerWebMessageReceivedEventHandler_Invoke(const sender: ICoreWebView2ServiceWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal): HResult;
+
+    // ICoreWebView2ServiceWorkerRegisteredEventHandler
+    function ServiceWorkerRegisteredEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerManager; const args: ICoreWebView2ServiceWorkerRegisteredEventArgs): HResult;
+
+    // ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler
+    function GetServiceWorkerRegistrationsCompletedHandler_Invoke(errorCode: HResult; const result: ICoreWebView2ServiceWorkerRegistrationCollectionView): HResult;
+
+    // ICoreWebView2ServiceWorkerActivatedEventHandler
+    function ServiceWorkerActivatedEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs): HResult;
+
+    // ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler
+    function ServiceWorkerRegistrationUnregisteringEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown): HResult;
+
+    // ICoreWebView2SharedWorkerCreatedEventHandler
+    function SharedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs): HResult;
+
+    // ICoreWebView2GetSharedWorkersCompletedHandler
+    function GetSharedWorkersCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView): HResult;
+
+    // ICoreWebView2SharedWorkerDestroyingEventHandler
+    function SharedWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown; aWorkerID: cardinal): HResult;
   end;
 
 implementation

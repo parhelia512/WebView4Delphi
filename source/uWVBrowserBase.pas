@@ -192,6 +192,20 @@ type
       FOnFindMatchCountChanged                        : TOnFindMatchCountChangedEvent;
       FOnFindStartCompleted                           : TOnFindStartCompletedEvent;
       FOnDragStarting                                 : TOnDragStartingEvent;
+      FOnDedicatedWorkerCreated                       : TOnDedicatedWorkerCreatedEvent;
+      FOnDedicatedWorkerCreated2                      : TOnDedicatedWorkerCreated2Event;
+      FOnDedicatedWorkerDestroying                    : TOnDedicatedWorkerDestroyingEvent;
+      FOnDedicatedWorkerWebMessageReceived            : TOnDedicatedWorkerWebMessageReceivedEvent;
+      FOnFrameDedicatedWorkerCreated                  : TOnFrameDedicatedWorkerCreatedEvent;
+      FOnServiceWorkerDestroying                      : TOnServiceWorkerDestroyingEvent;
+      FOnServiceWorkerWebMessageReceived              : TOnServiceWorkerWebMessageReceivedEvent;
+      FOnServiceWorkerRegistered                      : TOnServiceWorkerRegisteredEvent;
+      FOnGetServiceWorkerRegistrationsCompleted       : TOnGetServiceWorkerRegistrationsCompletedEvent;
+      FOnServiceWorkerActivated                       : TOnServiceWorkerActivatedEvent;
+      FOnServiceWorkerRegistrationUnregistering       : TOnServiceWorkerRegistrationUnregisteringEvent;
+      FOnSharedWorkerCreated                          : TOnSharedWorkerCreatedEvent;
+      FOnGetSharedWorkersCompleted                    : TOnGetSharedWorkersCompletedEvent;
+      FOnSharedWorkerDestroying                       : TOnSharedWorkerDestroyingEvent;
 
       function  GetBrowserProcessID : cardinal;
       function  GetBrowserVersionInfo : wvstring;
@@ -256,6 +270,9 @@ type
       function  GetProfileIsGeneralAutofillEnabled : boolean;
       function  GetMemoryUsageTargetLevel : TWVMemoryUsageTargetLevel;
       function  GetFrameID : cardinal;
+      function  GetAreWebViewScriptApisEnabledForServiceWorkers : boolean;
+      function  GetServiceWorkerManager : ICoreWebView2ServiceWorkerManager;
+      function  GetSharedWorkerManager : ICoreWebView2SharedWorkerManager;
 
       procedure SetBuiltInErrorPageEnabled(aValue: boolean);
       procedure SetDefaultContextMenusEnabled(aValue: boolean);
@@ -299,6 +316,7 @@ type
       procedure SetProfileIsPasswordAutosaveEnabled(aValue : boolean);
       procedure SetProfileIsGeneralAutofillEnabled(aValue : boolean);
       procedure SetMemoryUsageTargetLevel(aValue : TWVMemoryUsageTargetLevel);
+      procedure SetAreWebViewScriptApisEnabledForServiceWorkers(aValue : boolean);
 
       function  CreateEnvironment : boolean;
       function  CreateCompositionController: boolean;
@@ -423,6 +441,20 @@ type
       function FindMatchCountChangedEventHandler_Invoke(const sender: ICoreWebView2Find; const args: IUnknown): HRESULT;
       function FindStartCompletedHandler_Invoke(errorCode: HResult): HRESULT;
       function DragStartingEventHandler_Invoke(const sender: ICoreWebView2CompositionController; const args: ICoreWebView2DragStartingEventArgs): HRESULT;
+      function DedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HRESULT;
+      function DedicatedWorkerDedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aWorkerID: cardinal): HRESULT;
+      function DedicatedWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: IUnknown; aWorkerID: cardinal): HRESULT;
+      function DedicatedWorkerWebMessageReceivedEventHandler_Invoke(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal): HRESULT;
+      function FrameDedicatedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aFrameID: cardinal): HRESULT;
+      function ServiceWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2ServiceWorker; const args: IUnknown; aWorkerID: cardinal): HRESULT;
+      function ServiceWorkerWebMessageReceivedEventHandler_Invoke(const sender: ICoreWebView2ServiceWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal): HRESULT;
+      function ServiceWorkerRegisteredEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerManager; const args: ICoreWebView2ServiceWorkerRegisteredEventArgs): HRESULT;
+      function GetServiceWorkerRegistrationsCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView): HRESULT;
+      function ServiceWorkerActivatedEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs): HRESULT;
+      function ServiceWorkerRegistrationUnregisteringEventHandler_Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown): HRESULT;
+      function SharedWorkerCreatedEventHandler_Invoke(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs): HRESULT;
+      function GetSharedWorkersCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView): HRESULT;
+      function SharedWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown; aWorkerID: cardinal): HRESULT;
 
       procedure doOnInitializationError(aErrorCode: HRESULT; const aErrorMessage: wvstring); virtual;
       procedure doOnEnvironmentCompleted; virtual;
@@ -526,6 +558,20 @@ type
       procedure doOnFindMatchCountChangedEvent(const sender: ICoreWebView2Find; const args: IUnknown); virtual;
       procedure doOnFindStartCompletedEvent(errorCode: HResult); virtual;
       procedure doOnDragStartingEvent(const sender: ICoreWebView2CompositionController; const args: ICoreWebView2DragStartingEventArgs); virtual;
+      procedure doOnDedicatedWorkerCreatedEvent(const sender: ICoreWebView2; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs); virtual;
+      procedure doOnDedicatedWorkerCreatedEvent2(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aWorkerID: cardinal); virtual;
+      procedure doOnDedicatedWorkerDestroyingEvent(const sender: ICoreWebView2DedicatedWorker; const args: IUnknown; aWorkerID: cardinal); virtual;
+      procedure doOnDedicatedWorkerWebMessageReceivedEvent(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal); virtual;
+      procedure doOnFrameDedicatedWorkerCreatedEvent(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aFrameID: cardinal); virtual;
+      procedure doOnServiceWorkerDestroyingEvent(const sender: ICoreWebView2ServiceWorker; const args: IUnknown; aWorkerID: cardinal); virtual;
+      procedure doOnServiceWorkerWebMessageReceivedEvent(const sender: ICoreWebView2ServiceWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal); virtual;
+      procedure doOnServiceWorkerRegisteredEvent(const sender: ICoreWebView2ServiceWorkerManager; const args: ICoreWebView2ServiceWorkerRegisteredEventArgs); virtual;
+      procedure doOnGetServiceWorkerRegistrationsCompletedEvent(errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView); virtual;
+      procedure doOnServiceWorkerActivatedEvent(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs); virtual;
+      procedure doOnServiceWorkerRegistrationUnregisteringEvent(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown); virtual;
+      procedure doOnSharedWorkerCreatedEvent(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs); virtual;
+      procedure doOnGetSharedWorkersCompletedEvent(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView); virtual;
+      procedure doOnSharedWorkerDestroyingEvent(const sender: ICoreWebView2SharedWorker; const args: IUnknown; aWorkerID: cardinal); virtual;
 
     public
       constructor Create(AOwner: TComponent); override;
@@ -3001,6 +3047,34 @@ type
       /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2find">See the ICoreWebView2Find article.</see></para>
       /// </remarks>
       property FindSession                                    : TCoreWebView2Find                                      read FCoreWebView2Find;
+      /// <summary>
+      /// Enables or disables webview2 specific Service Worker JS APIs in the
+      /// WebView2s associated with this Profile. When set to `TRUE`, chrome and
+      /// webview objects are available in Service Workers. chrome.webview exposes
+      /// APIs to interact with the WebView from Service Workers. The default value
+      /// is `FALSE`. This setting applies to all newly installed Service Workers
+      /// within the profile and is not persisted across WebView2 sessions.
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#set_arewebviewscriptapisenabledforserviceworkers">See the ICoreWebView2Profile9 article.</see></para>
+      /// </remarks>
+      property AreWebViewScriptApisEnabledForServiceWorkers   : boolean                                                read GetAreWebViewScriptApisEnabledForServiceWorkers  write SetAreWebViewScriptApisEnabledForServiceWorkers;
+      /// <summary>
+      /// Get the service worker manager to monitor service worker registrations and
+      /// interact with the service workers associated with the current profile.
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_serviceworkermanager">See the ICoreWebView2Profile9 article.</see></para>
+      /// </remarks>
+      property ServiceWorkerManager                           : ICoreWebView2ServiceWorkerManager                      read GetServiceWorkerManager;
+      /// <summary>
+      /// Get the shared worker manager to monitor shared worker creations and interact
+      /// with the shared workers associated with the current profile.
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_sharedworkermanager">See the ICoreWebView2Profile9 article.</see></para>
+      /// </remarks>
+      property SharedWorkerManager                            : ICoreWebView2SharedWorkerManager                       read GetSharedWorkerManager;
 
       /// <summary>
       /// The OnBrowserProcessExited event is triggered when the collection of WebView2
@@ -4029,6 +4103,211 @@ type
       /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller5#add_dragstarting">See the ICoreWebView2CompositionController5 article.</see></para>
       /// </remarks>
       property OnDragStarting                                 : TOnDragStartingEvent                                   read FOnDragStarting                                  write FOnDragStarting;
+      /// <summary>
+      /// <para>Subscribe to this event that gets raised when a new dedicated worker is created.</para>
+      ///
+      /// <para>A Dedicated Worker is a type of web worker that allows you to run Javascript
+      /// code in the background without blocking the main thread, making them useful
+      /// for tasks like heavy computations, data processing, and parallel execution.</para>
+      /// <para>It is "dedicated" because it is linked to a single parent document and cannot
+      /// be shared with other scripts.</para>
+      ///
+      /// <para>This event is raised when a web application creates a dedicated worker using the
+      /// `new Worker("/worker.js")` method. See the
+      /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_29#add_dedicatedworkercreated">See the ICoreWebView2_29 article.</see></para>
+      /// </remarks>
+      property OnDedicatedWorkerCreated                       : TOnDedicatedWorkerCreatedEvent                         read FOnDedicatedWorkerCreated                        write FOnDedicatedWorkerCreated;
+      /// <summary>
+      /// <para>Subscribe to this event that gets raised when a new dedicated worker is created from a
+      /// dedicated worker.</para>
+      ///
+      /// <para>A Dedicated Worker is a type of web worker that allows you to run Javascript
+      /// code in the background without blocking the main thread, making them useful
+      /// for tasks like heavy computations, data processing, and parallel execution.</para>
+      /// <para>It is "dedicated" because it is linked to a single parent document and cannot
+      /// be shared with other scripts.</para>
+      ///
+      /// <para>This event is raised when a dedicated creates a dedicated worker using the
+      /// `new Worker("/worker.js")` method. See the
+      /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_dedicatedworkercreated">See the ICoreWebView2DedicatedWorker article.</see></para>
+      /// </remarks>
+      property OnDedicatedWorkerCreated2                      : TOnDedicatedWorkerCreated2Event                        read FOnDedicatedWorkerCreated2                       write FOnDedicatedWorkerCreated2;
+      /// <summary>
+      /// <para>Add an event handler for the `Destroying` event that is raised when the
+      /// worker object is Destroying.</para>
+      ///
+      /// <para>A worker object is Destroying when the worker script is terminated or when
+      /// the `CoreWebView2DedicatedWorker` object is Destroying.</para>
+      ///
+      /// <para>If the worker has already been destroyed before the event handler is registered,
+      /// the handler will never be called.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_destroying">See the ICoreWebView2DedicatedWorker article.</see></para>
+      /// </remarks>
+      property OnDedicatedWorkerDestroying                    : TOnDedicatedWorkerDestroyingEvent                      read FOnDedicatedWorkerDestroying                     write FOnDedicatedWorkerDestroying;
+      /// <summary>
+      /// <para>`OnWebMessageReceived` is fired, when the
+      /// `ICoreWebView2Settings.IsWebMessageEnabled` setting is set TRUE and the
+      /// worker runs `self.chrome.webview.postMessage`. The `postMessage` function
+      /// is `void postMessage(object)` where object is any object supported by JSON
+      /// conversion.</para>
+      ///
+      /// <para>If the worker calls `postMessage` multiple times, the corresponding
+      /// `OnWebMessageReceived` events are guaranteed to be fired in the same order.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_webmessagereceived">See the ICoreWebView2DedicatedWorker article.</see></para>
+      /// </remarks>
+      property OnDedicatedWorkerWebMessageReceived            : TOnDedicatedWorkerWebMessageReceivedEvent              read FOnDedicatedWorkerWebMessageReceived             write FOnDedicatedWorkerWebMessageReceived;
+      /// <summary>
+      /// <para>Subscribe to this event that gets raised when a new dedicated worker is created
+      /// from an iframe.</para>
+      ///
+      /// <para>A Dedicated Worker is a type of web worker that allows you to run Javascript
+      /// code in the background without blocking the main thread, making them useful
+      /// for tasks like heavy computations, data processing, and parallel execution.</para>
+      /// <para>It is "dedicated" because it is linked to a single parent document and cannot
+      /// be shared with other scripts.</para>
+      ///
+      /// <para>This event is raised when a web application creates a dedicated worker using the
+      /// `new Worker("/worker.js")` method. See the
+      /// [Worker](https://developer.mozilla.org/docs/Web/API/Worker/Worker)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame8#add_dedicatedworkercreated">See the ICoreWebView2Frame8 article.</see></para>
+      /// </remarks>
+      property OnFrameDedicatedWorkerCreated                  : TOnFrameDedicatedWorkerCreatedEvent                    read FOnFrameDedicatedWorkerCreated                   write FOnFrameDedicatedWorkerCreated;
+      /// <summary>
+      /// <para>Add an event handler for the `Destroying` event that is raised when the
+      /// worker object is Destroying.</para>
+      /// <para>A worker object is Destroying when the worker script is terminated or when
+      /// the `CoreWebView2ServiceWorker` object is Destroying.</para>
+      /// <para>If the worker has already been destroyed before the event handler is registered,
+      /// the handler will never be called.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_destroying">See the ICoreWebView2ServiceWorker article.</see></para>
+      /// </remarks>
+      property OnServiceWorkerDestroying                      : TOnServiceWorkerDestroyingEvent                        read FOnServiceWorkerDestroying                       write FOnServiceWorkerDestroying;
+      /// <summary>
+      /// <para>`OnWebMessageReceived` is fired, when the
+      /// `ICoreWebView2Settings.IsWebMessageEnabled` setting is set TRUE and the
+      /// worker runs `self.chrome.webview.postMessage`. The `postMessage` function
+      /// is `void postMessage(object)` where object is any object supported by JSON
+      /// conversion.</para>
+      /// <para>If the worker calls `postMessage` multiple times, the corresponding
+      /// `WebMessageReceived` events are guaranteed to be fired in the same order.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_webmessagereceived">See the ICoreWebView2ServiceWorker article.</see></para>
+      /// </remarks>
+      property OnServiceWorkerWebMessageReceived              : TOnServiceWorkerWebMessageReceivedEvent                read FOnServiceWorkerWebMessageReceived               write FOnServiceWorkerWebMessageReceived;
+      /// <summary>
+      /// <para>A ServiceWorker is a specific type of worker that takes a JavaScript file
+      /// that can control the web-page/site that it is associated with,
+      /// intercepting and modifying navigation and resource requests, and caching
+      /// resources in a very granular fashion to give you complete control
+      /// over how app behaves in certain situations.</para>
+      ///
+      /// <para>Service workers essentially act as proxy servers that sit between web
+      /// applications, the browser, and the network (when available). They run in
+      /// a different context from the web page, which means they have no direct access
+      /// to the DOM. Unlike dedicated and shared workers, which may have direct access to a
+      /// global scope shared with other scripts, service workers operate in isolation
+      /// from the DOM, ensuring a more secure and controlled environment.</para>
+      ///
+      /// <para>This event is raised when a web application registers a service worker using the
+      /// `navigator.serviceWorker.register("/sw.js")` method. See the
+      /// [Service Worker Registration](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#add_serviceworkerregistered">See the ICoreWebView2ServiceWorkerManager article.</see></para>
+      /// </remarks>
+      property OnServiceWorkerRegistered                      : TOnServiceWorkerRegisteredEvent                        read FOnServiceWorkerRegistered                       write FOnServiceWorkerRegistered;
+      /// <summary>
+      /// Receives the result of the TCoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrations and TCoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrationsForScope methods.
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#getserviceworkerregistrations">See the ICoreWebView2ServiceWorkerManager article.</see></para>
+      /// </remarks>
+      property OnGetServiceWorkerRegistrationsCompleted       : TOnGetServiceWorkerRegistrationsCompletedEvent         read FOnGetServiceWorkerRegistrationsCompleted        write FOnGetServiceWorkerRegistrationsCompleted;
+      /// <summary>
+      /// <para>This event is raised when a service worker is activated. A service worker is
+      /// activated when its script has been successfully registered and it is ready to
+      /// control the pages within the scope of the registration.</para>
+      ///
+      /// <para>This event is also raised when an updated version of a service worker reaches the active state.
+      /// In such a case, the existing CoreWebView2ServiceWorker object is destroying, and this event is
+      /// raised with a new CoreWebView2ServiceWorker object representing the updated service worker.
+      /// The active service worker is the one that receives fetch and message events for the pages it controls.
+      /// See the [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active)
+      /// documentation for more information.</para>
+      ///
+      /// <para>If you register for the `OnServiceWorkerActivated` event and the registration already
+      /// has an active worker, the event handler is not called immediately. Instead, it waits
+      /// for the next activation event to occur. Therefore, you should first check if an active
+      /// service worker is running by using the `TCoreWebView2ServiceWorkerRegistration.ActiveServiceWorker` property.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_serviceworkeractivated">See the ICoreWebView2ServiceWorkerRegistration article.</see></para>
+      /// </remarks>
+      property OnServiceWorkerActivated                       : TOnServiceWorkerActivatedEvent                         read FOnServiceWorkerActivated                        write FOnServiceWorkerActivated;
+      /// <summary>
+      /// <para>This event is raised when the worker registration is
+      /// unregistered using the JS api `registration.unregister()`. See the
+      /// [Unregister](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_unregistering">See the ICoreWebView2ServiceWorkerRegistration article.</see></para>
+      /// </remarks>
+      property OnServiceWorkerRegistrationUnregistering       : TOnServiceWorkerRegistrationUnregisteringEvent         read FOnServiceWorkerRegistrationUnregistering        write FOnServiceWorkerRegistrationUnregistering;
+      /// <summary>
+      /// <para>A SharedWorker is a specific type of worker that can be accessed from several
+      /// browsing contexts, such as multiple windows, iframes, or even other workers.
+      /// Unlike Dedicated Workers, which have their own separate global scope, SharedWorkers
+      /// share a common global scope called SharedWorkerGlobalScope.</para>
+      ///
+      /// <para>This event is raised when a web application creates a shared worker using the
+      /// `new SharedWorker("worker.js")` method. See the
+      /// [Shared Worker](https://developer.mozilla.org/docs/Web/API/SharedWorker)
+      /// for more information.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkermanager#add_sharedworkercreated">See the ICoreWebView2SharedWorkerManager article.</see></para>
+      /// </remarks>
+      property OnSharedWorkerCreated                          : TOnSharedWorkerCreatedEvent                            read FOnSharedWorkerCreated                           write FOnSharedWorkerCreated;
+      /// <summary>
+      /// Receives the result of the TCoreWebView2SharedWorkerManager.GetSharedWorkers method.
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getsharedworkerscompletedhandler#getsharedworkers">See the ICoreWebView2GetSharedWorkersCompletedHandler article.</see></para>
+      /// </remarks>
+      property OnGetSharedWorkersCompleted                    : TOnGetSharedWorkersCompletedEvent                      read FOnGetSharedWorkersCompleted                     write FOnGetSharedWorkersCompleted;
+      /// <summary>
+      /// <para>This event is raised when the worker object is Destroying.</para>
+      ///
+      /// <para>A worker object is Destroying when the worker script is terminated or when
+      /// the `CoreWebView2SharedWorker` object is Destroying.</para>
+      ///
+      /// <para>If the worker has already been destroyed before the event handler is registered,
+      /// the handler will never be called.</para>
+      /// </summary>
+      /// <remarks>
+      /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworker#add_destroying">See the ICoreWebView2SharedWorker article.</see></para>
+      /// </remarks>
+      property OnSharedWorkerDestroying                       : TOnSharedWorkerDestroyingEvent                         read FOnSharedWorkerDestroying                        write FOnSharedWorkerDestroying;
   end;
 
 implementation
@@ -4202,6 +4481,20 @@ begin
   FOnFindMatchCountChanged                         := nil;
   FOnFindStartCompleted                            := nil;
   FOnDragStarting                                  := nil;
+  FOnDedicatedWorkerCreated                        := nil;
+  FOnDedicatedWorkerCreated2                       := nil;
+  FOnDedicatedWorkerDestroying                     := nil;
+  FOnDedicatedWorkerWebMessageReceived             := nil;
+  FOnFrameDedicatedWorkerCreated                   := nil;
+  FOnServiceWorkerDestroying                       := nil;
+  FOnServiceWorkerWebMessageReceived               := nil;
+  FOnServiceWorkerRegistered                       := nil;
+  FOnGetServiceWorkerRegistrationsCompleted        := nil;
+  FOnServiceWorkerActivated                        := nil;
+  FOnServiceWorkerRegistrationUnregistering        := nil;
+  FOnSharedWorkerCreated                           := nil;
+  FOnGetSharedWorkersCompleted                     := nil;
+  FOnSharedWorkerDestroying                        := nil;
 end;
 
 destructor TWVBrowserBase.Destroy;
@@ -5432,6 +5725,97 @@ begin
     FOnDragStarting(self, sender, args);
 end;
 
+procedure TWVBrowserBase.doOnDedicatedWorkerCreatedEvent(const sender : ICoreWebView2;
+                                                         const args   : ICoreWebView2DedicatedWorkerCreatedEventArgs);
+begin
+  if assigned(FOnDedicatedWorkerCreated) then
+    FOnDedicatedWorkerCreated(self, sender, args);
+end;
+
+procedure TWVBrowserBase.doOnDedicatedWorkerCreatedEvent2(const sender             : ICoreWebView2DedicatedWorker;
+                                                          const args               : ICoreWebView2DedicatedWorkerCreatedEventArgs;
+                                                                aWorkerID : cardinal);
+begin
+  if assigned(FOnDedicatedWorkerCreated2) then
+    FOnDedicatedWorkerCreated2(self, sender, args, aWorkerID);
+end;
+
+procedure TWVBrowserBase.doOnDedicatedWorkerDestroyingEvent(const sender             : ICoreWebView2DedicatedWorker;
+                                                            const args               : IUnknown;
+                                                                  aWorkerID : cardinal);
+begin
+  if assigned(FOnDedicatedWorkerDestroying) then
+    FOnDedicatedWorkerDestroying(self, sender, args, aWorkerID);
+end;
+
+procedure TWVBrowserBase.doOnDedicatedWorkerWebMessageReceivedEvent(const sender             : ICoreWebView2DedicatedWorker;
+                                                                    const args               : ICoreWebView2WebMessageReceivedEventArgs;
+                                                                          aWorkerID : cardinal);
+begin
+  if assigned(FOnDedicatedWorkerWebMessageReceived) then
+    FOnDedicatedWorkerWebMessageReceived(self, sender, args, aWorkerID);
+end;
+
+procedure TWVBrowserBase.doOnFrameDedicatedWorkerCreatedEvent(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs; aFrameID: cardinal);
+begin
+  if assigned(FOnFrameDedicatedWorkerCreated) then
+    FOnFrameDedicatedWorkerCreated(self, sender, args, aFrameID);
+end;
+
+procedure TWVBrowserBase.doOnServiceWorkerDestroyingEvent(const sender: ICoreWebView2ServiceWorker; const args: IUnknown; aWorkerID: cardinal);
+begin
+  if assigned(FOnServiceWorkerDestroying) then
+    FOnServiceWorkerDestroying(self, sender, args, aWorkerID);
+end;
+
+procedure TWVBrowserBase.doOnServiceWorkerWebMessageReceivedEvent(const sender: ICoreWebView2ServiceWorker; const args: ICoreWebView2WebMessageReceivedEventArgs; aWorkerID: cardinal);
+begin
+  if assigned(FOnServiceWorkerWebMessageReceived) then
+    FOnServiceWorkerWebMessageReceived(self, sender, args, aWorkerID);
+end;
+
+procedure TWVBrowserBase.doOnServiceWorkerRegisteredEvent(const sender: ICoreWebView2ServiceWorkerManager; const args: ICoreWebView2ServiceWorkerRegisteredEventArgs);
+begin
+  if assigned(FOnServiceWorkerRegistered) then
+    FOnServiceWorkerRegistered(self, sender, args);
+end;
+
+procedure TWVBrowserBase.doOnGetServiceWorkerRegistrationsCompletedEvent(errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView);
+begin
+  if assigned(FOnGetServiceWorkerRegistrationsCompleted) then
+    FOnGetServiceWorkerRegistrationsCompleted(self, errorCode, result_);
+end;
+
+procedure TWVBrowserBase.doOnServiceWorkerActivatedEvent(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs);
+begin
+  if assigned(FOnServiceWorkerActivated) then
+    FOnServiceWorkerActivated(self, sender, args);
+end;
+
+procedure TWVBrowserBase.doOnServiceWorkerRegistrationUnregisteringEvent(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown);
+begin
+  if assigned(FOnServiceWorkerRegistrationUnregistering) then
+    FOnServiceWorkerRegistrationUnregistering(self, sender, args);
+end;
+
+procedure TWVBrowserBase.doOnSharedWorkerCreatedEvent(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs);
+begin
+  if assigned(FOnSharedWorkerCreated) then
+    FOnSharedWorkerCreated(self, sender, args);
+end;
+
+procedure TWVBrowserBase.doOnGetSharedWorkersCompletedEvent(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView);
+begin
+  if assigned(FOnGetSharedWorkersCompleted) then
+    FOnGetSharedWorkersCompleted(self, errorCode, result_);
+end;
+
+procedure TWVBrowserBase.doOnSharedWorkerDestroyingEvent(const sender: ICoreWebView2SharedWorker; const args: IUnknown; aWorkerID: cardinal);
+begin
+  if assigned(FOnSharedWorkerDestroying) then
+    FOnSharedWorkerDestroying(self, sender, args, aWorkerID);
+end;
+
 procedure TWVBrowserBase.doOnRetrieveMHTMLCompleted(      aErrorCode          : HRESULT;
                                                     const aReturnObjectAsJson : wvstring);
 var
@@ -5689,31 +6073,36 @@ begin
   doOnServerCertificateErrorDetectedEvent(sender, args);
 end;
 
-function TWVBrowserBase.FaviconChangedEventHandler_Invoke(const sender: ICoreWebView2; const args: IUnknown): HRESULT;
+function TWVBrowserBase.FaviconChangedEventHandler_Invoke(const sender : ICoreWebView2;
+                                                          const args   : IUnknown): HRESULT;
 begin
   Result := S_OK;
   doOnFaviconChangedEvent(sender, args);
 end;
 
-function TWVBrowserBase.GetFaviconCompletedHandler_Invoke(errorCode: HResult; const result_: IStream): HRESULT;
+function TWVBrowserBase.GetFaviconCompletedHandler_Invoke(      errorCode : HResult;
+                                                          const result_   : IStream): HRESULT;
 begin
   Result := S_OK;
   doOnGetFaviconCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.PrintCompletedHandler_Invoke(errorCode: HResult; result_: COREWEBVIEW2_PRINT_STATUS): HRESULT;
+function TWVBrowserBase.PrintCompletedHandler_Invoke(errorCode : HResult;
+                                                     result_   : COREWEBVIEW2_PRINT_STATUS): HRESULT;
 begin
   Result := S_OK;
   doOnPrintCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.PrintToPdfStreamCompletedHandler_Invoke(errorCode: HResult; const result_: IStream): HRESULT;
+function TWVBrowserBase.PrintToPdfStreamCompletedHandler_Invoke(      errorCode : HResult;
+                                                                const result_   : IStream): HRESULT;
 begin
   Result := S_OK;
   doOnPrintToPdfStreamCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.GetNonDefaultPermissionSettingsCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2PermissionSettingCollectionView): HRESULT;
+function TWVBrowserBase.GetNonDefaultPermissionSettingsCompletedHandler_Invoke(      errorCode : HResult;
+                                                                               const result_   : ICoreWebView2PermissionSettingCollectionView): HRESULT;
 begin
   Result := S_OK;
   doOnGetNonDefaultPermissionSettingsCompleted(errorCode, result_);
@@ -5725,115 +6114,137 @@ begin
   doOnSetPermissionStateCompleted(errorCode);
 end;
 
-function TWVBrowserBase.LaunchingExternalUriSchemeEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2LaunchingExternalUriSchemeEventArgs): HRESULT;
+function TWVBrowserBase.LaunchingExternalUriSchemeEventHandler_Invoke(const sender : ICoreWebView2;
+                                                                      const args   : ICoreWebView2LaunchingExternalUriSchemeEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnLaunchingExternalUriSchemeEvent(sender, args);
 end;
 
-function TWVBrowserBase.GetProcessExtendedInfosCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2ProcessExtendedInfoCollection): HRESULT;
+function TWVBrowserBase.GetProcessExtendedInfosCompletedHandler_Invoke(      errorCode : HResult;
+                                                                       const result_   : ICoreWebView2ProcessExtendedInfoCollection): HRESULT;
 begin
   Result := S_OK;
   doOnGetProcessExtendedInfosCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.BrowserExtensionRemoveCompletedHandler_Invoke(errorCode: HResult; const aExtensionID: wvstring): HRESULT;
+function TWVBrowserBase.BrowserExtensionRemoveCompletedHandler_Invoke(      errorCode    : HResult;
+                                                                      const aExtensionID : wvstring): HRESULT;
 begin
   Result := S_OK;
   doOnBrowserExtensionRemoveCompletedEvent(errorCode, aExtensionID);
 end;
 
-function TWVBrowserBase.BrowserExtensionEnableCompletedHandler_Invoke(errorCode: HResult; const aExtensionID: wvstring): HRESULT;
+function TWVBrowserBase.BrowserExtensionEnableCompletedHandler_Invoke(      errorCode    : HResult;
+                                                                      const aExtensionID : wvstring): HRESULT;
 begin
   Result := S_OK;
   doOnBrowserExtensionEnableCompletedEvent(errorCode, aExtensionID);
 end;
 
-function TWVBrowserBase.ProfileAddBrowserExtensionCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2BrowserExtension): HRESULT;
+function TWVBrowserBase.ProfileAddBrowserExtensionCompletedHandler_Invoke(      errorCode : HResult;
+                                                                          const result_   : ICoreWebView2BrowserExtension): HRESULT;
 begin
   Result := S_OK;
   doOnProfileAddBrowserExtensionCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.ProfileGetBrowserExtensionsCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2BrowserExtensionList): HRESULT;
+function TWVBrowserBase.ProfileGetBrowserExtensionsCompletedHandler_Invoke(      errorCode : HResult;
+                                                                           const result_   : ICoreWebView2BrowserExtensionList): HRESULT;
 begin
   Result := S_OK;
   doOnProfileGetBrowserExtensionsCompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.ProfileDeletedEventHandler_Invoke(const sender: ICoreWebView2Profile; const args: IUnknown): HRESULT;
+function TWVBrowserBase.ProfileDeletedEventHandler_Invoke(const sender : ICoreWebView2Profile;
+                                                          const args   : IUnknown): HRESULT;
 begin
   Result := S_OK;
   doOnProfileDeletedEvent(sender, args);
 end;
 
-function TWVBrowserBase.ExecuteScriptWithResultCompletedHandler_Invoke(errorCode: HResult; const result_: ICoreWebView2ExecuteScriptResult; aExecutionID : integer): HRESULT;
+function TWVBrowserBase.ExecuteScriptWithResultCompletedHandler_Invoke(      errorCode    : HResult;
+                                                                       const result_      : ICoreWebView2ExecuteScriptResult;
+                                                                             aExecutionID : integer): HRESULT;
 begin
   Result := S_OK;
   doOnExecuteScriptWithResultCompletedEvent(errorCode, result_, aExecutionID);
 end;
 
-function TWVBrowserBase.NonClientRegionChangedEventHandler_Invoke(const sender: ICoreWebView2CompositionController; const args: ICoreWebView2NonClientRegionChangedEventArgs): HRESULT;
+function TWVBrowserBase.NonClientRegionChangedEventHandler_Invoke(const sender : ICoreWebView2CompositionController;
+                                                                  const args   : ICoreWebView2NonClientRegionChangedEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnNonClientRegionChangedEvent(sender, args);
 end;
 
-function TWVBrowserBase.NotificationReceivedEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2NotificationReceivedEventArgs): HRESULT;
+function TWVBrowserBase.NotificationReceivedEventHandler_Invoke(const sender : ICoreWebView2;
+                                                                const args   : ICoreWebView2NotificationReceivedEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnNotificationReceivedEvent(sender, args);
 end;
 
-function TWVBrowserBase.NotificationCloseRequestedEventHandler_Invoke(const sender: ICoreWebView2Notification; const args: IUnknown): HRESULT;
+function TWVBrowserBase.NotificationCloseRequestedEventHandler_Invoke(const sender : ICoreWebView2Notification;
+                                                                      const args   : IUnknown): HRESULT;
 begin
   Result := S_OK;
   doOnNotificationCloseRequestedEvent(sender, args);
 end;
 
-function TWVBrowserBase.SaveAsUIShowingEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2SaveAsUIShowingEventArgs): HRESULT;
+function TWVBrowserBase.SaveAsUIShowingEventHandler_Invoke(const sender : ICoreWebView2;
+                                                           const args   : ICoreWebView2SaveAsUIShowingEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnSaveAsUIShowingEvent(sender, args);
 end;
 
-function TWVBrowserBase.ShowSaveAsUICompletedHandler_Invoke(errorCode: HResult; result_: COREWEBVIEW2_SAVE_AS_UI_RESULT): HRESULT;
+function TWVBrowserBase.ShowSaveAsUICompletedHandler_Invoke(errorCode : HResult;
+                                                            result_   : COREWEBVIEW2_SAVE_AS_UI_RESULT): HRESULT;
 begin
   Result := S_OK;
   doOnShowSaveAsUICompletedEvent(errorCode, result_);
 end;
 
-function TWVBrowserBase.SaveFileSecurityCheckStartingEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2SaveFileSecurityCheckStartingEventArgs): HRESULT;
+function TWVBrowserBase.SaveFileSecurityCheckStartingEventHandler_Invoke(const sender : ICoreWebView2;
+                                                                         const args   : ICoreWebView2SaveFileSecurityCheckStartingEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnSaveFileSecurityCheckStartingEvent(sender, args);
 end;
 
-function TWVBrowserBase.ScreenCaptureStartingEventHandler_Invoke(const sender: ICoreWebView2; const args: ICoreWebView2ScreenCaptureStartingEventArgs): HRESULT;
+function TWVBrowserBase.ScreenCaptureStartingEventHandler_Invoke(const sender : ICoreWebView2;
+                                                                 const args   : ICoreWebView2ScreenCaptureStartingEventArgs): HRESULT;
 begin
   Result := S_OK;
   doOnScreenCaptureStartingEvent(sender, args);
 end;
 
-function TWVBrowserBase.FrameScreenCaptureStartingEventHandler_Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2ScreenCaptureStartingEventArgs; aFrameID: cardinal): HRESULT;
+function TWVBrowserBase.FrameScreenCaptureStartingEventHandler_Invoke(const sender   : ICoreWebView2Frame;
+                                                                      const args     : ICoreWebView2ScreenCaptureStartingEventArgs;
+                                                                            aFrameID : cardinal): HRESULT;
 begin
   Result := S_OK;
   doOnFrameScreenCaptureStartingEvent(sender, args, aFrameID);
 end;
 
-function TWVBrowserBase.FrameChildFrameCreatedEventHandler_Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2FrameCreatedEventArgs; aFrameID: cardinal): HRESULT;
+function TWVBrowserBase.FrameChildFrameCreatedEventHandler_Invoke(const sender   : ICoreWebView2Frame;
+                                                                  const args     : ICoreWebView2FrameCreatedEventArgs;
+                                                                        aFrameID : cardinal): HRESULT;
 begin
   Result := S_OK;
   doOnFrameChildFrameCreatedEvent(sender, args, aFrameID);
 end;
 
-function TWVBrowserBase.FindActiveMatchIndexChangedEventHandler_Invoke(const sender: ICoreWebView2Find; const args: IUnknown): HRESULT;
+function TWVBrowserBase.FindActiveMatchIndexChangedEventHandler_Invoke(const sender : ICoreWebView2Find;
+                                                                       const args   : IUnknown): HRESULT;
 begin
   Result := S_OK;
   doOnFindActiveMatchIndexChangedEvent(sender, args);
 end;
 
-function TWVBrowserBase.FindMatchCountChangedEventHandler_Invoke(const sender: ICoreWebView2Find; const args: IUnknown): HRESULT;
+function TWVBrowserBase.FindMatchCountChangedEventHandler_Invoke(const sender : ICoreWebView2Find;
+                                                                 const args   : IUnknown): HRESULT;
 begin
   Result := S_OK;
   doOnFindMatchCountChangedEvent(sender, args);
@@ -5852,7 +6263,112 @@ begin
   doOnDragStartingEvent(sender, args);
 end;
 
-function TWVBrowserBase.ExecuteScriptCompletedHandler_Invoke(errorCode: HRESULT; result_: PWideChar; aExecutionID : integer): HRESULT;
+function TWVBrowserBase.DedicatedWorkerCreatedEventHandler_Invoke(const sender : ICoreWebView2;
+                                                                  const args   : ICoreWebView2DedicatedWorkerCreatedEventArgs): HRESULT;
+begin
+  Result := S_OK;
+  doOnDedicatedWorkerCreatedEvent(sender, args);
+end;
+
+function TWVBrowserBase.DedicatedWorkerDedicatedWorkerCreatedEventHandler_Invoke(const sender    : ICoreWebView2DedicatedWorker;
+                                                                                 const args      : ICoreWebView2DedicatedWorkerCreatedEventArgs;
+                                                                                       aWorkerID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnDedicatedWorkerCreatedEvent2(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.DedicatedWorkerDestroyingEventHandler_Invoke(const sender             : ICoreWebView2DedicatedWorker;
+                                                                     const args               : IUnknown;
+                                                                           aWorkerID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnDedicatedWorkerDestroyingEvent(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.DedicatedWorkerWebMessageReceivedEventHandler_Invoke(const sender    : ICoreWebView2DedicatedWorker;
+                                                                             const args      : ICoreWebView2WebMessageReceivedEventArgs;
+                                                                                   aWorkerID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnDedicatedWorkerWebMessageReceivedEvent(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.FrameDedicatedWorkerCreatedEventHandler_Invoke(const sender   : ICoreWebView2Frame;
+                                                                       const args     : ICoreWebView2DedicatedWorkerCreatedEventArgs;
+                                                                             aFrameID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnFrameDedicatedWorkerCreatedEvent(sender, args, aFrameID);
+end;
+
+function TWVBrowserBase.ServiceWorkerDestroyingEventHandler_Invoke(const sender    : ICoreWebView2ServiceWorker;
+                                                                   const args      : IUnknown;
+                                                                         aWorkerID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnServiceWorkerDestroyingEvent(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.ServiceWorkerWebMessageReceivedEventHandler_Invoke(const sender    : ICoreWebView2ServiceWorker;
+                                                                           const args      : ICoreWebView2WebMessageReceivedEventArgs;
+                                                                                 aWorkerID : cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnServiceWorkerWebMessageReceivedEvent(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.ServiceWorkerRegisteredEventHandler_Invoke(const sender : ICoreWebView2ServiceWorkerManager;
+                                                                   const args   : ICoreWebView2ServiceWorkerRegisteredEventArgs): HRESULT;
+begin
+  Result := S_OK;
+  doOnServiceWorkerRegisteredEvent(sender, args);
+end;
+
+function TWVBrowserBase.GetServiceWorkerRegistrationsCompletedHandler_Invoke(      errorCode : HResult;
+                                                                             const result_   : ICoreWebView2ServiceWorkerRegistrationCollectionView): HRESULT;
+begin
+  Result := S_OK;
+  doOnGetServiceWorkerRegistrationsCompletedEvent(errorCode, result_);
+end;
+
+function TWVBrowserBase.ServiceWorkerActivatedEventHandler_Invoke(const sender : ICoreWebView2ServiceWorkerRegistration;
+                                                                  const args   : ICoreWebView2ServiceWorkerActivatedEventArgs): HRESULT;
+begin
+  Result := S_OK;
+  doOnServiceWorkerActivatedEvent(sender, args);
+end;
+
+function TWVBrowserBase.ServiceWorkerRegistrationUnregisteringEventHandler_Invoke(const sender : ICoreWebView2ServiceWorkerRegistration;
+                                                                                  const args   : IUnknown): HRESULT;
+begin
+  Result := S_OK;
+  doOnServiceWorkerRegistrationUnregisteringEvent(sender, args);
+end;
+
+function TWVBrowserBase.SharedWorkerCreatedEventHandler_Invoke(const sender : ICoreWebView2SharedWorkerManager;
+                                                               const args   : ICoreWebView2SharedWorkerCreatedEventArgs): HRESULT;
+begin
+  Result := S_OK;
+  doOnSharedWorkerCreatedEvent(sender, args);
+end;
+
+function TWVBrowserBase.GetSharedWorkersCompletedHandler_Invoke(      errorCode : HResult;
+                                                                const result_   : ICoreWebView2SharedWorkerCollectionView): HRESULT;
+begin
+  Result := S_OK;
+  doOnGetSharedWorkersCompletedEvent(errorCode, result_);
+end;
+
+function TWVBrowserBase.SharedWorkerDestroyingEventHandler_Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown; aWorkerID: cardinal): HRESULT;
+begin
+  Result := S_OK;
+  doOnSharedWorkerDestroyingEvent(sender, args, aWorkerID);
+end;
+
+function TWVBrowserBase.ExecuteScriptCompletedHandler_Invoke(errorCode    : HRESULT;
+                                                             result_      : PWideChar;
+                                                             aExecutionID : integer): HRESULT;
 begin
   Result := S_OK;
 
@@ -6474,6 +6990,29 @@ begin
     Result := FCoreWebView2.FrameId
    else
     Result := WEBVIEW4DELPHI_INVALID_FRAMEID;
+end;
+
+function TWVBrowserBase.GetAreWebViewScriptApisEnabledForServiceWorkers : boolean;
+begin
+  Result := Initialized and
+            assigned(FCoreWebView2Profile) and
+            FCoreWebView2Profile.AreWebViewScriptApisEnabledForServiceWorkers;
+end;
+
+function TWVBrowserBase.GetServiceWorkerManager : ICoreWebView2ServiceWorkerManager;
+begin
+  if Initialized and assigned(FCoreWebView2Profile) then
+    Result := FCoreWebView2Profile.ServiceWorkerManager
+   else
+    Result := nil;
+end;
+
+function TWVBrowserBase.GetSharedWorkerManager : ICoreWebView2SharedWorkerManager;
+begin
+  if Initialized and assigned(FCoreWebView2Profile) then
+    Result := FCoreWebView2Profile.SharedWorkerManager
+   else
+    Result := nil;
 end;
 
 function TWVBrowserBase.GetScreenScale : single;
@@ -8146,6 +8685,12 @@ procedure TWVBrowserBase.SetMemoryUsageTargetLevel(aValue : TWVMemoryUsageTarget
 begin
   if Initialized then
     FCoreWebView2.MemoryUsageTargetLevel := aValue;
+end;
+
+procedure TWVBrowserBase.SetAreWebViewScriptApisEnabledForServiceWorkers(aValue : boolean);
+begin
+  if Initialized and assigned(FCoreWebView2Profile) then
+    FCoreWebView2Profile.AreWebViewScriptApisEnabledForServiceWorkers := aValue;
 end;
 
 function TWVBrowserBase.CreateSharedBuffer(aSize : Largeuint; var aSharedBuffer : ICoreWebView2SharedBuffer) : boolean;

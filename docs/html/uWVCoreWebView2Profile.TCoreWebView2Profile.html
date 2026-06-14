@@ -67,6 +67,10 @@ body { margin: 0.5em; }
 </tr>
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code><strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf9">FBaseIntf9</a></strong>: <a href="uWVTypeLibrary.ICoreWebView2Profile9.html">ICoreWebView2Profile9</a>;</code></td>
+</tr>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FProfileDeletedToken">FProfileDeletedToken</a></strong>: <a href="uWVTypeLibrary.EventRegistrationToken.html">EventRegistrationToken</a>;</code></td>
 </tr>
 </table>
@@ -114,23 +118,39 @@ body { margin: 0.5em; }
 </tr>
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
-<td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a></strong>(const aValue : <a href="uWVTypes.html#wvstring">wvstring</a>);</code></td>
+<td class="itemcode"><code>function <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetAreWebViewScriptApisEnabledForServiceWorkers">GetAreWebViewScriptApisEnabledForServiceWorkers</a></strong>: boolean;</code></td>
 </tr>
 <tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>function <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetServiceWorkerManager">GetServiceWorkerManager</a></strong>: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>;</code></td>
+</tr>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>function <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetSharedWorkerManager">GetSharedWorkerManager</a></strong>: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>;</code></td>
+</tr>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a></strong>(const aValue : <a href="uWVTypes.html#wvstring">wvstring</a>);</code></td>
+</tr>
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredColorScheme-TWVPreferredColorScheme-">SetPreferredColorScheme</a></strong>(aValue : <a href="uWVTypes.html#TWVPreferredColorScheme">TWVPreferredColorScheme</a>);</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredTrackingPreventionLevel-TWVTrackingPreventionLevel-">SetPreferredTrackingPreventionLevel</a></strong>(aValue : <a href="uWVTypes.html#TWVTrackingPreventionLevel">TWVTrackingPreventionLevel</a>);</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsPasswordAutosaveEnabled-boolean-">SetIsPasswordAutosaveEnabled</a></strong>(aValue : boolean);</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsGeneralAutofillEnabled-boolean-">SetIsGeneralAutofillEnabled</a></strong>(aValue : boolean);</code></td>
+</tr>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>procedure <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetAreWebViewScriptApisEnabledForServiceWorkers-boolean-">SetAreWebViewScriptApisEnabledForServiceWorkers</a></strong>(aValue : boolean);</code></td>
 </tr>
 <tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
@@ -197,47 +217,59 @@ body { margin: 0.5em; }
 <table class="summary wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#Initialized">Initialized</a></strong>                       : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetInitialized">GetInitialized</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#Initialized">Initialized</a></strong>                                  : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#BaseIntf">BaseIntf</a></strong>                          : <a href="uWVTypeLibrary.ICoreWebView2Profile.html">ICoreWebView2Profile</a>        read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>                            write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#BaseIntf">BaseIntf</a></strong>                                     : <a href="uWVTypeLibrary.ICoreWebView2Profile.html">ICoreWebView2Profile</a>                read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>                                        write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>;</code></td>
 </tr>
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#ProfileName">ProfileName</a></strong>                       : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfileName">GetProfileName</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#ProfileName">ProfileName</a></strong>                                  : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfileName">GetProfileName</a>;</code></td>
 </tr>
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsInPrivateModeEnabled">IsInPrivateModeEnabled</a></strong>            : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsInPrivateModeEnabled">GetIsInPrivateModeEnabled</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsInPrivateModeEnabled">IsInPrivateModeEnabled</a></strong>                       : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsInPrivateModeEnabled">GetIsInPrivateModeEnabled</a>;</code></td>
 </tr>
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#ProfilePath">ProfilePath</a></strong>                       : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfilePath">GetProfilePath</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#ProfilePath">ProfilePath</a></strong>                                  : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfilePath">GetProfilePath</a>;</code></td>
 </tr>
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#DefaultDownloadFolderPath">DefaultDownloadFolderPath</a></strong>         : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetDefaultDownloadFolderPath">GetDefaultDownloadFolderPath</a>         write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#DefaultDownloadFolderPath">DefaultDownloadFolderPath</a></strong>                    : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetDefaultDownloadFolderPath">GetDefaultDownloadFolderPath</a>                     write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a>;</code></td>
 </tr>
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#PreferredColorScheme">PreferredColorScheme</a></strong>              : <a href="uWVTypes.html#TWVPreferredColorScheme">TWVPreferredColorScheme</a>     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredColorScheme">GetPreferredColorScheme</a>              write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredColorScheme-TWVPreferredColorScheme-">SetPreferredColorScheme</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#PreferredColorScheme">PreferredColorScheme</a></strong>                         : <a href="uWVTypes.html#TWVPreferredColorScheme">TWVPreferredColorScheme</a>             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredColorScheme">GetPreferredColorScheme</a>                          write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredColorScheme-TWVPreferredColorScheme-">SetPreferredColorScheme</a>;</code></td>
 </tr>
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#PreferredTrackingPreventionLevel">PreferredTrackingPreventionLevel</a></strong>  : <a href="uWVTypes.html#TWVTrackingPreventionLevel">TWVTrackingPreventionLevel</a>  read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredTrackingPreventionLevel">GetPreferredTrackingPreventionLevel</a>  write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredTrackingPreventionLevel-TWVTrackingPreventionLevel-">SetPreferredTrackingPreventionLevel</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#PreferredTrackingPreventionLevel">PreferredTrackingPreventionLevel</a></strong>             : <a href="uWVTypes.html#TWVTrackingPreventionLevel">TWVTrackingPreventionLevel</a>          read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredTrackingPreventionLevel">GetPreferredTrackingPreventionLevel</a>              write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredTrackingPreventionLevel-TWVTrackingPreventionLevel-">SetPreferredTrackingPreventionLevel</a>;</code></td>
 </tr>
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#CookieManager">CookieManager</a></strong>                     : <a href="uWVTypeLibrary.ICoreWebView2CookieManager.html">ICoreWebView2CookieManager</a>  read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetCookieManager">GetCookieManager</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#CookieManager">CookieManager</a></strong>                                : <a href="uWVTypeLibrary.ICoreWebView2CookieManager.html">ICoreWebView2CookieManager</a>          read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetCookieManager">GetCookieManager</a>;</code></td>
 </tr>
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsPasswordAutosaveEnabled">IsPasswordAutosaveEnabled</a></strong>         : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsPasswordAutosaveEnabled">GetIsPasswordAutosaveEnabled</a>         write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsPasswordAutosaveEnabled-boolean-">SetIsPasswordAutosaveEnabled</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsPasswordAutosaveEnabled">IsPasswordAutosaveEnabled</a></strong>                    : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsPasswordAutosaveEnabled">GetIsPasswordAutosaveEnabled</a>                     write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsPasswordAutosaveEnabled-boolean-">SetIsPasswordAutosaveEnabled</a>;</code></td>
 </tr>
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsGeneralAutofillEnabled">IsGeneralAutofillEnabled</a></strong>          : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsGeneralAutofillEnabled">GetIsGeneralAutofillEnabled</a>          write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsGeneralAutofillEnabled-boolean-">SetIsGeneralAutofillEnabled</a>;</code></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#IsGeneralAutofillEnabled">IsGeneralAutofillEnabled</a></strong>                     : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsGeneralAutofillEnabled">GetIsGeneralAutofillEnabled</a>                      write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsGeneralAutofillEnabled-boolean-">SetIsGeneralAutofillEnabled</a>;</code></td>
+</tr>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#AreWebViewScriptApisEnabledForServiceWorkers">AreWebViewScriptApisEnabledForServiceWorkers</a></strong> : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetAreWebViewScriptApisEnabledForServiceWorkers">GetAreWebViewScriptApisEnabledForServiceWorkers</a>  write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetAreWebViewScriptApisEnabledForServiceWorkers-boolean-">SetAreWebViewScriptApisEnabledForServiceWorkers</a>;</code></td>
+</tr>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#ServiceWorkerManager">ServiceWorkerManager</a></strong>                         : <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>   read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetServiceWorkerManager">GetServiceWorkerManager</a>;</code></td>
+</tr>
+<tr class="list2 visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SharedWorkerManager">SharedWorkerManager</a></strong>                          : <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetSharedWorkerManager">GetSharedWorkerManager</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -302,6 +334,14 @@ body { margin: 0.5em; }
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="FBaseIntf8"></span><code><strong>FBaseIntf8</strong>: <a href="uWVTypeLibrary.ICoreWebView2Profile8.html">ICoreWebView2Profile8</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="FBaseIntf9"></span><code><strong>FBaseIntf9</strong>: <a href="uWVTypeLibrary.ICoreWebView2Profile9.html">ICoreWebView2Profile9</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -398,6 +438,30 @@ body { margin: 0.5em; }
 <table class="detail visibility-protected wide_list">
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="GetAreWebViewScriptApisEnabledForServiceWorkers"></span><code>function <strong>GetAreWebViewScriptApisEnabledForServiceWorkers</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="GetServiceWorkerManager"></span><code>function <strong>GetServiceWorkerManager</strong>: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="GetSharedWorkerManager"></span><code>function <strong>GetSharedWorkerManager</strong>: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="SetDefaultDownloadFolderPath-wvstring-"></span><code>procedure <strong>SetDefaultDownloadFolderPath</strong>(const aValue : <a href="uWVTypes.html#wvstring">wvstring</a>);</code></td>
 </tr>
 <tr><td colspan="2">
@@ -431,6 +495,14 @@ body { margin: 0.5em; }
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="SetIsGeneralAutofillEnabled-boolean-"></span><code>procedure <strong>SetIsGeneralAutofillEnabled</strong>(aValue : boolean);</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="SetAreWebViewScriptApisEnabledForServiceWorkers-boolean-"></span><code>procedure <strong>SetAreWebViewScriptApisEnabledForServiceWorkers</strong>(aValue : boolean);</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -705,7 +777,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>                       : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetInitialized">GetInitialized</a>;</code></td>
+<td class="itemcode"><span id="Initialized"></span><code>property <strong>Initialized</strong>                                  : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetInitialized">GetInitialized</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -715,7 +787,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="BaseIntf"></span><code>property <strong>BaseIntf</strong>                          : <a href="uWVTypeLibrary.ICoreWebView2Profile.html">ICoreWebView2Profile</a>        read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>                            write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>;</code></td>
+<td class="itemcode"><span id="BaseIntf"></span><code>property <strong>BaseIntf</strong>                                     : <a href="uWVTypeLibrary.ICoreWebView2Profile.html">ICoreWebView2Profile</a>                read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>                                        write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#FBaseIntf">FBaseIntf</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -725,7 +797,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="ProfileName"></span><code>property <strong>ProfileName</strong>                       : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfileName">GetProfileName</a>;</code></td>
+<td class="itemcode"><span id="ProfileName"></span><code>property <strong>ProfileName</strong>                                  : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfileName">GetProfileName</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -739,7 +811,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="IsInPrivateModeEnabled"></span><code>property <strong>IsInPrivateModeEnabled</strong>            : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsInPrivateModeEnabled">GetIsInPrivateModeEnabled</a>;</code></td>
+<td class="itemcode"><span id="IsInPrivateModeEnabled"></span><code>property <strong>IsInPrivateModeEnabled</strong>                       : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsInPrivateModeEnabled">GetIsInPrivateModeEnabled</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -753,7 +825,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="ProfilePath"></span><code>property <strong>ProfilePath</strong>                       : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfilePath">GetProfilePath</a>;</code></td>
+<td class="itemcode"><span id="ProfilePath"></span><code>property <strong>ProfilePath</strong>                                  : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetProfilePath">GetProfilePath</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -767,7 +839,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="DefaultDownloadFolderPath"></span><code>property <strong>DefaultDownloadFolderPath</strong>         : <a href="uWVTypes.html#wvstring">wvstring</a>                    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetDefaultDownloadFolderPath">GetDefaultDownloadFolderPath</a>         write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a>;</code></td>
+<td class="itemcode"><span id="DefaultDownloadFolderPath"></span><code>property <strong>DefaultDownloadFolderPath</strong>                    : <a href="uWVTypes.html#wvstring">wvstring</a>                            read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetDefaultDownloadFolderPath">GetDefaultDownloadFolderPath</a>                     write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetDefaultDownloadFolderPath-wvstring-">SetDefaultDownloadFolderPath</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -781,7 +853,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="PreferredColorScheme"></span><code>property <strong>PreferredColorScheme</strong>              : <a href="uWVTypes.html#TWVPreferredColorScheme">TWVPreferredColorScheme</a>     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredColorScheme">GetPreferredColorScheme</a>              write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredColorScheme-TWVPreferredColorScheme-">SetPreferredColorScheme</a>;</code></td>
+<td class="itemcode"><span id="PreferredColorScheme"></span><code>property <strong>PreferredColorScheme</strong>                         : <a href="uWVTypes.html#TWVPreferredColorScheme">TWVPreferredColorScheme</a>             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredColorScheme">GetPreferredColorScheme</a>                          write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredColorScheme-TWVPreferredColorScheme-">SetPreferredColorScheme</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -803,7 +875,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="PreferredTrackingPreventionLevel"></span><code>property <strong>PreferredTrackingPreventionLevel</strong>  : <a href="uWVTypes.html#TWVTrackingPreventionLevel">TWVTrackingPreventionLevel</a>  read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredTrackingPreventionLevel">GetPreferredTrackingPreventionLevel</a>  write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredTrackingPreventionLevel-TWVTrackingPreventionLevel-">SetPreferredTrackingPreventionLevel</a>;</code></td>
+<td class="itemcode"><span id="PreferredTrackingPreventionLevel"></span><code>property <strong>PreferredTrackingPreventionLevel</strong>             : <a href="uWVTypes.html#TWVTrackingPreventionLevel">TWVTrackingPreventionLevel</a>          read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetPreferredTrackingPreventionLevel">GetPreferredTrackingPreventionLevel</a>              write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetPreferredTrackingPreventionLevel-TWVTrackingPreventionLevel-">SetPreferredTrackingPreventionLevel</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -827,7 +899,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="CookieManager"></span><code>property <strong>CookieManager</strong>                     : <a href="uWVTypeLibrary.ICoreWebView2CookieManager.html">ICoreWebView2CookieManager</a>  read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetCookieManager">GetCookieManager</a>;</code></td>
+<td class="itemcode"><span id="CookieManager"></span><code>property <strong>CookieManager</strong>                                : <a href="uWVTypeLibrary.ICoreWebView2CookieManager.html">ICoreWebView2CookieManager</a>          read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetCookieManager">GetCookieManager</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -841,7 +913,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="IsPasswordAutosaveEnabled"></span><code>property <strong>IsPasswordAutosaveEnabled</strong>         : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsPasswordAutosaveEnabled">GetIsPasswordAutosaveEnabled</a>         write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsPasswordAutosaveEnabled-boolean-">SetIsPasswordAutosaveEnabled</a>;</code></td>
+<td class="itemcode"><span id="IsPasswordAutosaveEnabled"></span><code>property <strong>IsPasswordAutosaveEnabled</strong>                    : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsPasswordAutosaveEnabled">GetIsPasswordAutosaveEnabled</a>                     write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsPasswordAutosaveEnabled-boolean-">SetIsPasswordAutosaveEnabled</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -865,7 +937,7 @@ Error value                                     | Description
 <table class="detail visibility-public wide_list">
 <tr class="list visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
-<td class="itemcode"><span id="IsGeneralAutofillEnabled"></span><code>property <strong>IsGeneralAutofillEnabled</strong>          : boolean                     read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsGeneralAutofillEnabled">GetIsGeneralAutofillEnabled</a>          write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsGeneralAutofillEnabled-boolean-">SetIsGeneralAutofillEnabled</a>;</code></td>
+<td class="itemcode"><span id="IsGeneralAutofillEnabled"></span><code>property <strong>IsGeneralAutofillEnabled</strong>                     : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetIsGeneralAutofillEnabled">GetIsGeneralAutofillEnabled</a>                      write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetIsGeneralAutofillEnabled-boolean-">SetIsGeneralAutofillEnabled</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -882,6 +954,48 @@ Error value                                     | Description
 
 
 <p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#get_isgeneralautofillenabled">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile6#get_isgeneralautofillenabled</a>&quot;&gt;See the ICoreWebView2Profile6 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><span id="AreWebViewScriptApisEnabledForServiceWorkers"></span><code>property <strong>AreWebViewScriptApisEnabledForServiceWorkers</strong> : boolean                             read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetAreWebViewScriptApisEnabledForServiceWorkers">GetAreWebViewScriptApisEnabledForServiceWorkers</a>  write <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#SetAreWebViewScriptApisEnabledForServiceWorkers-boolean-">SetAreWebViewScriptApisEnabledForServiceWorkers</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Enables or disables webview2 specific Service Worker JS APIs in the WebView2s associated with this Profile. When set to `TRUE`, chrome and webview objects are available in Service Workers. chrome.webview exposes APIs to interact with the WebView from Service Workers. The default value is `FALSE`. This setting applies to all newly installed Service Workers within the profile and is not persisted across WebView2 sessions. </p>
+<p>
+
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#set_arewebviewscriptapisenabledforserviceworkers">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#set_arewebviewscriptapisenabledforserviceworkers</a>&quot;&gt;See the ICoreWebView2Profile9 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><span id="ServiceWorkerManager"></span><code>property <strong>ServiceWorkerManager</strong>                         : <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>   read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetServiceWorkerManager">GetServiceWorkerManager</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Get the service worker manager to monitor service worker registrations and interact with the service workers associated with the current profile. </p>
+<p>
+
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_serviceworkermanager">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_serviceworkermanager</a>&quot;&gt;See the ICoreWebView2Profile9 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><span id="SharedWorkerManager"></span><code>property <strong>SharedWorkerManager</strong>                          : <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>    read <a href="uWVCoreWebView2Profile.TCoreWebView2Profile.html#GetSharedWorkerManager">GetSharedWorkerManager</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Get the shared worker manager to monitor shared worker creations and interact with the shared workers associated with the current profile. </p>
+<p>
+
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_sharedworkermanager">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2profile9#get_sharedworkermanager</a>&quot;&gt;See the ICoreWebView2Profile9 article.)</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>

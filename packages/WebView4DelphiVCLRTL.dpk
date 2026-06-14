@@ -101,6 +101,14 @@ contains
   uWVCoreWebView2FileSystemHandle in '..\source\uWVCoreWebView2FileSystemHandle.pas',
   uWVCoreWebView2Notification in '..\source\uWVCoreWebView2Notification.pas',
   uWVCoreWebView2FindOptions in '..\source\uWVCoreWebView2FindOptions.pas',
-  uWVCoreWebView2Find in '..\source\uWVCoreWebView2Find.pas';
+  uWVCoreWebView2Find in '..\source\uWVCoreWebView2Find.pas',
+  uWVCoreWebView2DedicatedWorker in '..\source\uWVCoreWebView2DedicatedWorker.pas',
+  uWVCoreWebView2ServiceWorker in '..\source\uWVCoreWebView2ServiceWorker.pas',
+  uWVCoreWebView2ServiceWorkerManager in '..\source\uWVCoreWebView2ServiceWorkerManager.pas',
+  uWVCoreWebView2ServiceWorkerRegistration in '..\source\uWVCoreWebView2ServiceWorkerRegistration.pas',
+  uWVCoreWebView2ServiceWorkerRegistrationCollectionView in '..\source\uWVCoreWebView2ServiceWorkerRegistrationCollectionView.pas',
+  uWVCoreWebView2SharedWorkerManager in '..\source\uWVCoreWebView2SharedWorkerManager.pas',
+  uWVCoreWebView2SharedWorkerCollectionView in '..\source\uWVCoreWebView2SharedWorkerCollectionView.pas',
+  uWVCoreWebView2SharedWorker in '..\source\uWVCoreWebView2SharedWorker.pas';
 
 end.

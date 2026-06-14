@@ -523,6 +523,58 @@ body { margin: 0.5em; }
 <td class="visibility"><span class="badge vis-published">Published</span></td>
 <td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnDragStarting">OnDragStarting</a></strong>;</code></td>
 </tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnDedicatedWorkerCreated">OnDedicatedWorkerCreated</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnDedicatedWorkerCreated2">OnDedicatedWorkerCreated2</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnDedicatedWorkerDestroying">OnDedicatedWorkerDestroying</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnDedicatedWorkerWebMessageReceived">OnDedicatedWorkerWebMessageReceived</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnFrameDedicatedWorkerCreated">OnFrameDedicatedWorkerCreated</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnServiceWorkerDestroying">OnServiceWorkerDestroying</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnServiceWorkerWebMessageReceived">OnServiceWorkerWebMessageReceived</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnServiceWorkerRegistered">OnServiceWorkerRegistered</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnGetServiceWorkerRegistrationsCompleted">OnGetServiceWorkerRegistrationsCompleted</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnServiceWorkerActivated">OnServiceWorkerActivated</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnServiceWorkerRegistrationUnregistering">OnServiceWorkerRegistrationUnregistering</a></strong>;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnSharedWorkerCreated">OnSharedWorkerCreated</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><code>property <strong><a href="uWVFMXBrowser.TWVFMXBrowser.html#OnGetSharedWorkersCompleted">OnGetSharedWorkersCompleted</a></strong>;</code></td>
+</tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Methods</h3>
@@ -2137,6 +2189,246 @@ Unresponsiveness | The process indicated by the event args has become unresponsi
 <p>
 
 <p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller5#add_dragstarting">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2compositioncontroller5#add_dragstarting</a>&quot;&gt;See the ICoreWebView2CompositionController5 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnDedicatedWorkerCreated"></span><code>property <strong>OnDedicatedWorkerCreated</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnDedicatedWorkerCreated">TWVBrowserBase.OnDedicatedWorkerCreated</a>.</p><p>
+
+
+<p>Subscribe to this event that gets raised when a new dedicated worker is created.
+
+<p>A Dedicated Worker is a type of web worker that allows you to run Javascript code in the background without blocking the main thread, making them useful for tasks like heavy computations, data processing, and parallel execution.
+
+<p>It is &quot;dedicated&quot; because it is linked to a single parent document and cannot be shared with other scripts.
+
+<p>This event is raised when a web application creates a dedicated worker using the `new Worker(&quot;/worker.js&quot;)` method. See the [Worker](<a href="https://developer.mozilla.org/docs/Web/API/Worker/Worker">https://developer.mozilla.org/docs/Web/API/Worker/Worker</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_29#add_dedicatedworkercreated">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2_29#add_dedicatedworkercreated</a>&quot;&gt;See the ICoreWebView2_29 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnDedicatedWorkerCreated2"></span><code>property <strong>OnDedicatedWorkerCreated2</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnDedicatedWorkerCreated2">TWVBrowserBase.OnDedicatedWorkerCreated2</a>.</p><p>
+
+
+<p>Subscribe to this event that gets raised when a new dedicated worker is created from a dedicated worker.
+
+<p>A Dedicated Worker is a type of web worker that allows you to run Javascript code in the background without blocking the main thread, making them useful for tasks like heavy computations, data processing, and parallel execution.
+
+<p>It is &quot;dedicated&quot; because it is linked to a single parent document and cannot be shared with other scripts.
+
+<p>This event is raised when a dedicated creates a dedicated worker using the `new Worker(&quot;/worker.js&quot;)` method. See the [Worker](<a href="https://developer.mozilla.org/docs/Web/API/Worker/Worker">https://developer.mozilla.org/docs/Web/API/Worker/Worker</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_dedicatedworkercreated">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_dedicatedworkercreated</a>&quot;&gt;See the ICoreWebView2DedicatedWorker article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnDedicatedWorkerDestroying"></span><code>property <strong>OnDedicatedWorkerDestroying</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnDedicatedWorkerDestroying">TWVBrowserBase.OnDedicatedWorkerDestroying</a>.</p><p>
+
+
+<p>Add an event handler for the `Destroying` event that is raised when the worker object is Destroying.
+
+<p>A worker object is Destroying when the worker script is terminated or when the `CoreWebView2DedicatedWorker` object is Destroying.
+
+<p>If the worker has already been destroyed before the event handler is registered, the handler will never be called.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_destroying">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_destroying</a>&quot;&gt;See the ICoreWebView2DedicatedWorker article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnDedicatedWorkerWebMessageReceived"></span><code>property <strong>OnDedicatedWorkerWebMessageReceived</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnDedicatedWorkerWebMessageReceived">TWVBrowserBase.OnDedicatedWorkerWebMessageReceived</a>.</p><p>
+
+
+<p>`OnWebMessageReceived` is fired, when the `ICoreWebView2Settings.IsWebMessageEnabled` setting is set TRUE and the worker runs `self.chrome.webview.postMessage`. The `postMessage` function is `void postMessage(object)` where object is any object supported by JSON conversion.
+
+<p>If the worker calls `postMessage` multiple times, the corresponding `OnWebMessageReceived` events are guaranteed to be fired in the same order.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_webmessagereceived">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworker#add_webmessagereceived</a>&quot;&gt;See the ICoreWebView2DedicatedWorker article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnFrameDedicatedWorkerCreated"></span><code>property <strong>OnFrameDedicatedWorkerCreated</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnFrameDedicatedWorkerCreated">TWVBrowserBase.OnFrameDedicatedWorkerCreated</a>.</p><p>
+
+
+<p>Subscribe to this event that gets raised when a new dedicated worker is created from an iframe.
+
+<p>A Dedicated Worker is a type of web worker that allows you to run Javascript code in the background without blocking the main thread, making them useful for tasks like heavy computations, data processing, and parallel execution.
+
+<p>It is &quot;dedicated&quot; because it is linked to a single parent document and cannot be shared with other scripts.
+
+<p>This event is raised when a web application creates a dedicated worker using the `new Worker(&quot;/worker.js&quot;)` method. See the [Worker](<a href="https://developer.mozilla.org/docs/Web/API/Worker/Worker">https://developer.mozilla.org/docs/Web/API/Worker/Worker</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame8#add_dedicatedworkercreated">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2frame8#add_dedicatedworkercreated</a>&quot;&gt;See the ICoreWebView2Frame8 article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnServiceWorkerDestroying"></span><code>property <strong>OnServiceWorkerDestroying</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnServiceWorkerDestroying">TWVBrowserBase.OnServiceWorkerDestroying</a>.</p><p>
+
+
+<p>Add an event handler for the `Destroying` event that is raised when the worker object is Destroying.
+
+<p>A worker object is Destroying when the worker script is terminated or when the `CoreWebView2ServiceWorker` object is Destroying.
+
+<p>If the worker has already been destroyed before the event handler is registered, the handler will never be called.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_destroying">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_destroying</a>&quot;&gt;See the ICoreWebView2ServiceWorker article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnServiceWorkerWebMessageReceived"></span><code>property <strong>OnServiceWorkerWebMessageReceived</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnServiceWorkerWebMessageReceived">TWVBrowserBase.OnServiceWorkerWebMessageReceived</a>.</p><p>
+
+
+<p>`OnWebMessageReceived` is fired, when the `ICoreWebView2Settings.IsWebMessageEnabled` setting is set TRUE and the worker runs `self.chrome.webview.postMessage`. The `postMessage` function is `void postMessage(object)` where object is any object supported by JSON conversion.
+
+<p>If the worker calls `postMessage` multiple times, the corresponding `WebMessageReceived` events are guaranteed to be fired in the same order.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_webmessagereceived">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworker#add_webmessagereceived</a>&quot;&gt;See the ICoreWebView2ServiceWorker article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnServiceWorkerRegistered"></span><code>property <strong>OnServiceWorkerRegistered</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnServiceWorkerRegistered">TWVBrowserBase.OnServiceWorkerRegistered</a>.</p><p>
+
+
+<p>A ServiceWorker is a specific type of worker that takes a JavaScript file that can control the web-page/site that it is associated with, intercepting and modifying navigation and resource requests, and caching resources in a very granular fashion to give you complete control over how app behaves in certain situations.
+
+<p>Service workers essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They run in a different context from the web page, which means they have no direct access to the DOM. Unlike dedicated and shared workers, which may have direct access to a global scope shared with other scripts, service workers operate in isolation from the DOM, ensuring a more secure and controlled environment.
+
+<p>This event is raised when a web application registers a service worker using the `navigator.serviceWorker.register(&quot;/sw.js&quot;)` method. See the [Service Worker Registration](<a href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration">https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#add_serviceworkerregistered">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#add_serviceworkerregistered</a>&quot;&gt;See the ICoreWebView2ServiceWorkerManager article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnGetServiceWorkerRegistrationsCompleted"></span><code>property <strong>OnGetServiceWorkerRegistrationsCompleted</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnGetServiceWorkerRegistrationsCompleted">TWVBrowserBase.OnGetServiceWorkerRegistrationsCompleted</a>.</p><p>
+ Receives the result of the TCoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrations and TCoreWebView2ServiceWorkerManager.GetServiceWorkerRegistrationsForScope methods. 
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#getserviceworkerregistrations">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkermanager#getserviceworkerregistrations</a>&quot;&gt;See the ICoreWebView2ServiceWorkerManager article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnServiceWorkerActivated"></span><code>property <strong>OnServiceWorkerActivated</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnServiceWorkerActivated">TWVBrowserBase.OnServiceWorkerActivated</a>.</p><p>
+
+
+<p>This event is raised when a service worker is activated. A service worker is activated when its script has been successfully registered and it is ready to control the pages within the scope of the registration.
+
+<p>This event is also raised when an updated version of a service worker reaches the active state. In such a case, the existing CoreWebView2ServiceWorker object is destroying, and this event is raised with a new CoreWebView2ServiceWorker object representing the updated service worker. The active service worker is the one that receives fetch and message events for the pages it controls. See the [Service Worker](<a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active">https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active</a>) documentation for more information.
+
+<p>If you register for the `OnServiceWorkerActivated` event and the registration already has an active worker, the event handler is not called immediately. Instead, it waits for the next activation event to occur. Therefore, you should first check if an active service worker is running by using the `TCoreWebView2ServiceWorkerRegistration.ActiveServiceWorker` property.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_serviceworkeractivated">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_serviceworkeractivated</a>&quot;&gt;See the ICoreWebView2ServiceWorkerRegistration article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnServiceWorkerRegistrationUnregistering"></span><code>property <strong>OnServiceWorkerRegistrationUnregistering</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnServiceWorkerRegistrationUnregistering">TWVBrowserBase.OnServiceWorkerRegistrationUnregistering</a>.</p><p>
+
+
+<p>This event is raised when the worker registration is unregistered using the JS api `registration.unregister()`. See the [Unregister](<a href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister">https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/unregister</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_unregistering">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistration#add_unregistering</a>&quot;&gt;See the ICoreWebView2ServiceWorkerRegistration article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnSharedWorkerCreated"></span><code>property <strong>OnSharedWorkerCreated</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnSharedWorkerCreated">TWVBrowserBase.OnSharedWorkerCreated</a>.</p><p>
+
+
+<p>A SharedWorker is a specific type of worker that can be accessed from several browsing contexts, such as multiple windows, iframes, or even other workers. Unlike Dedicated Workers, which have their own separate global scope, SharedWorkers share a common global scope called SharedWorkerGlobalScope.
+
+<p>This event is raised when a web application creates a shared worker using the `new SharedWorker(&quot;worker.js&quot;)` method. See the [Shared Worker](<a href="https://developer.mozilla.org/docs/Web/API/SharedWorker">https://developer.mozilla.org/docs/Web/API/SharedWorker</a>) for more information.
+
+<p>
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkermanager#add_sharedworkercreated">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkermanager#add_sharedworkercreated</a>&quot;&gt;See the ICoreWebView2SharedWorkerManager article.)</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="visibility"><span class="badge vis-published">Published</span></td>
+<td class="itemcode"><span id="OnGetSharedWorkersCompleted"></span><code>property <strong>OnGetSharedWorkersCompleted</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="inheritdescription">This item has no description. Showing description inherited from <a class="normal" href="uWVBrowserBase.TWVBrowserBase.html#OnGetSharedWorkersCompleted">TWVBrowserBase.OnGetSharedWorkersCompleted</a>.</p><p>
+ Receives the result of the TCoreWebView2SharedWorkerManager.GetSharedWorkers method. 
+
+<p>&lt;see href=&quot;<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getsharedworkerscompletedhandler#getsharedworkers">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getsharedworkerscompletedhandler#getsharedworkers</a>&quot;&gt;See the ICoreWebView2GetSharedWorkersCompletedHandler article.)</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>

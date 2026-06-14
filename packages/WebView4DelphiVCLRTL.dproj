@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{DE8B4A26-5C97-4F34-974E-E3EE0CCF67E9}</ProjectGuid>
         <MainSource>WebView4DelphiVCLRTL.dpk</MainSource>
-        <ProjectVersion>20.3</ProjectVersion>
+        <ProjectVersion>20.4</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
@@ -180,6 +180,14 @@
         <DCCReference Include="..\source\uWVCoreWebView2Notification.pas"/>
         <DCCReference Include="..\source\uWVCoreWebView2FindOptions.pas"/>
         <DCCReference Include="..\source\uWVCoreWebView2Find.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2DedicatedWorker.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2ServiceWorker.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2ServiceWorkerManager.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2ServiceWorkerRegistration.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2ServiceWorkerRegistrationCollectionView.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2SharedWorkerManager.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2SharedWorkerCollectionView.pas"/>
+        <DCCReference Include="..\source\uWVCoreWebView2SharedWorker.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -211,7 +219,7 @@
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule"/>
                 <DeployFile LocalName="..\..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\22.0\Bpl\WebView4DelphiVCLRTL.bpl" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="..\..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\23.0\Bpl\WebView4DelphiVCLRTL.bpl" Configuration="Debug" Class="ProjectOutput"/>
-                <DeployFile LocalName="..\..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\23.0\Bpl\WebView4DelphiVCLRTL.bpl" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\37.0\Bpl\WebView4DelphiVCLRTL.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>WebView4DelphiVCLRTL.bpl</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -807,6 +815,9 @@
                     <Platform Name="Win64x">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="WinARM64EC">
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
@@ -845,6 +856,10 @@
                         <RemoteDir>Assets</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="WinARM64EC">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="UWP_DelphiLogo44">
                     <Platform Name="Win32">
@@ -852,6 +867,10 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="WinARM64EC">
                         <RemoteDir>Assets</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
@@ -1069,6 +1088,7 @@
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="WinARM64EC" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>

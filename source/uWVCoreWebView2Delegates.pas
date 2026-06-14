@@ -1652,6 +1652,253 @@ type
       destructor  Destroy; override;
   end;
 
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkercreatedeventhandler">See the ICoreWebView2DedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2DedicatedWorkerCreatedEventHandler = class(TInterfacedObject, ICoreWebView2DedicatedWorkerCreatedEventHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(const sender: ICoreWebView2;
+                      const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerdedicatedworkercreatedeventhandler">See the ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler = class(TInterfacedObject, ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2DedicatedWorker;
+                      const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerdestroyingeventhandler">See the ICoreWebView2DedicatedWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2DedicatedWorkerDestroyingEventHandler = class(TInterfacedObject, ICoreWebView2DedicatedWorkerDestroyingEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2DedicatedWorker; const args: IUnknown): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `WebMessageReceived` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2dedicatedworkerwebmessagereceivedeventhandler">See the ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler = class(TInterfacedObject, ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2DedicatedWorker; const args: ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `DedicatedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2framededicatedworkercreatedeventhandler">See the ICoreWebView2FrameDedicatedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2FrameDedicatedWorkerCreatedEventHandler = class(TInterfacedObject, ICoreWebView2FrameDedicatedWorkerCreatedEventHandler)
+    protected
+      FEvents  : Pointer;
+      FFrameID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aFrameID : cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerdestroyingeventhandler">See the ICoreWebView2ServiceWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerDestroyingEventHandler = class(TInterfacedObject, ICoreWebView2ServiceWorkerDestroyingEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2ServiceWorker; const args: IUnknown): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID : cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `WebMessageReceived` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerwebmessagereceivedeventhandler">See the ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler = class(TInterfacedObject, ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2ServiceWorker; const args: ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID : cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `ServiceWorkerRegistered` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregisteredeventhandler">See the ICoreWebView2ServiceWorkerRegisteredEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerRegisteredEventHandler = class(TInterfacedObject, ICoreWebView2ServiceWorkerRegisteredEventHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(const sender: ICoreWebView2ServiceWorkerManager; const args: ICoreWebView2ServiceWorkerRegisteredEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives the result of the `GetServiceWorkerRegistrations` method.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getserviceworkerregistrationscompletedhandler">See the ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler = class(TInterfacedObject, ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `ServiceWorkerActivated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkeractivatedeventhandler">See the ICoreWebView2ServiceWorkerActivatedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerActivatedEventHandler = class(TInterfacedObject, ICoreWebView2ServiceWorkerActivatedEventHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `Unregistering` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2serviceworkerregistrationunregisteringeventhandler">See the ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler = class(TInterfacedObject, ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `SharedWorkerCreated` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercreatedeventhandler">See the ICoreWebView2SharedWorkerCreatedEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2SharedWorkerCreatedEventHandler = class(TInterfacedObject, ICoreWebView2SharedWorkerCreatedEventHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives the result of the `GetSharedWorkers` method.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2getsharedworkerscompletedhandler">See the ICoreWebView2GetSharedWorkersCompletedHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2GetSharedWorkersCompletedHandler = class(TInterfacedObject, ICoreWebView2GetSharedWorkersCompletedHandler)
+    protected
+      FEvents : Pointer;
+
+      function Invoke(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents); reintroduce;
+      destructor  Destroy; override;
+  end;
+
+  /// <summary>
+  /// Receives `Destroying` events.
+  /// </summary>
+  /// <remarks>
+  /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkerdestroyingeventhandler">See the ICoreWebView2SharedWorkerDestroyingEventHandler article.</see></para>
+  /// </remarks>
+  TCoreWebView2SharedWorkerDestroyingEventHandler = class(TInterfacedObject, ICoreWebView2SharedWorkerDestroyingEventHandler)
+    protected
+      FEvents   : Pointer;
+      FWorkerID : cardinal;
+
+      function Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown): HResult; stdcall;
+
+    public
+      constructor Create(const aEvents: IWVBrowserEvents; aWorkerID : cardinal); reintroduce;
+      destructor  Destroy; override;
+  end;
+
 
 implementation
 
@@ -3930,7 +4177,8 @@ begin
   inherited Destroy;
 end;
 
-function TCoreWebView2FindActiveMatchIndexChangedEventHandler.Invoke(const sender: ICoreWebView2Find; const args: IUnknown): HResult; stdcall;
+function TCoreWebView2FindActiveMatchIndexChangedEventHandler.Invoke(const sender : ICoreWebView2Find;
+                                                                     const args   : IUnknown): HResult; stdcall;
 begin
   if (FEvents <> nil) then
     Result := IWVBrowserEvents(FEvents).FindActiveMatchIndexChangedEventHandler_Invoke(sender, args)
@@ -3955,7 +4203,8 @@ begin
   inherited Destroy;
 end;
 
-function TCoreWebView2FindMatchCountChangedEventHandler.Invoke(const sender: ICoreWebView2Find; const args: IUnknown): HResult; stdcall;
+function TCoreWebView2FindMatchCountChangedEventHandler.Invoke(const sender : ICoreWebView2Find;
+                                                               const args   : IUnknown): HResult; stdcall;
 begin
   if (FEvents <> nil) then
     Result := IWVBrowserEvents(FEvents).FindMatchCountChangedEventHandler_Invoke(sender, args)
@@ -4005,11 +4254,375 @@ begin
   inherited Destroy;
 end;
 
-function TCoreWebView2DragStartingEventHandler.Invoke(const sender: ICoreWebView2CompositionController;
-                                                      const args: ICoreWebView2DragStartingEventArgs): HResult;
+function TCoreWebView2DragStartingEventHandler.Invoke(const sender : ICoreWebView2CompositionController;
+                                                      const args   : ICoreWebView2DragStartingEventArgs): HResult;
 begin
   if (FEvents <> nil) then
     Result := IWVBrowserEvents(FEvents).DragStartingEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2DedicatedWorkerCreatedEventHandler
+
+constructor TCoreWebView2DedicatedWorkerCreatedEventHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2DedicatedWorkerCreatedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2DedicatedWorkerCreatedEventHandler.Invoke(const sender : ICoreWebView2;
+                                                                const args   : ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).DedicatedWorkerCreatedEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler
+
+constructor TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler.Invoke(const sender : ICoreWebView2DedicatedWorker;
+                                                                               const args   : ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).DedicatedWorkerDedicatedWorkerCreatedEventHandler_Invoke(sender, args, FWorkerID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2DedicatedWorkerDestroyingEventHandler
+
+constructor TCoreWebView2DedicatedWorkerDestroyingEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2DedicatedWorkerDestroyingEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2DedicatedWorkerDestroyingEventHandler.Invoke(const sender : ICoreWebView2DedicatedWorker;
+                                                                   const args   : IUnknown): HResult;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).DedicatedWorkerDestroyingEventHandler_Invoke(sender, args, FWorkerID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler
+
+constructor TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler.Invoke(const sender : ICoreWebView2DedicatedWorker;
+                                                                           const args   : ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).DedicatedWorkerWebMessageReceivedEventHandler_Invoke(sender, args, FWorkerID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2FrameDedicatedWorkerCreatedEventHandler
+
+constructor TCoreWebView2FrameDedicatedWorkerCreatedEventHandler.Create(const aEvents: IWVBrowserEvents; aFrameID : cardinal);
+begin
+  inherited Create;
+
+  FEvents  := Pointer(aEvents);
+  FFrameID := aFrameID;
+end;
+
+destructor TCoreWebView2FrameDedicatedWorkerCreatedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2FrameDedicatedWorkerCreatedEventHandler.Invoke(const sender: ICoreWebView2Frame; const args: ICoreWebView2DedicatedWorkerCreatedEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).FrameDedicatedWorkerCreatedEventHandler_Invoke(sender, args, FFrameID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2ServiceWorkerDestroyingEventHandler
+
+constructor TCoreWebView2ServiceWorkerDestroyingEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2ServiceWorkerDestroyingEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerDestroyingEventHandler.Invoke(const sender : ICoreWebView2ServiceWorker;
+                                                                 const args   : IUnknown): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).ServiceWorkerDestroyingEventHandler_Invoke(sender, args, FWorkerID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler
+
+constructor TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID: cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler.Invoke(const sender : ICoreWebView2ServiceWorker;
+                                                                         const args   : ICoreWebView2WebMessageReceivedEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).ServiceWorkerWebMessageReceivedEventHandler_Invoke(sender, args, FWorkerID)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2ServiceWorkerRegisteredEventHandler
+
+constructor TCoreWebView2ServiceWorkerRegisteredEventHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2ServiceWorkerRegisteredEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerRegisteredEventHandler.Invoke(const sender : ICoreWebView2ServiceWorkerManager;
+                                                                 const args   : ICoreWebView2ServiceWorkerRegisteredEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).ServiceWorkerRegisteredEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler
+
+constructor TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler.Invoke(errorCode: HResult; const result_: ICoreWebView2ServiceWorkerRegistrationCollectionView): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).GetServiceWorkerRegistrationsCompletedHandler_Invoke(errorCode, result_)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2ServiceWorkerActivatedEventHandler
+
+constructor TCoreWebView2ServiceWorkerActivatedEventHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2ServiceWorkerActivatedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerActivatedEventHandler.Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: ICoreWebView2ServiceWorkerActivatedEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).ServiceWorkerActivatedEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler
+
+constructor TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler.Invoke(const sender: ICoreWebView2ServiceWorkerRegistration; const args: IUnknown): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).ServiceWorkerRegistrationUnregisteringEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2SharedWorkerCreatedEventHandler
+
+constructor TCoreWebView2SharedWorkerCreatedEventHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2SharedWorkerCreatedEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2SharedWorkerCreatedEventHandler.Invoke(const sender: ICoreWebView2SharedWorkerManager; const args: ICoreWebView2SharedWorkerCreatedEventArgs): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).SharedWorkerCreatedEventHandler_Invoke(sender, args)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2GetSharedWorkersCompletedHandler
+
+constructor TCoreWebView2GetSharedWorkersCompletedHandler.Create(const aEvents: IWVBrowserEvents);
+begin
+  inherited Create;
+
+  FEvents := Pointer(aEvents);
+end;
+
+destructor TCoreWebView2GetSharedWorkersCompletedHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2GetSharedWorkersCompletedHandler.Invoke(errorCode: HResult; const result_: ICoreWebView2SharedWorkerCollectionView): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).GetSharedWorkersCompletedHandler_Invoke(errorCode, result_)
+   else
+    Result := E_FAIL;
+end;
+
+
+// TCoreWebView2SharedWorkerDestroyingEventHandler
+
+constructor TCoreWebView2SharedWorkerDestroyingEventHandler.Create(const aEvents: IWVBrowserEvents; aWorkerID : cardinal);
+begin
+  inherited Create;
+
+  FEvents   := Pointer(aEvents);
+  FWorkerID := aWorkerID;
+end;
+
+destructor TCoreWebView2SharedWorkerDestroyingEventHandler.Destroy;
+begin
+  FEvents := nil;
+
+  inherited Destroy;
+end;
+
+function TCoreWebView2SharedWorkerDestroyingEventHandler.Invoke(const sender: ICoreWebView2SharedWorker; const args: IUnknown): HResult; stdcall;
+begin
+  if (FEvents <> nil) then
+    Result := IWVBrowserEvents(FEvents).SharedWorkerDestroyingEventHandler_Invoke(sender, args, FWorkerID)
    else
     Result := E_FAIL;
 end;

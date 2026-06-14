@@ -2287,6 +2287,36 @@ body { margin: 0.5em; }
 <p>Example: custom-scheme-with-<a href="host://hostname/path/to/resource">host://hostname/path/to/resource</a> has origin of custom-scheme-with-<a href="host://hostname">host://hostname</a>. custom-scheme-without-host:path/to/resource has origin of custom-scheme-without-host:path/to/resource. For WebResourceRequested event, the cases of request URIs and filter URIs with custom schemes will be normalized according to generic URI syntax rules. Any non-ASCII characters will be preserved. The registered custom schemes also participate in [CORS](<a href="https://developer.mozilla.org/docs/Web/HTTP/CORS">https://developer.mozilla.org/docs/Web/HTTP/CORS</a>) and adheres to [CSP](<a href="https://developer.mozilla.org/docs/Web/HTTP/CSP">https://developer.mozilla.org/docs/Web/HTTP/CSP</a>). The app needs to set the appropriate access headers in its WebResourceRequested event handler to allow CORS requests. </p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface represents a dedicated worker in WebView2 and provides methods and properties for interacting with it, such as getting the script uri, posting messages, managing events related to the creation of child workers, termination etc. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Event args for the `DedicatedWorkerCreated` event. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventHandler.html">ICoreWebView2DedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler.html">ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerDestroyingEventHandler.html">ICoreWebView2DedicatedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler.html">ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `WebMessageReceived` events. </p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2Deferral.html">ICoreWebView2Deferral</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface is used to complete deferrals on event args that support getting deferrals using the GetDeferral method. </p></td>
@@ -2567,24 +2597,34 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p> This is the `ICoreWebView2Frame` interface to support tracking of nested iframes. </p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2Frame8.html">ICoreWebView2Frame8</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> A continuation of the `ICoreWebView2Frame` interface to manage dedicated workers. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameChildFrameCreatedEventHandler.html">ICoreWebView2FrameChildFrameCreatedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `FrameCreated` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameContentLoadingEventHandler.html">ICoreWebView2FrameContentLoadingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `ContentLoading` events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameCreatedEventArgs.html">ICoreWebView2FrameCreatedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Event args for the FrameCreated events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameCreatedEventHandler.html">ICoreWebView2FrameCreatedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `FrameCreated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameDedicatedWorkerCreatedEventHandler.html">ICoreWebView2FrameDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2FrameDestroyedEventHandler.html">ICoreWebView2FrameDestroyedEventHandler</a></td>
@@ -2665,6 +2705,16 @@ body { margin: 0.5em; }
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2GetProcessExtendedInfosCompletedHandler.html">ICoreWebView2GetProcessExtendedInfosCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives the result of the `GetProcessExtendedInfos` method. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler.html">ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives the result of the `GetServiceWorkerRegistrations` method. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2GetSharedWorkersCompletedHandler.html">ICoreWebView2GetSharedWorkersCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives the result of the `GetSharedWorkers` method. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2HistoryChangedEventHandler.html">ICoreWebView2HistoryChangedEventHandler</a></td>
@@ -2973,84 +3023,144 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p> This is the profile interface that manages profile deletion. </p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2Profile9.html">ICoreWebView2Profile9</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> A continuation of the ICoreWebView2Profile interface to manage service workers, shared workers, and service worker script API settings. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ProfileAddBrowserExtensionCompletedHandler.html">ICoreWebView2ProfileAddBrowserExtensionCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives the result of the `AddBrowserExtension` method. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ProfileDeletedEventHandler.html">ICoreWebView2ProfileDeletedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `Deleted` events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ProfileGetBrowserExtensionsCompletedHandler.html">ICoreWebView2ProfileGetBrowserExtensionsCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives the result of the `GetBrowserExtensions` method. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2RasterizationScaleChangedEventHandler.html">ICoreWebView2RasterizationScaleChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `RasterizationScaleChanged` events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2RegionRectCollectionView.html">ICoreWebView2RegionRectCollectionView</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> A collection of RECT. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SaveAsUIShowingEventArgs.html">ICoreWebView2SaveAsUIShowingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> The event args for `SaveAsUIShowing` event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SaveAsUIShowingEventHandler.html">ICoreWebView2SaveAsUIShowingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `SaveAsUIShowing` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SaveFileSecurityCheckStartingEventArgs.html">ICoreWebView2SaveFileSecurityCheckStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> The event args for `SaveFileSecurityCheckStarting` event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SaveFileSecurityCheckStartingEventHandler.html">ICoreWebView2SaveFileSecurityCheckStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `SaveFileSecurityCheckStarting` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ScreenCaptureStartingEventArgs.html">ICoreWebView2ScreenCaptureStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Event args for the `ScreenCaptureStarting` event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ScreenCaptureStartingEventHandler.html">ICoreWebView2ScreenCaptureStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `ScreenCaptureStarting` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ScriptDialogOpeningEventArgs.html">ICoreWebView2ScriptDialogOpeningEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Event args for the ScriptDialogOpening event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ScriptDialogOpeningEventHandler.html">ICoreWebView2ScriptDialogOpeningEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives ScriptDialogOpening events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ScriptException.html">ICoreWebView2ScriptException</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface represents a JavaScript exception. If the CoreWebView2.ExecuteScriptWithResult result has Succeeded as false, you can use the result's Exception property to get the script exception. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServerCertificateErrorDetectedEventArgs.html">ICoreWebView2ServerCertificateErrorDetectedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Event args for the ServerCertificateErrorDetected event. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServerCertificateErrorDetectedEventHandler.html">ICoreWebView2ServerCertificateErrorDetectedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> Receives `ServerCertificateErrorDetected` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorker.html">ICoreWebView2ServiceWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface represents a service worker in WebView2 and provides methods and properties for interacting with it, such as getting the script uri, posting messages to it etc. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerActivatedEventArgs.html">ICoreWebView2ServiceWorkerActivatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Event args for the `ServiceWorkerActivated` event. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerActivatedEventHandler.html">ICoreWebView2ServiceWorkerActivatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `ServiceWorkerActivated` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerDestroyingEventHandler.html">ICoreWebView2ServiceWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface manages registrations for service workers in WebView2. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegisteredEventArgs.html">ICoreWebView2ServiceWorkerRegisteredEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Event args for the `ServiceWorkerRegistered` event. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegisteredEventHandler.html">ICoreWebView2ServiceWorkerRegisteredEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `ServiceWorkerRegistered` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistration.html">ICoreWebView2ServiceWorkerRegistration</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface represents a service worker registration in WebView2 and provides methods and properties for interacting with it, such as getting the scope uri, active service worker, listening for service worker activation, unregistering events etc. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistrationCollectionView.html">ICoreWebView2ServiceWorkerRegistrationCollectionView</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> A collection of ICoreWebView2ServiceWorkerRegistration. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler.html">ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `Unregistering` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler.html">ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `WebMessageReceived` events. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SetPermissionStateCompletedHandler.html">ICoreWebView2SetPermissionStateCompletedHandler</a></td>
@@ -3106,6 +3216,36 @@ body { margin: 0.5em; }
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedBuffer.html">ICoreWebView2SharedBuffer</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> The shared buffer object that is created by [CreateSharedBuffer](<a href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment12#createsharedbuffer">https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2environment12#createsharedbuffer</a>). The object is presented to script as ArrayBuffer when posted to script with [PostSharedBufferToScript](/microsoft-edge/webview2/reference/win32/icorewebview2_17#postsharedbuffertoscript). </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorker.html">ICoreWebView2SharedWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface represents a shared worker in WebView2 and provides methods and properties for interacting with it, such as listening to destroying events, getting the script URI, origin, and top-level origin of the worker etc. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorkerCollectionView.html">ICoreWebView2SharedWorkerCollectionView</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> A collection of ICoreWebView2SharedWorker. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorkerCreatedEventArgs.html">ICoreWebView2SharedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Event args for the `SharedWorkerCreated` event. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorkerCreatedEventHandler.html">ICoreWebView2SharedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `SharedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorkerDestroyingEventHandler.html">ICoreWebView2SharedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> This interface manages shared workers in WebView2. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2ShowSaveAsUICompletedHandler.html">ICoreWebView2ShowSaveAsUICompletedHandler</a></td>
@@ -3326,587 +3466,627 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p> Interface providing methods to access the find session functionalities in the CoreWebView2. </p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_29.html">ICoreWebView2_29</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p> A continuation of the ICoreWebView2 interface to manage dedicated workers. </p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_3.html">ICoreWebView2_3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> A continuation of the ICoreWebView2_2 interface. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_4.html">ICoreWebView2_4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> A continuation of the ICoreWebView2_3 interface to support FrameCreated and DownloadStarting events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_5.html">ICoreWebView2_5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> A continuation of the ICoreWebView2_4 interface to support ClientCertificateRequested event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_6.html">ICoreWebView2_6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface is an extension of `ICoreWebView2_5` that manages opening the browser task manager window. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_7.html">ICoreWebView2_7</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface is an extension of ICoreWebView2_5 that manages opening the browser task manager window. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_8.html">ICoreWebView2_8</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface is an extension of ICoreWebView2_7 that supports media features. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.ICoreWebView2_9.html">ICoreWebView2_9</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p> This interface is an extension of ICoreWebView2_8 that default download dialog positioning and anchoring. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2">IID_ICoreWebView2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2AcceleratorKeyPressedEventArgs">IID_ICoreWebView2AcceleratorKeyPressedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2AcceleratorKeyPressedEventArgs2">IID_ICoreWebView2AcceleratorKeyPressedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2AcceleratorKeyPressedEventHandler">IID_ICoreWebView2AcceleratorKeyPressedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler">IID_ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BasicAuthenticationRequestedEventArgs">IID_ICoreWebView2BasicAuthenticationRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BasicAuthenticationRequestedEventHandler">IID_ICoreWebView2BasicAuthenticationRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BasicAuthenticationResponse">IID_ICoreWebView2BasicAuthenticationResponse</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserExtension">IID_ICoreWebView2BrowserExtension</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserExtensionEnableCompletedHandler">IID_ICoreWebView2BrowserExtensionEnableCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserExtensionList">IID_ICoreWebView2BrowserExtensionList</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserExtensionRemoveCompletedHandler">IID_ICoreWebView2BrowserExtensionRemoveCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserProcessExitedEventArgs">IID_ICoreWebView2BrowserProcessExitedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BrowserProcessExitedEventHandler">IID_ICoreWebView2BrowserProcessExitedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2BytesReceivedChangedEventHandler">IID_ICoreWebView2BytesReceivedChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CallDevToolsProtocolMethodCompletedHandler">IID_ICoreWebView2CallDevToolsProtocolMethodCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CapturePreviewCompletedHandler">IID_ICoreWebView2CapturePreviewCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Certificate">IID_ICoreWebView2Certificate</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClearBrowsingDataCompletedHandler">IID_ICoreWebView2ClearBrowsingDataCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClearServerCertificateErrorActionsCompletedHandler">IID_ICoreWebView2ClearServerCertificateErrorActionsCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClientCertificate">IID_ICoreWebView2ClientCertificate</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClientCertificateCollection">IID_ICoreWebView2ClientCertificateCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClientCertificateRequestedEventArgs">IID_ICoreWebView2ClientCertificateRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ClientCertificateRequestedEventHandler">IID_ICoreWebView2ClientCertificateRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CompositionController">IID_ICoreWebView2CompositionController</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CompositionController2">IID_ICoreWebView2CompositionController2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CompositionController3">IID_ICoreWebView2CompositionController3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CompositionController4">IID_ICoreWebView2CompositionController4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CompositionController5">IID_ICoreWebView2CompositionController5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContainsFullScreenElementChangedEventHandler">IID_ICoreWebView2ContainsFullScreenElementChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContentLoadingEventArgs">IID_ICoreWebView2ContentLoadingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContentLoadingEventHandler">IID_ICoreWebView2ContentLoadingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContextMenuItem">IID_ICoreWebView2ContextMenuItem</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContextMenuItemCollection">IID_ICoreWebView2ContextMenuItemCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContextMenuRequestedEventArgs">IID_ICoreWebView2ContextMenuRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContextMenuRequestedEventHandler">IID_ICoreWebView2ContextMenuRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ContextMenuTarget">IID_ICoreWebView2ContextMenuTarget</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Controller">IID_ICoreWebView2Controller</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Controller2">IID_ICoreWebView2Controller2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Controller3">IID_ICoreWebView2Controller3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Controller4">IID_ICoreWebView2Controller4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ControllerOptions">IID_ICoreWebView2ControllerOptions</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ControllerOptions2">IID_ICoreWebView2ControllerOptions2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ControllerOptions3">IID_ICoreWebView2ControllerOptions3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ControllerOptions4">IID_ICoreWebView2ControllerOptions4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Cookie">IID_ICoreWebView2Cookie</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CookieList">IID_ICoreWebView2CookieList</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CookieManager">IID_ICoreWebView2CookieManager</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CreateCoreWebView2CompositionControllerCompletedHandler">IID_ICoreWebView2CreateCoreWebView2CompositionControllerCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CreateCoreWebView2ControllerCompletedHandler">IID_ICoreWebView2CreateCoreWebView2ControllerCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler">IID_ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CursorChangedEventHandler">IID_ICoreWebView2CursorChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CustomItemSelectedEventHandler">IID_ICoreWebView2CustomItemSelectedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2CustomSchemeRegistration">IID_ICoreWebView2CustomSchemeRegistration</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorker">IID_ICoreWebView2DedicatedWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorkerCreatedEventArgs">IID_ICoreWebView2DedicatedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorkerCreatedEventHandler">IID_ICoreWebView2DedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler">IID_ICoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorkerDestroyingEventHandler">IID_ICoreWebView2DedicatedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler">IID_ICoreWebView2DedicatedWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Deferral">IID_ICoreWebView2Deferral</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DevToolsProtocolEventReceivedEventArgs">IID_ICoreWebView2DevToolsProtocolEventReceivedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DevToolsProtocolEventReceivedEventArgs2">IID_ICoreWebView2DevToolsProtocolEventReceivedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DevToolsProtocolEventReceivedEventHandler">IID_ICoreWebView2DevToolsProtocolEventReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DevToolsProtocolEventReceiver">IID_ICoreWebView2DevToolsProtocolEventReceiver</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DocumentTitleChangedEventHandler">IID_ICoreWebView2DocumentTitleChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DOMContentLoadedEventArgs">IID_ICoreWebView2DOMContentLoadedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DOMContentLoadedEventHandler">IID_ICoreWebView2DOMContentLoadedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DownloadOperation">IID_ICoreWebView2DownloadOperation</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DownloadStartingEventArgs">IID_ICoreWebView2DownloadStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DownloadStartingEventHandler">IID_ICoreWebView2DownloadStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DragStartingEventArgs">IID_ICoreWebView2DragStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2DragStartingEventHandler">IID_ICoreWebView2DragStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment">IID_ICoreWebView2Environment</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment10">IID_ICoreWebView2Environment10</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment11">IID_ICoreWebView2Environment11</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment12">IID_ICoreWebView2Environment12</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment13">IID_ICoreWebView2Environment13</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment14">IID_ICoreWebView2Environment14</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment15">IID_ICoreWebView2Environment15</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment2">IID_ICoreWebView2Environment2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment3">IID_ICoreWebView2Environment3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment4">IID_ICoreWebView2Environment4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment5">IID_ICoreWebView2Environment5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment6">IID_ICoreWebView2Environment6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment7">IID_ICoreWebView2Environment7</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment8">IID_ICoreWebView2Environment8</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Environment9">IID_ICoreWebView2Environment9</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions">IID_ICoreWebView2EnvironmentOptions</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions2">IID_ICoreWebView2EnvironmentOptions2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions3">IID_ICoreWebView2EnvironmentOptions3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions4">IID_ICoreWebView2EnvironmentOptions4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions5">IID_ICoreWebView2EnvironmentOptions5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions6">IID_ICoreWebView2EnvironmentOptions6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions7">IID_ICoreWebView2EnvironmentOptions7</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EnvironmentOptions8">IID_ICoreWebView2EnvironmentOptions8</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2EstimatedEndTimeChangedEventHandler">IID_ICoreWebView2EstimatedEndTimeChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ExecuteScriptCompletedHandler">IID_ICoreWebView2ExecuteScriptCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ExecuteScriptResult">IID_ICoreWebView2ExecuteScriptResult</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ExecuteScriptWithResultCompletedHandler">IID_ICoreWebView2ExecuteScriptWithResultCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FaviconChangedEventHandler">IID_ICoreWebView2FaviconChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2File">IID_ICoreWebView2File</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FileSystemHandle">IID_ICoreWebView2FileSystemHandle</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Find">IID_ICoreWebView2Find</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FindActiveMatchIndexChangedEventHandler">IID_ICoreWebView2FindActiveMatchIndexChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FindMatchCountChangedEventHandler">IID_ICoreWebView2FindMatchCountChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FindOptions">IID_ICoreWebView2FindOptions</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FindStartCompletedHandler">IID_ICoreWebView2FindStartCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FocusChangedEventHandler">IID_ICoreWebView2FocusChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame">IID_ICoreWebView2Frame</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame2">IID_ICoreWebView2Frame2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame3">IID_ICoreWebView2Frame3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame4">IID_ICoreWebView2Frame4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame5">IID_ICoreWebView2Frame5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame6">IID_ICoreWebView2Frame6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame7">IID_ICoreWebView2Frame7</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Frame8">IID_ICoreWebView2Frame8</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
@@ -3931,382 +4111,402 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameDedicatedWorkerCreatedEventHandler">IID_ICoreWebView2FrameDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameDestroyedEventHandler">IID_ICoreWebView2FrameDestroyedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameDOMContentLoadedEventHandler">IID_ICoreWebView2FrameDOMContentLoadedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameInfo">IID_ICoreWebView2FrameInfo</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameInfo2">IID_ICoreWebView2FrameInfo2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameInfoCollection">IID_ICoreWebView2FrameInfoCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameInfoCollectionIterator">IID_ICoreWebView2FrameInfoCollectionIterator</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameNameChangedEventHandler">IID_ICoreWebView2FrameNameChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameNavigationCompletedEventHandler">IID_ICoreWebView2FrameNavigationCompletedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameNavigationStartingEventHandler">IID_ICoreWebView2FrameNavigationStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FramePermissionRequestedEventHandler">IID_ICoreWebView2FramePermissionRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameScreenCaptureStartingEventHandler">IID_ICoreWebView2FrameScreenCaptureStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2FrameWebMessageReceivedEventHandler">IID_ICoreWebView2FrameWebMessageReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetCookiesCompletedHandler">IID_ICoreWebView2GetCookiesCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetFaviconCompletedHandler">IID_ICoreWebView2GetFaviconCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetNonDefaultPermissionSettingsCompletedHandler">IID_ICoreWebView2GetNonDefaultPermissionSettingsCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetProcessExtendedInfosCompletedHandler">IID_ICoreWebView2GetProcessExtendedInfosCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler">IID_ICoreWebView2GetServiceWorkerRegistrationsCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2GetSharedWorkersCompletedHandler">IID_ICoreWebView2GetSharedWorkersCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2HistoryChangedEventHandler">IID_ICoreWebView2HistoryChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2HttpHeadersCollectionIterator">IID_ICoreWebView2HttpHeadersCollectionIterator</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2HttpRequestHeaders">IID_ICoreWebView2HttpRequestHeaders</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2HttpResponseHeaders">IID_ICoreWebView2HttpResponseHeaders</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2IsDefaultDownloadDialogOpenChangedEventHandler">IID_ICoreWebView2IsDefaultDownloadDialogOpenChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2IsDocumentPlayingAudioChangedEventHandler">IID_ICoreWebView2IsDocumentPlayingAudioChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2IsMutedChangedEventHandler">IID_ICoreWebView2IsMutedChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2LaunchingExternalUriSchemeEventArgs">IID_ICoreWebView2LaunchingExternalUriSchemeEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2LaunchingExternalUriSchemeEventHandler">IID_ICoreWebView2LaunchingExternalUriSchemeEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2MoveFocusRequestedEventArgs">IID_ICoreWebView2MoveFocusRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2MoveFocusRequestedEventHandler">IID_ICoreWebView2MoveFocusRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationCompletedEventArgs">IID_ICoreWebView2NavigationCompletedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationCompletedEventArgs2">IID_ICoreWebView2NavigationCompletedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationCompletedEventHandler">IID_ICoreWebView2NavigationCompletedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationStartingEventArgs">IID_ICoreWebView2NavigationStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationStartingEventArgs2">IID_ICoreWebView2NavigationStartingEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationStartingEventArgs3">IID_ICoreWebView2NavigationStartingEventArgs3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NavigationStartingEventHandler">IID_ICoreWebView2NavigationStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NewBrowserVersionAvailableEventHandler">IID_ICoreWebView2NewBrowserVersionAvailableEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NewWindowRequestedEventArgs">IID_ICoreWebView2NewWindowRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NewWindowRequestedEventArgs2">IID_ICoreWebView2NewWindowRequestedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NewWindowRequestedEventArgs3">IID_ICoreWebView2NewWindowRequestedEventArgs3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NewWindowRequestedEventHandler">IID_ICoreWebView2NewWindowRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NonClientRegionChangedEventArgs">IID_ICoreWebView2NonClientRegionChangedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NonClientRegionChangedEventHandler">IID_ICoreWebView2NonClientRegionChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Notification">IID_ICoreWebView2Notification</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NotificationCloseRequestedEventHandler">IID_ICoreWebView2NotificationCloseRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NotificationReceivedEventArgs">IID_ICoreWebView2NotificationReceivedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2NotificationReceivedEventHandler">IID_ICoreWebView2NotificationReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ObjectCollection">IID_ICoreWebView2ObjectCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ObjectCollectionView">IID_ICoreWebView2ObjectCollectionView</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionRequestedEventArgs">IID_ICoreWebView2PermissionRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionRequestedEventArgs2">IID_ICoreWebView2PermissionRequestedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionRequestedEventArgs3">IID_ICoreWebView2PermissionRequestedEventArgs3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionRequestedEventHandler">IID_ICoreWebView2PermissionRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionSetting">IID_ICoreWebView2PermissionSetting</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PermissionSettingCollectionView">IID_ICoreWebView2PermissionSettingCollectionView</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PointerInfo">IID_ICoreWebView2PointerInfo</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PrintCompletedHandler">IID_ICoreWebView2PrintCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PrintSettings">IID_ICoreWebView2PrintSettings</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PrintSettings2">IID_ICoreWebView2PrintSettings2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PrintToPdfCompletedHandler">IID_ICoreWebView2PrintToPdfCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2PrintToPdfStreamCompletedHandler">IID_ICoreWebView2PrintToPdfStreamCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessExtendedInfo">IID_ICoreWebView2ProcessExtendedInfo</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessExtendedInfoCollection">IID_ICoreWebView2ProcessExtendedInfoCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessFailedEventArgs">IID_ICoreWebView2ProcessFailedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessFailedEventArgs2">IID_ICoreWebView2ProcessFailedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessFailedEventArgs3">IID_ICoreWebView2ProcessFailedEventArgs3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessFailedEventHandler">IID_ICoreWebView2ProcessFailedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessInfo">IID_ICoreWebView2ProcessInfo</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessInfoCollection">IID_ICoreWebView2ProcessInfoCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ProcessInfosChangedEventHandler">IID_ICoreWebView2ProcessInfosChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile">IID_ICoreWebView2Profile</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile2">IID_ICoreWebView2Profile2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile3">IID_ICoreWebView2Profile3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile4">IID_ICoreWebView2Profile4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile5">IID_ICoreWebView2Profile5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile6">IID_ICoreWebView2Profile6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile7">IID_ICoreWebView2Profile7</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile8">IID_ICoreWebView2Profile8</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Profile9">IID_ICoreWebView2Profile9</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
@@ -4391,267 +4591,357 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorker">IID_ICoreWebView2ServiceWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerActivatedEventArgs">IID_ICoreWebView2ServiceWorkerActivatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerActivatedEventHandler">IID_ICoreWebView2ServiceWorkerActivatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerDestroyingEventHandler">IID_ICoreWebView2ServiceWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerManager">IID_ICoreWebView2ServiceWorkerManager</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerRegisteredEventArgs">IID_ICoreWebView2ServiceWorkerRegisteredEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerRegisteredEventHandler">IID_ICoreWebView2ServiceWorkerRegisteredEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerRegistration">IID_ICoreWebView2ServiceWorkerRegistration</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerRegistrationCollectionView">IID_ICoreWebView2ServiceWorkerRegistrationCollectionView</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler">IID_ICoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler">IID_ICoreWebView2ServiceWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SetPermissionStateCompletedHandler">IID_ICoreWebView2SetPermissionStateCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings">IID_ICoreWebView2Settings</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings2">IID_ICoreWebView2Settings2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings3">IID_ICoreWebView2Settings3</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings4">IID_ICoreWebView2Settings4</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings5">IID_ICoreWebView2Settings5</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings6">IID_ICoreWebView2Settings6</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings7">IID_ICoreWebView2Settings7</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings8">IID_ICoreWebView2Settings8</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2Settings9">IID_ICoreWebView2Settings9</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedBuffer">IID_ICoreWebView2SharedBuffer</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorker">IID_ICoreWebView2SharedWorker</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorkerCollectionView">IID_ICoreWebView2SharedWorkerCollectionView</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorkerCreatedEventArgs">IID_ICoreWebView2SharedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorkerCreatedEventHandler">IID_ICoreWebView2SharedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorkerDestroyingEventHandler">IID_ICoreWebView2SharedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SharedWorkerManager">IID_ICoreWebView2SharedWorkerManager</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ShowSaveAsUICompletedHandler">IID_ICoreWebView2ShowSaveAsUICompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SourceChangedEventArgs">IID_ICoreWebView2SourceChangedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2SourceChangedEventHandler">IID_ICoreWebView2SourceChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2StateChangedEventHandler">IID_ICoreWebView2StateChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2StatusBarTextChangedEventHandler">IID_ICoreWebView2StatusBarTextChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2StringCollection">IID_ICoreWebView2StringCollection</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2TrySuspendCompletedHandler">IID_ICoreWebView2TrySuspendCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebMessageReceivedEventArgs">IID_ICoreWebView2WebMessageReceivedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebMessageReceivedEventArgs2">IID_ICoreWebView2WebMessageReceivedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebMessageReceivedEventHandler">IID_ICoreWebView2WebMessageReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceRequest">IID_ICoreWebView2WebResourceRequest</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceRequestedEventArgs">IID_ICoreWebView2WebResourceRequestedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceRequestedEventArgs2">IID_ICoreWebView2WebResourceRequestedEventArgs2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceRequestedEventHandler">IID_ICoreWebView2WebResourceRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceResponse">IID_ICoreWebView2WebResourceResponse</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceResponseReceivedEventArgs">IID_ICoreWebView2WebResourceResponseReceivedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceResponseReceivedEventHandler">IID_ICoreWebView2WebResourceResponseReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceResponseView">IID_ICoreWebView2WebResourceResponseView</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WebResourceResponseViewGetContentCompletedHandler">IID_ICoreWebView2WebResourceResponseViewGetContentCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WindowCloseRequestedEventHandler">IID_ICoreWebView2WindowCloseRequestedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2WindowFeatures">IID_ICoreWebView2WindowFeatures</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2ZoomFactorChangedEventHandler">IID_ICoreWebView2ZoomFactorChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_10">IID_ICoreWebView2_10</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_11">IID_ICoreWebView2_11</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_12">IID_ICoreWebView2_12</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_13">IID_ICoreWebView2_13</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_14">IID_ICoreWebView2_14</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_15">IID_ICoreWebView2_15</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_16">IID_ICoreWebView2_16</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_17">IID_ICoreWebView2_17</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_18">IID_ICoreWebView2_18</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_19">IID_ICoreWebView2_19</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_2">IID_ICoreWebView2_2</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_20">IID_ICoreWebView2_20</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_21">IID_ICoreWebView2_21</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_22">IID_ICoreWebView2_22</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_23">IID_ICoreWebView2_23</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_24">IID_ICoreWebView2_24</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_25">IID_ICoreWebView2_25</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_26">IID_ICoreWebView2_26</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_27">IID_ICoreWebView2_27</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_28">IID_ICoreWebView2_28</a></td>
+<td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVTypeLibrary.html#IID_ICoreWebView2_29">IID_ICoreWebView2_29</a></td>
 <td class="itemunit"><a class="bold" href="uWVTypeLibrary.html">uWVTypeLibrary</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
@@ -5063,159 +5353,189 @@ body { margin: 0.5em; }
 <p></p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2DedicatedWorkerCreatedEventArgs.html">TCoreWebView2DedicatedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
+<td class="itemdesc"><p> Event args for the `DedicatedWorkerCreated` event. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DedicatedWorkerCreatedEventHandler.html">TCoreWebView2DedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler.html">TCoreWebView2DedicatedWorkerDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DedicatedWorkerDestroyingEventHandler.html">TCoreWebView2DedicatedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler.html">TCoreWebView2DedicatedWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `WebMessageReceived` events. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Deferral.TCoreWebView2Deferral.html">TCoreWebView2Deferral</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Deferral.html">uWVCoreWebView2Deferral</a></td>
 <td class="itemdesc"><p> This interface is used to complete deferrals on event args that support getting deferrals using the GetDeferral method. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2DevToolsProtocolEventReceivedEventArgs.html">TCoreWebView2DevToolsProtocolEventReceivedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
 <td class="itemdesc"><p> Event args for the DevToolsProtocolEventReceived event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DevToolsProtocolEventReceivedEventHandler.html">TCoreWebView2DevToolsProtocolEventReceivedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives DevToolsProtocolEventReceived events from the WebView. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DocumentTitleChangedEventHandler.html">TCoreWebView2DocumentTitleChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives DocumentTitleChanged events. Use the DocumentTitle property to get the modified title. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2DOMContentLoadedEventArgs.html">TCoreWebView2DOMContentLoadedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
 <td class="itemdesc"><p> Event args for the DOMContentLoaded event. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DOMContentLoadedEventHandler.html">TCoreWebView2DOMContentLoadedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives DOMContentLoaded events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2DownloadOperation.TCoreWebView2DownloadOperation.html">TCoreWebView2DownloadOperation</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2DownloadOperation.html">uWVCoreWebView2DownloadOperation</a></td>
 <td class="itemdesc"><p> Represents a download operation. Gives access to the download's metadata and supports a user canceling, pausing, or resuming the download. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2DownloadStartingEventArgs.html">TCoreWebView2DownloadStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
 <td class="itemdesc"><p> Event args for the DownloadStarting event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DownloadStartingEventHandler.html">TCoreWebView2DownloadStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Add an event handler for the DownloadStarting event. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2DragStartingEventArgs.html">TCoreWebView2DragStartingEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
 <td class="itemdesc"><p> Event args for the `DragStarting` event. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2DragStartingEventHandler.html">TCoreWebView2DragStartingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives `DragStarting` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Environment.TCoreWebView2Environment.html">TCoreWebView2Environment</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Environment.html">uWVCoreWebView2Environment</a></td>
 <td class="itemdesc"><p> Represents the WebView2 Environment. WebViews created from an environment run on the browser process specified with environment parameters and objects created from an environment should be used in the same environment. Using it in different environments are not guaranteed to be compatible and may fail. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2EnvironmentCompletedHandler.html">TCoreWebView2EnvironmentCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives the WebView2Environment created using CreateCoreWebView2Environment. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2EnvironmentOptions.TCoreWebView2EnvironmentOptions.html">TCoreWebView2EnvironmentOptions</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2EnvironmentOptions.html">uWVCoreWebView2EnvironmentOptions</a></td>
 <td class="itemdesc"><p> Options used to create WebView2 Environment. A default implementation is provided in WebView2EnvironmentOptions.h. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2EstimatedEndTimeChangedEventHandler.html">TCoreWebView2EstimatedEndTimeChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Implements the interface to receive EstimatedEndTimeChanged event. Use the ICoreWebView2DownloadOperation.EstimatedEndTime property to get the new estimated end time. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ExecuteScriptCompletedHandler.html">TCoreWebView2ExecuteScriptCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives the result of the ExecuteScript method. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2ExecuteScriptResult.TCoreWebView2ExecuteScriptResult.html">TCoreWebView2ExecuteScriptResult</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2ExecuteScriptResult.html">uWVCoreWebView2ExecuteScriptResult</a></td>
 <td class="itemdesc"><p> This is the result for ExecuteScriptWithResult. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ExecuteScriptWithResultCompletedHandler.html">TCoreWebView2ExecuteScriptWithResultCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> This is the callback for ExecuteScriptWithResult </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FaviconChangedEventHandler.html">TCoreWebView2FaviconChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> This interface is a handler for when the Favicon is changed. The sender is the ICoreWebView2 object the top-level document of which has changed favicon and the eventArgs is nullptr. Use the FaviconUri property and GetFavicon method to obtain the favicon data. The second argument is always null. For more information see add_FaviconChanged. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2File.TCoreWebView2File.html">TCoreWebView2File</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2File.html">uWVCoreWebView2File</a></td>
 <td class="itemdesc"><p> Representation of a DOM [File](<a href="https://developer.mozilla.org/docs/Web/API/File">https://developer.mozilla.org/docs/Web/API/File</a>) object passed via WebMessage. You can use this object to obtain the path of a File dropped on WebView2. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2FileSystemHandle.TCoreWebView2FileSystemHandle.html">TCoreWebView2FileSystemHandle</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2FileSystemHandle.html">uWVCoreWebView2FileSystemHandle</a></td>
 <td class="itemdesc"><p> Representation of a DOM [FileSystemHandle](<a href="https://developer.mozilla.org/docs/Web/API/FileSystemHandle">https://developer.mozilla.org/docs/Web/API/FileSystemHandle</a>) object. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Find.TCoreWebView2Find.html">TCoreWebView2Find</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Find.html">uWVCoreWebView2Find</a></td>
 <td class="itemdesc"><p> Class providing methods and properties for finding and navigating through text in the web view. This class allows for finding text, navigation between matches, and customization of the find UI. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FindActiveMatchIndexChangedEventHandler.html">TCoreWebView2FindActiveMatchIndexChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives `ActiveMatchIndexChanged` events. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FindMatchCountChangedEventHandler.html">TCoreWebView2FindMatchCountChangedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives `MatchCountChanged` events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2FindOptions.TCoreWebView2FindOptions.html">TCoreWebView2FindOptions</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2FindOptions.html">uWVCoreWebView2FindOptions</a></td>
 <td class="itemdesc"><p> Class defining the find options. This class provides the necessary methods and properties to configure a find session. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FindStartCompletedHandler.html">TCoreWebView2FindStartCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives the result of the `Start` method. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Frame.TCoreWebView2Frame.html">TCoreWebView2Frame</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Frame.html">uWVCoreWebView2Frame</a></td>
 <td class="itemdesc"><p> ICoreWebView2Frame provides direct access to the iframes information. You can get an ICoreWebView2Frame by handling the ICoreWebView2_4.add_FrameCreated event. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FrameChildFrameCreatedEventHandler.html">TCoreWebView2FrameChildFrameCreatedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives `FrameCreated` events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FrameContentLoadingEventHandler.html">TCoreWebView2FrameContentLoadingEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives ContentLoading events for iframe. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2FrameCreatedEventArgs.html">TCoreWebView2FrameCreatedEventArgs</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
 <td class="itemdesc"><p> Event args for the FrameCreated events. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FrameCreatedEventHandler.html">TCoreWebView2FrameCreatedEventHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives FrameCreated event. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FrameDedicatedWorkerCreatedEventHandler.html">TCoreWebView2FrameDedicatedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `DedicatedWorkerCreated` events. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2FrameDestroyedEventHandler.html">TCoreWebView2FrameDestroyedEventHandler</a></td>
@@ -5301,6 +5621,16 @@ body { margin: 0.5em; }
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2GetProcessExtendedInfosCompletedHandler.html">TCoreWebView2GetProcessExtendedInfosCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> Receives the result of the `GetProcessExtendedInfos` method. The result is written to the collection of `ProcessExtendedInfo`s provided in the `GetProcessExtendedInfos` method call. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler.html">TCoreWebView2GetServiceWorkerRegistrationsCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives the result of the `GetServiceWorkerRegistrations` method. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2GetSharedWorkersCompletedHandler.html">TCoreWebView2GetSharedWorkersCompletedHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives the result of the `GetSharedWorkers` method. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2GotFocusEventHandler.html">TCoreWebView2GotFocusEventHandler</a></td>
@@ -5614,19 +5944,69 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p> An event handler for the ServerCertificateErrorDetected event. </p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2ServiceWorkerActivatedEventArgs.html">TCoreWebView2ServiceWorkerActivatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
+<td class="itemdesc"><p> Event args for the `ServiceWorkerActivated` event. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ServiceWorkerActivatedEventHandler.html">TCoreWebView2ServiceWorkerActivatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `ServiceWorkerActivated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ServiceWorkerDestroyingEventHandler.html">TCoreWebView2ServiceWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2ServiceWorkerRegisteredEventArgs.html">TCoreWebView2ServiceWorkerRegisteredEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
+<td class="itemdesc"><p> Event args for the `ServiceWorkerRegistered` event. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ServiceWorkerRegisteredEventHandler.html">TCoreWebView2ServiceWorkerRegisteredEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `ServiceWorkerRegistered` events. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler.html">TCoreWebView2ServiceWorkerRegistrationUnregisteringEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `Unregistering` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler.html">TCoreWebView2ServiceWorkerWebMessageReceivedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `WebMessageReceived` events. </p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2SetPermissionStateCompletedHandler.html">TCoreWebView2SetPermissionStateCompletedHandler</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
 <td class="itemdesc"><p> The caller implements this interface to handle the result of SetPermissionState. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Settings.TCoreWebView2Settings.html">TCoreWebView2Settings</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2Settings.html">uWVCoreWebView2Settings</a></td>
 <td class="itemdesc"><p> Defines properties that enable, disable, or modify WebView features. Changes to IsGeneralAutofillEnabled and IsPasswordAutosaveEnabled apply immediately, while other setting changes made after NavigationStarting event do not apply until the next top-level navigation. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2SharedBuffer.TCoreWebView2SharedBuffer.html">TCoreWebView2SharedBuffer</a></td>
 <td class="itemunit"><a class="bold" href="uWVCoreWebView2SharedBuffer.html">uWVCoreWebView2SharedBuffer</a></td>
 <td class="itemdesc"><p> The shared buffer object that is created by CreateSharedBuffer. The object is presented to script as ArrayBuffer when posted to script with PostSharedBufferToScript. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Args.TCoreWebView2SharedWorkerCreatedEventArgs.html">TCoreWebView2SharedWorkerCreatedEventArgs</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Args.html">uWVCoreWebView2Args</a></td>
+<td class="itemdesc"><p> Event args for the `SharedWorkerCreated` event. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2SharedWorkerCreatedEventHandler.html">TCoreWebView2SharedWorkerCreatedEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `SharedWorkerCreated` events. </p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2SharedWorkerDestroyingEventHandler.html">TCoreWebView2SharedWorkerDestroyingEventHandler</a></td>
+<td class="itemunit"><a class="bold" href="uWVCoreWebView2Delegates.html">uWVCoreWebView2Delegates</a></td>
+<td class="itemdesc"><p> Receives `Destroying` events. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="uWVCoreWebView2Delegates.TCoreWebView2ShowSaveAsUICompletedHandler.html">TCoreWebView2ShowSaveAsUICompletedHandler</a></td>
@@ -5857,6 +6237,26 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnDedicatedWorkerCreated2Event">TOnDedicatedWorkerCreated2Event</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnDedicatedWorkerCreatedEvent">TOnDedicatedWorkerCreatedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnDedicatedWorkerDestroyingEvent">TOnDedicatedWorkerDestroyingEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnDedicatedWorkerWebMessageReceivedEvent">TOnDedicatedWorkerWebMessageReceivedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnDevToolsProtocolEventReceivedEvent">TOnDevToolsProtocolEventReceivedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
@@ -5932,237 +6332,287 @@ body { margin: 0.5em; }
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameDedicatedWorkerCreatedEvent">TOnFrameDedicatedWorkerCreatedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameDestroyedEvent">TOnFrameDestroyedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameDOMContentLoadedEvent">TOnFrameDOMContentLoadedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameNameChangedEvent">TOnFrameNameChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameNavigationCompletedEvent">TOnFrameNavigationCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameNavigationStartingEvent">TOnFrameNavigationStartingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFramePermissionRequestedEvent">TOnFramePermissionRequestedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameScreenCaptureStartingEvent">TOnFrameScreenCaptureStartingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnFrameWebMessageReceivedEvent">TOnFrameWebMessageReceivedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetCookiesCompletedEvent">TOnGetCookiesCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetCustomSchemesEvent">TOnGetCustomSchemesEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetFaviconCompletedEvent">TOnGetFaviconCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetNonDefaultPermissionSettingsCompletedEvent">TOnGetNonDefaultPermissionSettingsCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetProcessExtendedInfosCompletedEvent">TOnGetProcessExtendedInfosCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetServiceWorkerRegistrationsCompletedEvent">TOnGetServiceWorkerRegistrationsCompletedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnGetSharedWorkersCompletedEvent">TOnGetSharedWorkersCompletedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnIgnoreCertificateErrorsCompletedEvent">TOnIgnoreCertificateErrorsCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnInitializationErrorEvent">TOnInitializationErrorEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnIsDefaultDownloadDialogOpenChangedEvent">TOnIsDefaultDownloadDialogOpenChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnIsDocumentPlayingAudioChangedEvent">TOnIsDocumentPlayingAudioChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnIsMutedChangedEvent">TOnIsMutedChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnLaunchingExternalUriSchemeEvent">TOnLaunchingExternalUriSchemeEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnMoveFocusRequestedEvent">TOnMoveFocusRequestedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNavigationCompletedEvent">TOnNavigationCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNavigationStartingEvent">TOnNavigationStartingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNewWindowRequestedEvent">TOnNewWindowRequestedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNonClientRegionChangedEvent">TOnNonClientRegionChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNotificationCloseRequestedEvent">TOnNotificationCloseRequestedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnNotificationReceivedEvent">TOnNotificationReceivedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnOfflineCompletedEvent">TOnOfflineCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnPermissionRequestedEvent">TOnPermissionRequestedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnPrintCompletedEvent">TOnPrintCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnPrintToPdfCompletedEvent">TOnPrintToPdfCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnPrintToPdfStreamCompletedEvent">TOnPrintToPdfStreamCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnProcessFailedEvent">TOnProcessFailedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnProcessInfosChangedEvent">TOnProcessInfosChangedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnProfileAddBrowserExtensionCompletedEvent">TOnProfileAddBrowserExtensionCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnProfileDeletedEvent">TOnProfileDeletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnProfileGetBrowserExtensionsCompletedEvent">TOnProfileGetBrowserExtensionsCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnRefreshIgnoreCacheCompletedEvent">TOnRefreshIgnoreCacheCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnRetrieveHTMLCompletedEvent">TOnRetrieveHTMLCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnRetrieveMHTMLCompletedEvent">TOnRetrieveMHTMLCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnRetrieveTextCompletedEvent">TOnRetrieveTextCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnSaveAsUIShowingEvent">TOnSaveAsUIShowingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnSaveFileSecurityCheckStartingEvent">TOnSaveFileSecurityCheckStartingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnScreenCaptureStartingEvent">TOnScreenCaptureStartingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnScriptDialogOpeningEvent">TOnScriptDialogOpeningEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnServerCertificateErrorActionsCompletedEvent">TOnServerCertificateErrorActionsCompletedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnServerCertificateErrorDetectedEvent">TOnServerCertificateErrorDetectedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnServiceWorkerActivatedEvent">TOnServiceWorkerActivatedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnServiceWorkerDestroyingEvent">TOnServiceWorkerDestroyingEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnServiceWorkerRegisteredEvent">TOnServiceWorkerRegisteredEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnServiceWorkerRegistrationUnregisteringEvent">TOnServiceWorkerRegistrationUnregisteringEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnServiceWorkerWebMessageReceivedEvent">TOnServiceWorkerWebMessageReceivedEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="uWVEvents.html#TOnSetPermissionStateCompletedEvent">TOnSetPermissionStateCompletedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnSharedWorkerCreatedEvent">TOnSharedWorkerCreatedEvent</a></td>
+<td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="uWVEvents.html#TOnSharedWorkerDestroyingEvent">TOnSharedWorkerDestroyingEvent</a></td>
 <td class="itemunit"><a class="bold" href="uWVEvents.html">uWVEvents</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>

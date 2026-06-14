@@ -296,6 +296,48 @@ body { margin: 0.5em; }
 <td class="itemcode"><code><strong><a href="uWVEvents.html#TOnDragStartingEvent">TOnDragStartingEvent</a></strong> = procedure(Sender: TObject; const aController: <a href="uWVTypeLibrary.ICoreWebView2CompositionController.html">ICoreWebView2CompositionController</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DragStartingEventArgs.html">ICoreWebView2DragStartingEventArgs</a>) of object;</code></td>
 </tr>
 <tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnDedicatedWorkerCreatedEvent">TOnDedicatedWorkerCreatedEvent</a></strong> = procedure(Sender: TObject; const aWebView : <a href="uWVTypeLibrary.ICoreWebView2.html">ICoreWebView2</a>; const aArgs : <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnDedicatedWorkerCreated2Event">TOnDedicatedWorkerCreated2Event</a></strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnDedicatedWorkerDestroyingEvent">TOnDedicatedWorkerDestroyingEvent</a></strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnDedicatedWorkerWebMessageReceivedEvent">TOnDedicatedWorkerWebMessageReceivedEvent</a></strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventArgs.html">ICoreWebView2WebMessageReceivedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnFrameDedicatedWorkerCreatedEvent">TOnFrameDedicatedWorkerCreatedEvent</a></strong> = procedure(Sender: TObject; const aFrame: <a href="uWVTypeLibrary.ICoreWebView2Frame.html">ICoreWebView2Frame</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>; aFrameID: cardinal) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnServiceWorkerDestroyingEvent">TOnServiceWorkerDestroyingEvent</a></strong> = procedure(Sender: TObject; const aServiceWorker: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorker.html">ICoreWebView2ServiceWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnServiceWorkerWebMessageReceivedEvent">TOnServiceWorkerWebMessageReceivedEvent</a></strong> = procedure(Sender: TObject; const aServiceWorker: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorker.html">ICoreWebView2ServiceWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventArgs.html">ICoreWebView2WebMessageReceivedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnServiceWorkerRegisteredEvent">TOnServiceWorkerRegisteredEvent</a></strong> = procedure(Sender: TObject; const aServiceWorkerManager: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegisteredEventArgs.html">ICoreWebView2ServiceWorkerRegisteredEventArgs</a>) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnGetServiceWorkerRegistrationsCompletedEvent">TOnGetServiceWorkerRegistrationsCompletedEvent</a></strong> = procedure(Sender: TObject; errorCode: HResult; const result_: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistrationCollectionView.html">ICoreWebView2ServiceWorkerRegistrationCollectionView</a>) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnServiceWorkerActivatedEvent">TOnServiceWorkerActivatedEvent</a></strong> = procedure(Sender: TObject; const aServiceWorkerRegistration: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistration.html">ICoreWebView2ServiceWorkerRegistration</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerActivatedEventArgs.html">ICoreWebView2ServiceWorkerActivatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnServiceWorkerRegistrationUnregisteringEvent">TOnServiceWorkerRegistrationUnregisteringEvent</a></strong> = procedure(Sender: TObject; const aServiceWorkerRegistration: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistration.html">ICoreWebView2ServiceWorkerRegistration</a>; const aArgs: IUnknown) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnSharedWorkerCreatedEvent">TOnSharedWorkerCreatedEvent</a></strong> = procedure(Sender: TObject; const aSharedWorkerManager: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerCreatedEventArgs.html">ICoreWebView2SharedWorkerCreatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnGetSharedWorkersCompletedEvent">TOnGetSharedWorkersCompletedEvent</a></strong> = procedure(Sender: TObject; errorCode: HResult; const result_: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerCollectionView.html">ICoreWebView2SharedWorkerCollectionView</a>) of object;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="uWVEvents.html#TOnSharedWorkerDestroyingEvent">TOnSharedWorkerDestroyingEvent</a></strong> = procedure(Sender: TObject; const aSharedWorker: <a href="uWVTypeLibrary.ICoreWebView2SharedWorker.html">ICoreWebView2SharedWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="uWVEvents.html#TOnCompMsgEvent">TOnCompMsgEvent</a></strong> = procedure(Sender: TObject; var aMessage: TMessage; var aHandled: Boolean) of object;</code></td>
 </tr>
 </table>
@@ -945,6 +987,104 @@ Browser events</p>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="TOnDragStartingEvent"></span><code><strong>TOnDragStartingEvent</strong> = procedure(Sender: TObject; const aController: <a href="uWVTypeLibrary.ICoreWebView2CompositionController.html">ICoreWebView2CompositionController</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DragStartingEventArgs.html">ICoreWebView2DragStartingEventArgs</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnDedicatedWorkerCreatedEvent"></span><code><strong>TOnDedicatedWorkerCreatedEvent</strong> = procedure(Sender: TObject; const aWebView : <a href="uWVTypeLibrary.ICoreWebView2.html">ICoreWebView2</a>; const aArgs : <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnDedicatedWorkerCreated2Event"></span><code><strong>TOnDedicatedWorkerCreated2Event</strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnDedicatedWorkerDestroyingEvent"></span><code><strong>TOnDedicatedWorkerDestroyingEvent</strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnDedicatedWorkerWebMessageReceivedEvent"></span><code><strong>TOnDedicatedWorkerWebMessageReceivedEvent</strong> = procedure(Sender: TObject; const aDedicatedWorker: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorker.html">ICoreWebView2DedicatedWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventArgs.html">ICoreWebView2WebMessageReceivedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnFrameDedicatedWorkerCreatedEvent"></span><code><strong>TOnFrameDedicatedWorkerCreatedEvent</strong> = procedure(Sender: TObject; const aFrame: <a href="uWVTypeLibrary.ICoreWebView2Frame.html">ICoreWebView2Frame</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2DedicatedWorkerCreatedEventArgs.html">ICoreWebView2DedicatedWorkerCreatedEventArgs</a>; aFrameID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnServiceWorkerDestroyingEvent"></span><code><strong>TOnServiceWorkerDestroyingEvent</strong> = procedure(Sender: TObject; const aServiceWorker: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorker.html">ICoreWebView2ServiceWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnServiceWorkerWebMessageReceivedEvent"></span><code><strong>TOnServiceWorkerWebMessageReceivedEvent</strong> = procedure(Sender: TObject; const aServiceWorker: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorker.html">ICoreWebView2ServiceWorker</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2WebMessageReceivedEventArgs.html">ICoreWebView2WebMessageReceivedEventArgs</a>; aWorkerID: cardinal) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnServiceWorkerRegisteredEvent"></span><code><strong>TOnServiceWorkerRegisteredEvent</strong> = procedure(Sender: TObject; const aServiceWorkerManager: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerManager.html">ICoreWebView2ServiceWorkerManager</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegisteredEventArgs.html">ICoreWebView2ServiceWorkerRegisteredEventArgs</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnGetServiceWorkerRegistrationsCompletedEvent"></span><code><strong>TOnGetServiceWorkerRegistrationsCompletedEvent</strong> = procedure(Sender: TObject; errorCode: HResult; const result_: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistrationCollectionView.html">ICoreWebView2ServiceWorkerRegistrationCollectionView</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnServiceWorkerActivatedEvent"></span><code><strong>TOnServiceWorkerActivatedEvent</strong> = procedure(Sender: TObject; const aServiceWorkerRegistration: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistration.html">ICoreWebView2ServiceWorkerRegistration</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerActivatedEventArgs.html">ICoreWebView2ServiceWorkerActivatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnServiceWorkerRegistrationUnregisteringEvent"></span><code><strong>TOnServiceWorkerRegistrationUnregisteringEvent</strong> = procedure(Sender: TObject; const aServiceWorkerRegistration: <a href="uWVTypeLibrary.ICoreWebView2ServiceWorkerRegistration.html">ICoreWebView2ServiceWorkerRegistration</a>; const aArgs: IUnknown) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnSharedWorkerCreatedEvent"></span><code><strong>TOnSharedWorkerCreatedEvent</strong> = procedure(Sender: TObject; const aSharedWorkerManager: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerManager.html">ICoreWebView2SharedWorkerManager</a>; const aArgs: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerCreatedEventArgs.html">ICoreWebView2SharedWorkerCreatedEventArgs</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnGetSharedWorkersCompletedEvent"></span><code><strong>TOnGetSharedWorkersCompletedEvent</strong> = procedure(Sender: TObject; errorCode: HResult; const result_: <a href="uWVTypeLibrary.ICoreWebView2SharedWorkerCollectionView.html">ICoreWebView2SharedWorkerCollectionView</a>) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TOnSharedWorkerDestroyingEvent"></span><code><strong>TOnSharedWorkerDestroyingEvent</strong> = procedure(Sender: TObject; const aSharedWorker: <a href="uWVTypeLibrary.ICoreWebView2SharedWorker.html">ICoreWebView2SharedWorker</a>; const aArgs: IUnknown; aWorkerID: cardinal) of object;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>

@@ -65,67 +65,75 @@ body { margin: 0.5em; }
 </tr>
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
-<td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FErrorLog">FErrorLog</a></strong>: TStringList;</code></td>
+<td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FSyncObj">FSyncObj</a></strong>: TCriticalSection;</code></td>
 </tr>
 <tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FErrorLog">FErrorLog</a></strong>: TStringList;</code></td>
+</tr>
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FError">FError</a></strong>: int64;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FBrowserExecPath">FBrowserExecPath</a></strong>: <a href="uWVTypes.html#wvstring">wvstring</a>;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FUserDataFolder">FUserDataFolder</a></strong>: <a href="uWVTypes.html#wvstring">wvstring</a>;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FStatus">FStatus</a></strong>: <a href="uWVTypes.html#TWV2LoaderStatus">TWV2LoaderStatus</a>;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FSetCurrentDir">FSetCurrentDir</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FCheckFiles">FCheckFiles</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FShowMessageDlg">FShowMessageDlg</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FInitCOMLibrary">FInitCOMLibrary</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FLocalCOMInitMade">FLocalCOMInitMade</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FDeviceScaleFactor">FDeviceScaleFactor</a></strong>: single;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FForcedDeviceScaleFactor">FForcedDeviceScaleFactor</a></strong>: single;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FReRaiseExceptions">FReRaiseExceptions</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FLoaderDllPath">FLoaderDllPath</a></strong>: <a href="uWVTypes.html#wvstring">wvstring</a>;</code></td>
 </tr>
-<tr class="list visibility-protected">
+<tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FUseInternalLoader">FUseInternalLoader</a></strong>: boolean;</code></td>
 </tr>
-<tr class="list2 visibility-protected">
+<tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FAllowOldRuntime">FAllowOldRuntime</a></strong>: boolean;</code></td>
+</tr>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code><strong><a href="uWVLoader.TWVLoader.html#FWorkerIDGen">FWorkerIDGen</a></strong>: cardinal;</code></td>
 </tr>
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
@@ -376,6 +384,14 @@ body { margin: 0.5em; }
 </tr>
 <tr class="list2 visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>function <strong><a href="uWVLoader.TWVLoader.html#Lock">Lock</a></strong>: boolean;</code></td>
+</tr>
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><code>procedure <strong><a href="uWVLoader.TWVLoader.html#UnLock">UnLock</a></strong>;</code></td>
+</tr>
+<tr class="list2 visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><code>function <strong><a href="uWVLoader.TWVLoader.html#GetFileVersion-wvstring-TFileVersionInfo-">GetFileVersion</a></strong>(const aFile : <a href="uWVTypes.html#wvstring">wvstring</a>; var aVersionInfo : <a href="uWVTypes.TFileVersionInfo.html">TFileVersionInfo</a>) : boolean;</code></td>
 </tr>
 <tr class="list visibility-protected">
@@ -505,6 +521,10 @@ body { margin: 0.5em; }
 <tr class="list2 visibility-public">
 <td class="visibility"><span class="badge vis-public">Public</span></td>
 <td class="itemcode"><code>procedure <strong><a href="uWVLoader.TWVLoader.html#AppendErrorLog-wvstring-">AppendErrorLog</a></strong>(const aText : <a href="uWVTypes.html#wvstring">wvstring</a>);</code></td>
+</tr>
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><code>function <strong><a href="uWVLoader.TWVLoader.html#NextWorkerID">NextWorkerID</a></strong>: cardinal;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Properties</h3>
@@ -891,6 +911,14 @@ body { margin: 0.5em; }
 <table class="detail visibility-protected wide_list">
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="FSyncObj"></span><code><strong>FSyncObj</strong>: TCriticalSection;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="FErrorLog"></span><code><strong>FErrorLog</strong>: TStringList;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -1012,6 +1040,14 @@ body { margin: 0.5em; }
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="FAllowOldRuntime"></span><code><strong>FAllowOldRuntime</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="FWorkerIDGen"></span><code><strong>FWorkerIDGen</strong>: cardinal;</code></td>
 </tr>
 <tr><td colspan="2">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -1512,6 +1548,22 @@ Fields used to set command line switches</p>
 <table class="detail visibility-protected wide_list">
 <tr class="list visibility-protected">
 <td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="Lock"></span><code>function <strong>Lock</strong>: boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
+<td class="itemcode"><span id="UnLock"></span><code>procedure <strong>UnLock</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-protected wide_list">
+<tr class="list visibility-protected">
+<td class="visibility"><span class="badge vis-protected">Protected</span></td>
 <td class="itemcode"><span id="GetFileVersion-wvstring-TFileVersionInfo-"></span><code>function <strong>GetFileVersion</strong>(const aFile : <a href="uWVTypes.html#wvstring">wvstring</a>; var aVersionInfo : <a href="uWVTypes.TFileVersionInfo.html">TFileVersionInfo</a>) : boolean;</code></td>
 </tr>
 <tr><td colspan="2">
@@ -1795,6 +1847,16 @@ ICoreWebView2ProcessInfosChangedEventHandler</p>
 <tr><td colspan="2">
 <p>
  Append aText to the ErrorMessage property. </p>
+</td></tr>
+</table>
+<table class="detail visibility-public wide_list">
+<tr class="list visibility-public">
+<td class="visibility"><span class="badge vis-public">Public</span></td>
+<td class="itemcode"><span id="NextWorkerID"></span><code>function <strong>NextWorkerID</strong>: cardinal;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+ Custom ID generator for the web workers. </p>
 </td></tr>
 </table>
 <h3 class="detail">Properties</h3>
