@@ -16,7 +16,7 @@ type
   /// <remarks>
   /// <para><see href="https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/win32/icorewebview2sharedworkercollectionview">See the ICoreWebView2SharedWorkerCollectionView article.</see></para>
   /// </remarks>
-  TCoreWebView2ServiceWorkerRegistrationCollectionView = class
+  TCoreWebView2SharedWorkerCollectionView = class
     protected
       FBaseIntf : ICoreWebView2SharedWorkerCollectionView;
 
@@ -55,26 +55,26 @@ uses
   ActiveX;
   {$ENDIF}
 
-constructor TCoreWebView2ServiceWorkerRegistrationCollectionView.Create(const aBaseIntf: ICoreWebView2SharedWorkerCollectionView);
+constructor TCoreWebView2SharedWorkerCollectionView.Create(const aBaseIntf: ICoreWebView2SharedWorkerCollectionView);
 begin
   inherited Create;
 
   FBaseIntf := aBaseIntf;
 end;
 
-destructor TCoreWebView2ServiceWorkerRegistrationCollectionView.Destroy;
+destructor TCoreWebView2SharedWorkerCollectionView.Destroy;
 begin
   FBaseIntf := nil;
 
   inherited Destroy;
 end;
 
-function TCoreWebView2ServiceWorkerRegistrationCollectionView.GetInitialized : boolean;
+function TCoreWebView2SharedWorkerCollectionView.GetInitialized : boolean;
 begin
   Result := assigned(FBaseIntf);
 end;
 
-function TCoreWebView2ServiceWorkerRegistrationCollectionView.GetCount : cardinal;
+function TCoreWebView2SharedWorkerCollectionView.GetCount : cardinal;
 var
   TempResult : SYSUINT;
 begin
@@ -86,7 +86,7 @@ begin
     Result := TempResult;
 end;
 
-function TCoreWebView2ServiceWorkerRegistrationCollectionView.GetValueAtIndex(index : cardinal) : ICoreWebView2SharedWorker;
+function TCoreWebView2SharedWorkerCollectionView.GetValueAtIndex(index : cardinal) : ICoreWebView2SharedWorker;
 var
   TempResult : ICoreWebView2SharedWorker;
 begin
