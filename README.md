@@ -58,7 +58,7 @@ You can also support this project with Liberapay.
 * [LAZARUS FREE PASCAL Développement rapide](https://lazaruscomponents.com/2025/11/08/livrel-lazarus-free-pascad/)
 
 ## Attribution
-* [Fugue & Diagona icons](http://yusukekamiyamane.com/)
+* [Fugue & Diagona icons made by Yusuke Kamiyamane](https://p.yusukekamiyamane.com/)
 * [FatCow Farm-Fresh Web Icons](https://github.com/gammasoft/fatcow)
 * [Material Design Icons](https://github.com/google/material-design-icons) 
 * [Monaco Editor](https://github.com/microsoft/monaco-editor)
